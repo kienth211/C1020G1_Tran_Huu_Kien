@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b20a986e-5d27-42e7-93e4-7890d2a06f4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/3. HTML/CV.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. HTML/Tao danh sach.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GitProject" beforeDir="false" afterPath="$PROJECT_DIR$/../GitProject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source.html" beforeDir="false" afterPath="$PROJECT_DIR$/Source.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +36,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../GitProject/Source" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -52,6 +56,7 @@
       <workItem from="1603687978307" duration="186000" />
       <workItem from="1603688194864" duration="85000" />
       <workItem from="1604030142130" duration="557000" />
+      <workItem from="1604039121818" duration="4487000" />
     </task>
     <servers />
   </component>
@@ -59,9 +64,29 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="516" y="305" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604044790096">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="516" y="305" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1604044790096" />
     <state x="549" y="155" key="FileChooserDialogImpl" timestamp="1604030349017">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="155" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604030349017" />
+    <state x="277" y="56" key="SettingsEditor" timestamp="1604044730785">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604044730785" />
+    <state x="437" y="57" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604044654037">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="437" y="57" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1604044654037" />
+    <state x="463" y="10" width="609" height="804" key="find.popup" timestamp="1604044601324">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="463" y="10" width="609" height="804" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1604044601324" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604044799107">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604044799107" />
   </component>
 </project>
