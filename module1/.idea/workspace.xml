@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b20a986e-5d27-42e7-93e4-7890d2a06f4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/3. HTML/CV.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3. HTML/Tao danh sach.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GitProject" beforeDir="false" afterPath="$PROJECT_DIR$/../GitProject" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/1. Thuc hanh/1.simpleform.html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/1. Thuc hanh/2.googleSearch.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/1. Thuc hanh/3.simpleTable_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/1. Thuc hanh/4.simpleTable_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/1.simpleForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/2.simpleForm_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/3.simpleForm_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/5.simpleTable_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/6.simpleTable_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/7.simpleTable_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/8.simpleTable_4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source.html" beforeDir="false" afterPath="$PROJECT_DIR$/Source.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +64,9 @@
       <workItem from="1603687978307" duration="186000" />
       <workItem from="1603688194864" duration="85000" />
       <workItem from="1604030142130" duration="557000" />
-      <workItem from="1604039121818" duration="4487000" />
+      <workItem from="1604039121818" duration="7145000" />
+      <workItem from="1604288605186" duration="18587000" />
+      <workItem from="1604323279551" duration="5593000" />
     </task>
     <servers />
   </component>
@@ -64,6 +74,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="72" key="#Notifications" timestamp="1604289336914">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="72" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1604289336914" />
     <state x="516" y="305" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604044790096">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -84,9 +98,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="463" y="10" width="609" height="804" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1604044601324" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604044799107">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604288662230">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604044799107" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604288662230" />
   </component>
 </project>
