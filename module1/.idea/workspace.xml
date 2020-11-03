@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b20a986e-5d27-42e7-93e4-7890d2a06f4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/1. Thuc hanh/1.simpleform.html.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/1. Thuc hanh/2.googleSearch.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/1. Thuc hanh/3.simpleTable_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/1. Thuc hanh/4.simpleTable_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/1.simpleForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/2.simpleForm_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/3.simpleForm_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/5.simpleTable_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/6.simpleTable_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/7.simpleTable_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/8.simpleTable_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.Javascript/1. Thuc hanh/1. simpleJS_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.Javascript/1. Thuc hanh/2. simpleJS_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.Javascript/1. Thuc hanh/simpleJS_2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/7.simpleTable_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/7.simpleTable_3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/8.simpleTable_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/2. Bai tap/8.simpleTable_4.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -67,6 +61,7 @@
       <workItem from="1604039121818" duration="7145000" />
       <workItem from="1604288605186" duration="18587000" />
       <workItem from="1604323279551" duration="5593000" />
+      <workItem from="1604365975186" duration="4619000" />
     </task>
     <servers />
   </component>
