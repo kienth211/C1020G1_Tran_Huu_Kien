@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    </style>
+</head>
+<body>
+<form style="font-size: x-large">
+    <label>
+        Nhập điểm lý:
+        <input type="number" id="physicPoint" style="width: 200px;height: 25px;font-size: x-large">
+    </label>
+    <label>
+        Nhập điểm hóa:
+        <input type="number" id="chemistryPoint" style="width: 200px;height: 25px;font-size: x-large">
+    </label>
+    <label>
+        Nhập điểm toán:
+        <input type="number" id="mathPoint" style="width: 200px;height: 25px;font-size: x-large">
+    </label>
+    <br>
+    <br>
+    <input type="button" onclick="average()" value="Tính điểm trung bình" style="width: 200px;height: 40px;font-size: large">
+    <br>
+    <p id="show"></p>
+</form>
+<script>
+    function average() {
+        let ly = parseInt(document.getElementById("physicPoint").value);
+        let chemistry = parseInt(document.getElementById("chemistryPoint").value);
+        let math = parseInt(document.getElementById("mathPoint").value);
+        let average = (ly + chemistry + math)/3;
+        document.getElementById("show").innerText = "Điểm trung bình là: "+average;
+    }
+</script>
+</body>
+</html>

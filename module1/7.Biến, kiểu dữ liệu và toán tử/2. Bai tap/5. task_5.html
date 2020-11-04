@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    </style>
+</head>
+<body>
+<form style="font-size: x-large">
+    <table>
+        <tr>
+            <th>Amount:</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td>
+                <label for="amount"></label>
+                <input type="number" id="amount" style="width: 200px;height: 25px;font-size: x-large">
+            </td>
+            <td>
+                <label>
+                    <select id="currency_1" style="width: 200px;height: 35px;font-size: large">
+                        <option value="usd_1">USD</option>
+                        <option value="vnd_1">VND</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select id="currency_2" style="width: 200px;height: 35px;font-size: large">
+                        <option value="usd_2">USD</option>
+                        <option value="vnd_2">VND</option>
+                    </select>
+                </label>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <input type="button" onclick="Exchange()" value="Đổi tiền" style="width: 300px;height: 40px;font-size: large">
+    <br>
+    <p id="show"></p>
+</form>
+<script>
+        function Exchange() {
+            let money = parseInt(document.getElementById("amount").value);
+            let currency_1 = document.getElementById("currency_1").value;
+            let currency_2 = document.getElementById("currency_2").value;
+            if (currency_1 === "vnd_1" && currency_2 === "usd_2") {
+                let money_1 = money * 23000;
+                document.getElementById("show").innerText = "Số tiền là: " + money_1;
+            } else if (currency_1 === "usd_1" && currency_2 === "vnd_2") {
+                let money_1 = money / 23000;
+                document.getElementById("show").innerText = "Số tiền là: " + money_1;
+            } else {
+                document.getElementById("show").innerText = "Số tiền là: " + money;
+            }
+        }
+</script>
+</body>
+</html>

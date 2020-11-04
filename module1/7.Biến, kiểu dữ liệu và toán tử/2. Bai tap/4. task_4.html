@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    </style>
+</head>
+<body>
+<form style="font-size: x-large">
+    <label>
+        Nhập giá trị bán kính:
+        <input type="number" id="radius" style="width: 200px;height: 25px;font-size: x-large">
+    </label>
+    <br>
+    <br>
+    <input type="button" onclick="perimeter()" value="Tính chu vi" style="width: 300px;height: 40px;font-size: large">
+    <br>
+    <p id="show"></p>
+</form>
+<script>
+        function perimeter(){
+        const Pi = 3.14;
+        let radius = parseInt(document.getElementById("radius").value);
+        let perimeter = Pi * 2 * radius;
+        document.getElementById("show").innerText = "Giá trị diện tích là: "+perimeter;
+        }
+</script>
+</body>
+</html>
