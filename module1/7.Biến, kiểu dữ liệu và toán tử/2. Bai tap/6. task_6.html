@@ -57,6 +57,9 @@
         }
         function Div() {
             let C = parseInt(A.value) / parseInt(B.value);
+            if (parseInt(B.value) === 0)
+                document.getElementById("show").innerText = "Không thể chia cho 0";
+            else
             document.getElementById("show").innerText = "Kết quả là " + C;
         }
 </script>

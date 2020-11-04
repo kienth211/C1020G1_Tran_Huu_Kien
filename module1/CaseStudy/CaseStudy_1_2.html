@@ -25,8 +25,7 @@
                    Tên:
                </th>
                 <td>
-                    <label for="name"></label>
-                    <input type="text" id="name" style="width: 300px;height: 25px;font-size: x-large">
+                    <input type="text" id="name_1" style="width: 300px;height: 25px;font-size: x-large">
                 </td>
             </tr>
             <tr>
@@ -34,8 +33,7 @@
                     Số CMND:
                 </th>
                 <td>
-                    <label for="cmnd"></label>
-                    <input type="number" id="cmnd" style="width: 300px;height: 25px;font-size: x-large">
+                    <input type="number" id="cmnd_1" style="width: 300px;height: 25px;font-size: x-large">
                 </td>
             </tr>
             <tr>
@@ -43,8 +41,7 @@
                     Ngày tháng năm sinh:
                 </th>
                 <td>
-                    <label for="birthday"></label>
-                    <input type="date" id="birthday" style="width: 300px;height: 25px;font-size: x-large">
+                    <input type="date" id="birthdate_1" style="width: 300px;height: 25px;font-size: x-large">
                 </td>
             </tr>
             <tr>
@@ -52,8 +49,7 @@
                     Email:
                 </th>
                 <td>
-                    <label for="email"></label>
-                    <input type="text" id="email" style="width: 300px;height: 25px;font-size: x-large">
+                    <input type="text" id="email_1" style="width: 300px;height: 25px;font-size: x-large">
                 </td>
             </tr>
             <tr>
@@ -61,8 +57,7 @@
                     Địa chỉ:
                 </th>
                 <td>
-                    <label for="address"></label>
-                    <textarea id="address" style="width: 300px;height: 100px;font-size: x-large"></textarea>
+                    <textarea id="address_1" style="width: 300px;height: 100px;font-size: x-large"></textarea>
                 </td>
             </tr>
             <tr>
@@ -70,8 +65,7 @@
                     Loại khách hàng:
                 </th>
                 <td>
-                    <label for="customerType"></label>
-                    <select id="customerType" style="width: 300px;height: 25px;font-size: large">
+                    <select id="customerType_1" style="width: 300px;height: 25px;font-size: large">
                         <option>
                             Diamond
                         </option>
@@ -95,8 +89,7 @@
                     Giảm giá:
                 </th>
                 <td>
-                    <label for="discount"></label>
-                    <input type="number" id="discount" style="width: 300px;height: 25px;font-size: x-large">
+                    <input type="number" id="discount_1" style="width: 300px;height: 25px;font-size: x-large">
                 </td>
             </tr>
             <tr>
@@ -104,8 +97,7 @@
                     Số người đi kèm:
                 </th>
                 <td>
-                    <label for="addPpl"></label>
-                    <input type="number" id="addPpl" style="width: 300px;height: 25px;font-size: x-large">
+                    <input type="number" id="addPpl_1" style="width: 300px;height: 25px;font-size: x-large">
                 </td>
             </tr>
             <tr>
@@ -113,8 +105,7 @@
                     Số ngày thuê:
                 </th>
                 <td>
-                    <label for="rentDay"></label>
-                    <input type="text" id="rentDay" style="width: 300px;height: 25px;font-size: x-large">
+                    <input type="text" id="rentDay_1" style="width: 300px;height: 25px;font-size: x-large">
                 </td>
             </tr>
             <tr>
@@ -122,8 +113,7 @@
                     Loại dịch vụ:
                 </th>
                 <td>
-                    <label for="serviceType"></label>
-                    <select id="serviceType" style="width: 300px;height: 25px;font-size: large">
+                    <select id="serviceType_1" style="width: 300px;height: 25px;font-size: large">
                         <option>
                             Villa 500$/1 ngày
                         </option>
@@ -141,8 +131,7 @@
                     Loại phòng:
                 </th>
                 <td>
-                    <label for="roomType"></label>
-                    <select id="roomType" style="width: 300px;height: 25px;font-size: large">
+                    <select id="roomType_1" style="width: 300px;height: 25px;font-size: large">
                         <option>
                             Vip
                         </option>
@@ -157,34 +146,28 @@
             </tr>
             <tr>
                 <th colspan="2">
-                    <button id="button_1" style="width: 300px;height: 40px;font-size: large">Click</button>
+                    <input type="button" onclick="button_1()" value="Click" style="width: 300px;height: 40px;font-size: large"/>
                 </th>
             </tr>
         </table>
-        <table style="float: right;margin-right: 800px">
+        <table style="float: right;margin-right: 600px">
             <tr>
                 <th>
                     Tên:
                 </th>
-                <td>
-                <p id="name" style="width: 300px;height: 25px;font-size: x-large"> </p>
-                </td>
+                <td id="name_2"></td>
             </tr>
             <tr>
                 <th>
                     Số CMND:
                 </th>
-                <td>
-
-                </td>
+                <td id="cmnd_2"></td>
             </tr>
             <tr>
                 <th>
                     Ngày tháng năm sinh:
                 </th>
-                <td>
-
-                </td>
+                <td id="birthdate_2"></td>
             </tr>
             <tr>
                 <th>
@@ -250,12 +233,12 @@
 
                 </td>
             </tr>
-            <tr>
-                <th colspan="2">
-                    <button id="button_1" style="width: 300px;height: 40px;font-size: large">Click</button>
-                </th>
-            </tr>
         </table>
     </form>
 </body>
+<script>
+    function button_1() {
+    document.getElementById("name_2").innerText = document.getElementById("name_1").value;
+    }
+</script>
 </html>
