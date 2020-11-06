@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<table>
+    <tr>
+        <th>
+            <input type="number" id="month" placeholder="Nhập tháng cần kiểm tra">
+        </th>
+        <th>
+            <input type="button" onclick="tinh()" value="Tính số ngày">
+        </th>
+    </tr>
+    <tr>
+        <th colspan="2" id="days_id"></th>
+    </tr>
+</table>
+</form>
+</body>
+<script>
+    function tinh() {
+        let days = parseInt(document.getElementById("month").value);
+        let mess = null;
+        if (days > 12 || days < 0) {
+            document.getElementById("days_id").innerText = "Bạn đã nhập sai";
+        }
+        else {
+            switch (days) {
+                case 2:
+                    mess = "có 28 hoặc 29";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    mess = "có 30";
+                    break;
+                default:
+                    mess = "có 31";
+            }
+            document.getElementById("days_id").innerText = "Tháng " +
+                parseInt(document.getElementById("month").value) + " " + mess + " ngày";
+        }
+        }
+</script>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<table>
+    <tr>
+        <th colspan="4">
+            <input disabled id="result">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="push(1)" value="1" >
+        </th>
+        <th>
+            <input type="button" onclick="push(2)" value="2" >
+        </th>
+        <th>
+            <input type="button" onclick="push(3)" value="3" >
+        </th>
+        <th>
+            <input type="button" onclick="push('+')" value="+" >
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="push(4)" value="4" >
+        </th>
+        <th>
+            <input type="button" onclick="push(5)" value="5" >
+        </th>
+        <th>
+            <input type="button" onclick="push(6)" value="6" >
+        </th>
+        <th>
+            <input type="button" onclick="push('-')" value="-" >
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="push(7)" value="7" >
+        </th>
+        <th>
+            <input type="button" onclick="push(8)" value="8" >
+        </th>
+        <th>
+            <input type="button" onclick="push(9)" value="9" >
+        </th>
+        <th>
+            <input type="button" onclick="push('*')" value="*" >
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="del()" value="C">
+        </th>
+        <th>
+            <input type="button" onclick="push(0)" value="0">
+        </th>
+        <th>
+            <input type="button" onclick="result_1()" value="=">
+        </th>
+        <th>
+            <input type="button" onclick="push('/')" value="/">
+        </th>
+    </tr>
+</table>
+</form>
+</body>
+<script>
+    function del() {
+    document.getElementById("result").value = null;
+    }
+    function push(num) {
+    document.getElementById("result").value += num;
+    }
+    function result_1() {
+        document.getElementById("result").value = parseFloat(eval(document.getElementById("result").value));
+    }
+</script>
+</html>

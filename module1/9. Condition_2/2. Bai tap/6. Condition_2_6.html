@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 1-->
+<table>
+    <tr>
+        <th>
+            Nhập độ C:
+        </th>
+        <th>
+            <input type="number" id="doC">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="test_1()" value="Chuyển đổi độ F">
+        </th>
+        <th id="test_1"></th>
+    </tr>
+</table>
+<hr>
+<br>
+<!--Bài 2-->
+<table>
+    <tr>
+        <th>
+            Nhập độ C:
+        </th>
+        <th>
+            <input type="number" id="feet">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="test_2()" value="Chuyển đổi sang mét">
+        </th>
+        <th id="test_2"></th>
+    </tr>
+</table>
+<hr>
+<br>
+<!--Bài 3-->
+<table>
+    <tr>
+        <th>
+            Nhập độ dài cạnh:
+        </th>
+        <th>
+            <input type="number" id="length">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="test_3()" value="Tính diện tích">
+        </th>
+        <th id="test_3"></th>
+    </tr>
+</table>
+<hr>
+<br>
+<!--Bài 4-->
+<table>
+    <tr>
+        <th>
+            Nhập độ dài cạnh thứ 1:
+        </th>
+        <th>
+            <input type="number" id="length_1">
+        </th>
+        <th>
+            Nhập độ dài cạnh thứ 2:
+        </th>
+        <th>
+            <input type="number" id="length_2">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="test_4()" value="Tính diện tích">
+        </th>
+        <th>
+            <input type="button" onclick="test_5()" value="Tính diện tích tam giác">
+        </th>
+        <th id="test_4" colspan="2"></th>
+    </tr>
+</table>
+<hr>
+<br>
+<!--Bài 6-->
+<table>
+    <tr>
+        <th>
+            Nhập các giá trị:
+        </th>
+        <th>
+            <input type="number" id="giatriA" placeholder="giá trị a">
+        </th>
+        <th>
+            x +
+        </th>
+        <th>
+            <input type="number" id="giatriB" placeholder="giá trị b">
+        </th>
+        <th>
+            = 0
+        </th>
+    </tr>
+    <tr>
+        <th colspan="3">
+            <input type="button" onclick="test_6()" value="Giá trị nghiệm">
+        </th>
+        <th id="test_6" colspan="2"></th>
+    </tr>
+</table>
+<hr>
+<br>
+<!--Bài 7-->
+<table>
+    <tr>
+        <th>
+            Nhập các giá trị:
+        </th>
+        <th>
+            <input type="number" id="giatriA_1" placeholder="giá trị a">
+        </th>
+        <th>
+            x<sup>2</sup> +
+        </th>
+        <th>
+            <input type="number" id="giatriB_1" placeholder="giá trị b">
+        </th>
+        <th>
+            x +
+        </th>
+        <th>
+            <input type="number" id="giatriC_1" placeholder="giá trị c">
+        </th>
+        <th>
+            = 0
+        </th>
+    </tr>
+    <tr>
+        <th colspan="3">
+            <input type="button" onclick="test_7()" value="Giá trị nghiệm">
+        </th>
+        <th id="test_7" colspan="2"></th>
+    </tr>
+</table>
+<hr>
+<br>
+<!--Bài 8-->
+<table>
+    <tr>
+        <th>
+            Nhập độ tuổi:
+        </th>
+        <th>
+            <input type="number" id="yearOld">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="test_8()" value="Kiểm tra">
+        </th>
+        <th id="test_8"></th>
+    </tr>
+</table>
+<hr>
+<br>
+<!--Bài 9-->
+<table>
+    <tr>
+        <th>
+            <input type="number" id="giatriA_2" placeholder="Nhập giá trị cạnh thứ 1">
+        </th>
+        <th>
+            <input type="number" id="giatriB_2" placeholder="Nhập giá trị cạnh thứ 2">
+        </th>
+        <th>
+            <input type="number" id="giatriC_2" placeholder="Nhập giá trị cạnh thứ 3">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="test_9()" value="Kiểm tra">
+        </th>
+        <th id="test_9" colspan="2"></th>
+    </tr>
+</table>
+<hr>
+<br>
+<!--Bài 10-->
+<table>
+    <tr>
+        <th>
+            <input type="number" id="power" placeholder="Nhập số điện">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="test_10()" value="Tính tiền điện">
+        </th>
+        <th id="test_10"></th>
+    </tr>
+</table>
+<hr>
+<br>
+<!--Bài 11-->
+<table>
+    <tr>
+        <th>
+            <input type="number" id="tax" placeholder="Nhập thu nhập của bạn (triệu đồng)">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="test_11()" value="Tính thuế thu nhập cá nhân">
+        </th>
+        <th id="test_11"></th>
+    </tr>
+</table>
+<hr>
+<br>
+<!--Bài 12-->
+<table>
+    <tr>
+        <th>
+            <input type="number" id="money" placeholder="Nhập số tiền vay (triệu đồng)">
+        </th>
+        <th>
+            <input type="number" id="month" placeholder="Nhập số tháng vay">
+        </th>
+        <th>
+            <input type="number" id="loan" placeholder="Nhập lãi suất %">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="test_12()" value="Tính lãi">
+        </th>
+        <th id="test_12" colspan="2"></th>
+    </tr>
+</table>
+</body>
+<script>
+// Bài 1
+    function test_1() {
+        let doC = parseInt(document.getElementById("doC").value);
+        document.getElementById("test_1").innerText = "Độ F là: " + (doC * 9 / 5 + 32);
+    }
+// Bài 2
+function test_2() {
+    let feet = parseInt(document.getElementById("feet").value);
+    document.getElementById("test_2").innerText = "Giá trị mét là: " + (feet * 3.2808);
+}
+// Bài 3
+function test_3() {
+    let length = parseInt(document.getElementById("length").value);
+    document.getElementById("test_3").innerText = "Diện tích hình vuông là: " + (length * length);
+}
+// Bài 4
+function test_4() {
+    let length_1 = parseInt(document.getElementById("length_1").value);
+    let length_2 = parseInt(document.getElementById("length_2").value);
+    document.getElementById("test_4").innerText = "Diện tích hình chữ nhật là: " + (length_1 * length_2);
+}
+// Bài 5
+function test_5() {
+    let length_1 = parseInt(document.getElementById("length_1").value);
+    let length_2 = parseInt(document.getElementById("length_2").value);
+    document.getElementById("test_4").innerText = "Diện tích hình chữ nhật là: " + ((length_1 * length_2)/2);
+}
+// Bài 6
+function test_6() {
+    let giatriA = parseInt(document.getElementById("giatriA").value);
+    let giatriB = parseInt(document.getElementById("giatriB").value);
+    if (giatriA === 0)
+        document.getElementById("test_6").innerText = "Phương trình có vô số nghiệm ";
+    else
+        document.getElementById("test_6").innerText = "Nghiệm của phương trình có giá trị là x =  "
+            + ((0 - giatriB) / giatriA);
+}
+// Bài 7
+function test_7() {
+    let giatriA = parseInt(document.getElementById("giatriA_1").value);
+    let giatriB = parseInt(document.getElementById("giatriB_1").value);
+    let giatriC = parseInt(document.getElementById("giatriC_1").value);
+    switch (giatriA === 0) {
+        case true:
+            if (giatriB === 0)
+                document.getElementById("test_7").innerText = "Phương trình có vô số nghiệm ";
+            break;
+        case false:
+            let alpha_1 = giatriB * giatriB - (4 * giatriA * giatriC);
+            let x_1;
+            let x_2;
+            if (alpha_1 < 0)
+                document.getElementById("test_7").innerText = "Phương trình vô nghiệm ";
+            else if (alpha_1 === 0)
+                document.getElementById("test_7").innerText = "Nghiệm kép của phương trình có giá trị là x =  "
+                + ((0 - giatriC) / giatriB);
+            else {
+            x_1 = ((0 - giatriB) + Math.sqrt(alpha_1)) / (2 * giatriA);
+            x_2 = ((0 - giatriB) - Math.sqrt(alpha_1)) / (2 * giatriA);
+            document.getElementById("test_7").innerText =
+                "Nghiệm của phương trình có giá trị là x1 = " + x_1 + " " + "Nghiệm của phương trình có giá trị là x2 = " + x_2
+            }
+    }
+}
+// Bài 8
+function test_8() {
+    let yearOld = parseInt(document.getElementById("yearOld").value);
+    if (yearOld < 0 || yearOld > 120)
+        document.getElementById("test_8").innerText = "Đây không phải tuổi của con người!";
+    else
+        document.getElementById("test_8").innerText = "Đây là tuổi của con người!";
+}
+// Bài 9
+function test_9() {
+    let giatriA = parseInt(document.getElementById("giatriA_2").value);
+    let giatriB = parseInt(document.getElementById("giatriB_2").value);
+    let giatriC = parseInt(document.getElementById("giatriC_2").value);
+    switch (giatriA > 0 && giatriB > 0 && giatriC > 0) {
+        case false:
+            document.getElementById("test_9").innerText = "Đây không phải là giá trị 3 cạnh của tam giác";
+            break;
+        case true:
+            if ((giatriA + giatriB) > giatriC &&
+                (giatriA + giatriC) > giatriB &&
+                (giatriB + giatriC) > giatriA)
+                    document.getElementById("test_9").innerText = "Đây là giá trị 3 cạnh của tam giác";
+            else
+                document.getElementById("test_9").innerText = "Đây không phải là giá trị 3 cạnh của tam giác";
+    }
+}
+// Bài 10
+function test_10() {
+    let power = parseInt(document.getElementById("power").value);
+    let power_2;
+    if (power < 50) {
+        power_2 = power * 1000;
+        document.getElementById("test_10").innerText = "tiền điện của bạn là: " + power_2;
+    }
+    else if (power < 100) {
+        power_2 = 50000 + (power - 50) * 1300;
+        document.getElementById("test_10").innerText = "tiền điện của bạn là: " + power_2;
+    }
+    else if (power < 150) {
+        power_2 = 115000 + (power - 100) * 1600;
+        document.getElementById("test_10").innerText = "tiền điện của bạn là: " + power_2;
+    }
+    else if (power < 200) {
+        power_2 = 195000 + (power - 150) * 2000;
+        document.getElementById("test_10").innerText = "tiền điện của bạn là: " + power_2;
+    }
+    else {
+        power_2 = 295000 + (power - 200) * 2500;
+        document.getElementById("test_10").innerText = "tiền điện của bạn là: " + power_2;
+    }
+}
+// Bài 11
+function test_11() {
+    let tax = parseInt(document.getElementById("tax").value);
+    let tax_2;
+    if (tax <= 5)
+        tax_2 = tax * 5 / 100;
+    else if (tax <= 10)
+        tax_2 = tax * 10 / 100;
+    else if (tax <= 18)
+        tax_2 = tax * 15 / 100;
+    else if (tax <= 32)
+        tax_2 = tax * 20 / 100;
+    else if (tax <= 52)
+        tax_2 = tax * 25 / 100;
+    else if (tax <= 80)
+        tax_2 = tax * 30 / 100;
+    else
+        tax_2 = tax * 35 / 100;
+    document.getElementById("test_11").innerText = "thuế thu nhập cá nhân là: " + tax_2 + " triệu đồng";
+}
+// Bài 12
+function test_12() {
+    let money = parseInt(document.getElementById("money").value);
+    let month = parseInt(document.getElementById("month").value);
+    let loan = parseInt(document.getElementById("loan").value);
+    let i = 1;
+    let loan_2 = money * (loan / 100);
+    while (i < month) {
+        money = money + money * (loan / 100);
+        loan_2 = loan_2 + money * (loan / 100);
+        i++;
+    }
+    document.getElementById("test_12").innerText = "lãi vay là " + loan_2 + " triệu đồng";
+}
+</script>
+</html>

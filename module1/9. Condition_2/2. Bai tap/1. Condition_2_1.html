@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<table>
+    <tr>
+        <th>
+            Nhập vào số cân nặng của bạn:
+        </th>
+        <th>
+            <input type="number" id="weight" placeholder="Kilogram">
+        </th>
+        <th>
+            Nhập vào số đo chiều cao của bạn:
+        </th>
+        <th>
+            <input type="number" id="height" placeholder="Centimet">
+        </th>
+    </tr>
+    <tr>
+        <th colspan="2">
+            <input type="button" onclick="tinh()" value="Tính BMI">
+        </th>
+        <th id="tinh"></th>
+    </tr>
+</table>
+</form>
+</body>
+<script>
+    function tinh() {
+        let bmi =
+            parseInt(document.getElementById("weight").value) /
+            ((parseInt(document.getElementById("height").value) / 100) ^ 2);
+        if (bmi < 18)
+            document.getElementById("tinh").innerText = "Underweight";
+        else if (bmi < 25.0)
+            document.getElementById("tinh").innerText = "Normal";
+        else if (bmi < 30.0)
+            document.getElementById("tinh").innerText = "Overweight";
+        else
+            document.getElementById("tinh").innerText = "Obese";
+    }
+</script>
+</html>

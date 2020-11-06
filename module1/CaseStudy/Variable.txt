@@ -1,0 +1,24 @@
+1_2: id:
+name_1
+cmnd_1
+birthdate_1
+email_1
+address_1
+customerType_1
+discount_1
+addPpl_1
+rentDay_1
+serviceType_1
+roomType_1
+
+name_2
+cmnd_2
+birthdate_2
+email_2
+address_2
+customerType_2
+discount_2
+addPpl_2
+rentDay_2
+serviceType_2
+roomType_2

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 1-->
+    <p>Nhập số A:</p>
+    <input type="number" id="test_1_A">
+    <p>Nhập số B:</p>
+    <input type="number" id="test_1_B">
+    <input type="button" onclick="test_1()" value="Kiểm tra">
+    <hr>
+<br>
+<!--Bài 2-->
+    <table>
+        <tr>
+            <th>
+                Nhập tuổi của bạn:
+            </th>
+            <th>
+                <input type="number" id="test_2">
+            </th>
+            <th>
+                <input type="button" onclick="test_2()" value="Kiểm tra">
+            </th>
+        </tr>
+    </table>
+    <hr>
+<br>
+<!--Bài 3-->
+<table>
+    <tr>
+        <th>
+            Nhập số:
+        </th>
+        <th>
+            <input type="number" id="test_3">
+        </th>
+        <th>
+            <input type="button" onclick="test_3()" value="Kiểm tra">
+        </th>
+    </tr>
+</table>
+<hr>
+<br>
+<!--Bài 4-->
+<table>
+    <tr>
+        <th>
+            Nhập số thứ 1:
+        </th>
+        <th>
+            <input type="number" id="test_4_1">
+        </th>
+        <th>
+            Nhập số thứ 2:
+        </th>
+        <th>
+            <input type="number" id="test_4_2">
+        </th>
+        <th>
+            Nhập số thứ 3:
+        </th>
+        <th>
+            <input type="number" id="test_4_3">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="test_4()" value="Kiểm tra">
+        </th>
+    </tr>
+</table>
+<hr>
+<br>
+<!--Bài 5-->
+<table>
+    <tr>
+        <th>
+            Nhập điểm kiểm tra:
+        </th>
+        <th>
+            <input type="number" id="test_5_1">
+        </th>
+        <th>
+            Nhập điểm thi giữa kỳ:
+        </th>
+        <th>
+            <input type="number" id="test_5_2">
+        </th>
+        <th>
+            Nhập điểm thi cuối kỳ:
+        </th>
+        <th>
+            <input type="number" id="test_5_3">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="test_5()" value="Kiểm tra">
+        </th>
+    </tr>
+</table>
+<hr>
+<br>
+<!--Bài 6-->
+<table>
+    <tr>
+        <th>
+            Nhập doanh số bán hàng:
+        </th>
+        <th>
+            <input type="number" id="test_6" placeholder="triệu đồng">
+        </th>
+        <th>
+            <input type="button" onclick="test_6()" value="Kiểm tra">
+        </th>
+    </tr>
+</table>
+<hr>
+<br>
+<!--Bài 7-->
+<table>
+    <tr>
+        <th>
+            Nhập thời gian gọi điện:
+        </th>
+        <th>
+            <input type="number" id="test_7">
+        </th>
+        <th>
+            <input type="button" onclick="test_7()" value="Kiểm tra">
+        </th>
+    </tr>
+</table>
+</body>
+<script>
+// Bài 1
+    function test_1() {
+        let A_1 = parseInt(document.getElementById("test_1_A").value);
+        let B_1 = parseInt(document.getElementById("test_1_B").value);
+    if (A_1 % B_1 === 0)
+        alert("A chia hết cho B");
+    else
+        alert("A không chia hết cho B");
+    }
+// Bài 2
+    function test_2() {
+        let A_2 = parseInt(document.getElementById("test_2").value);
+        if (A_2 >= 16)
+            alert("Bạn đủ tuổi học lớp 10");
+        else
+            alert("Bạn không đủ tuổi học lớp 10");
+    }
+// Bài 3
+    function test_3() {
+        let A_3 = parseInt(document.getElementById("test_3").value);
+        if (A_3 > 0)
+            alert("Số bạn nhập lớn hơn 0");
+        else if (A_3 === 0)
+            alert("Số bạn nhập là số 0");
+        else
+            alert("Số bạn nhập nhỏ hơn 0");
+}
+// Bài 4
+function test_4() {
+    let A_4_1 = parseInt(document.getElementById("test_4_1").value);
+    let A_4_2 = parseInt(document.getElementById("test_4_2").value);
+    let A_4_3 = parseInt(document.getElementById("test_4_3").value);
+    if (A_4_1 > A_4_2) {
+        if (A_4_1 > A_4_3)
+            alert("Số thứ 1 là số lớn nhất");
+        else
+            alert("Số thứ 3 là số lớn nhất");
+        } 
+    else if (A_4_2 > A_4_3)
+        alert("Số thứ 2 là số lớn nhất");
+    else
+        alert("Số thứ 3 là số lớn nhất");
+}
+// Bài 5
+// Điểm kiểm tra hệ số 1, thi giữa kỳ hệ số 2, thi cuối kỳ hệ số 3
+function test_5() {
+    let A_5_1 = parseInt(document.getElementById("test_5_1").value);
+    let A_5_2 = parseInt(document.getElementById("test_5_2").value);
+    let A_5_3 = parseInt(document.getElementById("test_5_3").value);
+    let A_5_4 = (A_5_1 + A_5_2 * 2 + A_5_3 * 3) / 6;
+    if (A_5_4 < 5)
+        alert("Học lực loại yếu");
+    else if (A_5_4 < 6)
+        alert("Học lực loại trung bình");
+    else if (A_5_4 < 7)
+        alert("Học lực loại trung bình khá");
+    else if (A_5_4 < 8)
+        alert("Học lực loại khá");
+    else if (A_5_4 < 9)
+        alert("Học lực loại giỏi");
+    else if (A_5_4 < 10)
+        alert("Học lực loại xuất sắc");
+    else
+        alert("Bạn nhập sai điểm");
+}
+// Bài 6
+// Doanh thu từ 0>50 triệu hưởng hoa hồng 10%
+// Doanh thu từ 50>100 triệu hưởng hoa hồng 15%
+// Doanh thu từ >100 triệu hưởng hoa hồng 20%
+
+function test_6() {
+    let A_6_1 = parseInt(document.getElementById("test_6").value);
+    let A_6_2;
+    if (A_6_1 < 50) {
+        A_6_2 = A_6_1 * 10 / 100;
+        alert("Hoa hồng của bạn là " + A_6_2 + " triệu đồng");
+    }
+    else if (A_6_1 < 100) {
+        A_6_2 = A_6_1 * 15 / 100;
+        alert("Hoa hồng của bạn là " + A_6_2 + " triệu đồng");
+    }
+    else {
+        A_6_2 = A_6_1 * 20 / 100;
+    alert("Hoa hồng của bạn là " + A_6_2 + " triệu đồng");
+    }
+}
+// Bài 7
+// cước từ 0 > 10 phút là 3,000 đồng/1 phút
+// cước từ 10 > 20 phút là 2,000 đồng/1 phút
+// cước từ 20 phút trở lên là 1,000 đồng/1 phút
+function test_7() {
+    let A_7_1 = parseInt(document.getElementById("test_7").value);
+    let A_7_2;
+    if (A_7_1 < 10) {
+        A_7_2 = A_7_1 * 3000;
+        alert("Cước điện thoại của bạn là: " + A_7_2);
+    }
+    else if (A_7_1 < 20) {
+        A_7_2 = 30000 + (A_7_1 - 10) * 2000;
+        alert("Cước điện thoại của bạn là: " + A_7_2);
+    }
+    else {
+        A_7_2 = 50000 + (A_7_1 - 20) * 1000;
+        alert("Cước điện thoại của bạn là: " + A_7_2);
+    }
+}
+</script>
+</html>
