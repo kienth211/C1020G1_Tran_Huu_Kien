@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i = 2;
+    // let num_1 = parseInt(prompt("Nhập số nguyên lớn hơn 2"));
+    let num_1 = parseInt(prompt("Nhập số lượng số nguyên tố cần hiển thị"));
+    let num_3 = 2;
+    let num_2 = Math.sqrt(num_3);
+    while (1){
+        if (i > num_2){
+            // alert(num_1 + " là số nguyên tố");
+            document.write(num_3 + " ");
+            num_3 = num_3 + 1;
+            break;
+        }
+        if (num_1 % i !== 0){
+            i++;
+        }
+        else {
+            // alert(num_1 + " không phải là số nguyên tố");
+            break;
+        }
+}
+</script>
+</body>
+</html>

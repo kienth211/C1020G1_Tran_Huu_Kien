@@ -2,26 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b20a986e-5d27-42e7-93e4-7890d2a06f4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/8. Condition_1/1. Thuc hanh/1. condition_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8. Condition_1/1. Thuc hanh/2. condition_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8. Condition_1/1. Thuc hanh/3. condition_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8. Condition_1/1. Thuc hanh/4. condition_4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8. Condition_1/1. Thuc hanh/5. condition_5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8. Condition_1/1. Thuc hanh/6. condition_6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8. Condition_1/1. Thuc hanh/7. condition_7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8. Condition_1/1. Thuc hanh/8. condition_8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9. Condition_2/1. Thuc hanh/2. Condition_2_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9. Condition_2/2. Bai tap/1. Condition_2_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9. Condition_2/2. Bai tap/2. Condition_2_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9. Condition_2/2. Bai tap/3. Condition_2_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9. Condition_2/2. Bai tap/4. Condition_2_4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9. Condition_2/2. Bai tap/5. Condition_2_5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9. Condition_2/2. Bai tap/6. Condition_2_6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CaseStudy/CaseStudy_2_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CaseStudy/CaseStudy_2_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CaseStudy/Variable.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10. Loop_1/1. Thuc hanh/1. Loop_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10. Loop_1/1. Thuc hanh/2. Loop_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10. Loop_1/1. Thuc hanh/3. Loop_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10. Loop_1/1. Thuc hanh/4. Loop_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10. Loop_1/1. Thuc hanh/5. Loop_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10. Loop_1/1. Thuc hanh/6. Loop_6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11. Loop_2/1. Bai tap/1. Bảng cửu chương.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11. Loop_2/1. Bai tap/2. Kiểm tra số nguyên.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudy/CaseStudy_1_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy/CaseStudy_1_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudy/CaseStudy_2_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy/CaseStudy_2_2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,16 +41,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/9. Condition_2/2. Bai tap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/11. Loop_2/1. Bai tap" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\C1020G1_Tran_Huu_Kien\module1\11. Loop_2\1. Bai tap" />
+      <recent name="G:\C1020G1_Tran_Huu_Kien\module1\10. Loop_1\1. Thuc hanh" />
       <recent name="G:\C1020G1_Tran_Huu_Kien\module1\9. Condition_2\2. Bai tap" />
       <recent name="G:\C1020G1_Tran_Huu_Kien\module1\9. Condition_2\1. Thuc hanh" />
       <recent name="G:\C1020G1_Tran_Huu_Kien\module1\CaseStudy" />
-      <recent name="G:\C1020G1_Tran_Huu_Kien\module1\8. Conditional\1. Thuc hanh" />
-      <recent name="G:\C1020G1_Tran_Huu_Kien\module1\7.Biến, kiểu dữ liệu và toán tử\2. Bai tap" />
     </key>
   </component>
   <component name="RunManager">
@@ -95,6 +85,7 @@
       <workItem from="1604546995967" duration="19794000" />
       <workItem from="1604625783504" duration="30210000" />
       <workItem from="1604661538993" duration="7677000" />
+      <workItem from="1604883600796" duration="15781000" />
     </task>
     <servers />
   </component>
