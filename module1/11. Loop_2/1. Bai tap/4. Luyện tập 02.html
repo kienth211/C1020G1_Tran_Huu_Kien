@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+
+    <!--Bài 1: Hiện số fibonacci-->
+    <p>Hiện số fibonacci</p>
+    <input type="button" onclick="fibo_1()" value="Hiện số" style="font-size: large">
+    <br>
+    <hr>
+
+    <!--Bài 2: Tính giai thừa-->
+    <p>Tính giai thừa</p>
+    <input type="button" onclick="facto_2()" value="Tính" style="font-size: large">
+    <br>
+    <hr>
+
+    <!--Bài 3: In hình tam giác vuông-->
+    <p>In hình tam giác vuông</p>
+    <table>
+        <tr>
+            <th>
+                <input type="button" onclick="tri_3_1()" value="Góc vuông bên phải phía trên" style="font-size: large">
+            </th>
+            <th>
+                <input type="button" onclick="tri_3_2()" value="Góc vuông bên phải phía dưới" style="font-size: large">
+            </th>
+            <th>
+                <input type="button" onclick="tri_3_3()" value="Góc vuông bên trái phía dưới" style="font-size: large">
+            </th>
+            <th>
+                <input type="button" onclick="tri_3_4()" value="Góc vuông bên trái phía trên" style="font-size: large">
+            </th>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <!--Bài 4: In hình chữ nhật-->
+    <p>In hình chữ nhật</p>
+    <table>
+        <tr>
+            <th>
+                <input type="number" id="rec_1" placeholder="Nhập chiều dài">
+            </th>
+            <th>
+                <input type="number" id="rec_2" placeholder="Nhập chiều rộng">
+            </th>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <input type="button" onclick="rectangle()" value="Vẽ hình chữ nhật" style="font-size: large">
+            </th>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <!--Bài 5: Tính lãi-->
+    <p>Tính lãi vay</p>
+    <table>
+        <tr>
+            <th>
+                <input type="number" id="money" placeholder="Nhập số tiền vay (triệu đồng)" style="width: 200px">
+            </th>
+            <th>
+                <input type="number" id="month" placeholder="Nhập số tháng vay">
+            </th>
+            <th>
+                <input type="number" id="loan" placeholder="Nhập lãi suất %">
+            </th>
+        </tr>
+        <tr>
+            <th colspan="3">
+                <input type="button" onclick="loan_5()" value="Tính lãi" style="font-size: large">
+            </th>
+        </tr>
+    </table>
+
+    <!--Bài 6: In hình trái tim-->
+    <p>In hình trái tim</p>
+    <input type="button" onclick="heart()" value="Vẽ hình trái tim" style="font-size: large">
+    <br>
+    <hr>
+
+</form>
+<script>
+
+    // Bài 1: Hiện số fibonacci
+    function fibo_1(){
+        let count_1 = parseInt(prompt("Nhập số lượng số fibonacci cần hiện"));
+        for (let i = 0, j = 1, count_2 = 1; count_2 <= 20; count_2++){
+            document.write(j + " ");
+            j = j + i;
+            i = j - i;
+        }
+    }
+
+    // Bài 2: Tính giai thừa
+    function facto_2(){
+        let count_1 = parseInt(prompt("Nhập số cần tính giai thừa, số lớn hơn 1 "));
+        let facto = 1;
+        for (let count_2 = 1; count_2 < count_1; count_2++){
+            facto = count_2 * (count_2 + 1)
+        }
+        alert("Giai thừa của " + count_1 + " là " + facto);
+    }
+
+    // Bài 3: In hình tam giác vuông
+    function tri_3_1(){
+        let i = 1;
+        let j = 1;
+        for (;i <= 5; i++){
+            for(;j <= 5; j++){
+                if (j >= i){
+                    document.write("*");
+                }
+                else {
+                    document.write("&nbsp&nbsp");
+                }
+            }
+            j = 1;
+            document.write("<br>");
+        }
+    }
+    function tri_3_2(){
+        let i = 1;
+        let j = 1;
+        for (;i <= 5; i++){
+            for(;j <= 5; j++){
+                if (j >= (6 - i)){
+                    document.write("*");
+                }
+                else {
+                    document.write("&nbsp&nbsp");
+                }
+            }
+            j = 1;
+            document.write("<br>");
+        }
+    }
+    function tri_3_3(){
+        let i = 1;
+        let j = 1;
+        for (;i <= 5; i++){
+            for(;j <= 5; j++){
+                if (j <= i){
+                    document.write("*");
+                }
+                else {
+                    document.write("&nbsp&nbsp");
+                }
+            }
+            j = 1;
+            document.write("<br>");
+        }
+    }
+    function tri_3_4(){
+        let i = 1;
+        let j = 1;
+        for (;i <= 5; i++){
+            for(;j <= 5; j++){
+                if (j <= (6 - i)){
+                    document.write("*");
+                }
+                else {
+                    document.write("&nbsp&nbsp");
+                }
+            }
+            j = 1;
+            document.write("<br>");
+        }
+    }
+
+    // Bài 4: In hình chữ nhật
+    function rectangle(){
+        let rec_1 = document.getElementById("rec_1");
+        let rec_2 = document.getElementById("rec_2");
+        let i = 1, j = 1;
+        for (;i <= parseInt(rec_2.value); i++){
+            for(;j <= parseInt(rec_1.value); j++) {
+                if (i === 1 || i === parseInt(rec_2.value)) {
+                    document.write("*&nbsp");
+                }
+                else {
+                if (j === 1 || j === parseInt(rec_1.value)) {
+                    document.write("*&nbsp");
+                } else {
+                    document.write("&nbsp&nbsp&nbsp");
+                }
+                }
+            }
+            j = 1;
+            document.write("<br>");
+        }
+    }
+
+    // Bài 5: Tính lãi
+    function loan_5() {
+        let money = parseInt(document.getElementById("money").value);
+        let month = parseInt(document.getElementById("month").value);
+        let loan = parseInt(document.getElementById("loan").value);
+        let i = 1;
+        let loan_2 = money * (loan / 100);
+        while (i < month) {
+            money = money + money * (loan / 100);
+            loan_2 = loan_2 + money * (loan / 100);
+            i++;
+        }
+        alert("lãi vay là " + loan_2.toFixed(2) + " triệu đồng");
+    }
+    // Bài 6: Vẽ hình trái tim
+    function heart(){
+        for (let i = 1; i <= 4; i++){
+            switch (i) {
+                case (1):
+                    document.write("&nbsp&nbsp**&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp**&nbsp&nbsp" + "<br>");
+                    break;
+                case (2):
+                    document.write("*********" + "<br>");
+                    break;
+                case (3):
+                    document.write("&nbsp&nbsp&nbsp&nbsp*****&nbsp&nbsp&nbsp&nbsp" + "<br>");
+                    break;
+                case (4):
+                    document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "<br>");
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>

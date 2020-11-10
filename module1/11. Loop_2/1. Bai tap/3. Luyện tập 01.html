@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+
+    <!--Bài 1: Hiện 100 số từ 1 > 100, đến số 100 thì thông báo-->
+    <p>Hiện 100 số tự nhiên</p>
+    <input type="button" onclick="showNumber()" value="Hiện số" style="font-size: large">
+    <br>
+    <hr>
+
+    <!--Bài 2: Nhập nhiệt độ-->
+    <table>
+        <tr>
+            <th>
+                <input type="number" id="temp_2">
+            </th>
+            <th>
+                <input type="button" onclick="temp()" value="Kiểm tra nhiệt độ" style="font-size: large">
+            </th>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <!--Bài 3: Hiện 20 số fibonacci đầu tiên-->
+    <p>Hiện 20 số fibonacci đầu tiên</p>
+    <input type="button" onclick="fibo_3()" value="Hiện số" style="font-size: large">
+    <br>
+    <hr>
+
+    <!--Bài 4: Hiện số fibonacci đầu tiên chia hết cho 5-->
+    <p>Hiện số fibonacci đầu tiên chia hết cho 5</p>
+    <input type="button" onclick="fibo_4()" value="Hiện số" style="font-size: large">
+    <br>
+    <hr>
+
+    <!--Bài 5: Tính tổng 20 số fibonacci đầu tiên-->
+    <p>Tính tổng 20 số fibonacci đầu tiên</p>
+    <input type="button" onclick="fibo_5()" value="Hiện tổng" style="font-size: large">
+    <br>
+    <hr>
+
+    <!--Bài 6: Tính tổng 30 số tự nhiên đầu tiên chia hết cho 7 -->
+    <p>Tính tổng 30 số tự nhiên đầu tiên chia hết cho 7</p>
+    <input type="button" onclick="nat_6()" value="Hiện tổng" style="font-size: large">
+    <br>
+    <hr>
+
+    <!--Bài 7: Hiện số từ 1 > 100 -->
+    <p>Hiện số từ 1 > 100</p>
+    <input type="button" onclick="showNumber_7()" value="Hiện số" style="font-size: large">
+    <br>
+    <hr>
+
+    <!--Bài 8: Đoán xem -->
+    <p>Đoán xem</p>
+    <input type="button" onclick="game_8()" value="Chơi" style="font-size: large">
+    <br>
+    <hr>
+
+</form>
+<script>
+
+    // Bài 1: Hiện 100 số từ 1 > 100, đến số 100 thì thông báo
+    function showNumber() {
+        for (let i = 0; i < 100; i++) {
+        document.write(i + " ");
+        if (i === 98) {
+            alert("đã hoàn thành");
+        }
+    }
+    }
+
+    // Bài 2: Nhập nhiệt độ
+    function temp() {
+        let temp = parseInt(document.getElementById("temp_2").value);
+        if ( temp < 20){
+            alert("Yêu cầu tăng nhiệt độ lên");
+        }
+        else if ( temp > 100){
+            alert("Yêu cầu giảm nhiệt độ xuống");
+        }
+        else {
+            alert("Không vấn đề gì");
+        }
+    }
+
+    // Bài 3: Hiện 20 số fibonacci đầu tiên
+    function fibo_3(){
+    let count = 1;
+    for (let i = 0, j = 1; count <= 20; count++){
+        document.write(j + " ");
+        j = j + i;
+        i = j - i;
+    }
+    }
+
+    // Bài 4: Hiện số fibonacci đầu tiên chia hết cho 5
+    function fibo_4(){
+        let i = 0;
+        let j = 1;
+        while (1){
+            j = j + i;
+            if (j % 5 === 0){
+                alert("Số " + j + " là số fibonacci đầu tiên chia hết cho 5");
+                break;
+            }
+            i = j - i;
+        }
+    }
+
+    // Bài 5: Tính tổng 20 số fibonacci đầu tiên
+    function fibo_5(){
+        let count = 1;
+        let sum = 0;
+        for (let i = 0, j = 1; count <= 20; count++){
+            sum = sum + j;
+            j = j + i;
+            i = j - i;
+        }
+        alert("Tổng của 20 số fibonacci là: " + sum);
+    }
+
+    // Bài 6: Tính tổng 30 số tự nhiên đầu tiên chia hết cho 7
+    function nat_6(){
+        let count = 1;
+        let sum = 0;
+        for (let i = 7; count <= 30; count++){
+            sum = sum + i;
+            i = i + 7;
+        }
+        alert("Tổng 30 số tự nhiên đầu tiên chia hết cho 7 là: " + sum);
+    }
+
+    // Bài 7: Hiện số từ 1 > 100
+    function showNumber_7(){
+        let count = 1;
+        for (; count <= 100; count++) {
+            if (count % 3 === 0 && count % 5 === 0) {
+                document.write("FizzBuzz ");
+                continue;
+            }
+            if (count % 3 === 0) {
+                document.write("Fizz ");
+                continue;
+            }
+            if (count % 5 === 0) {
+            document.write("Buzz ");
+            continue;
+            }
+            document.write(count + " ");
+        }
+    }
+
+    // Bài 8: Đoán xem
+    function game_8() {
+        let num_8_1 = parseInt(prompt("Mời bạn nhập giới hạn khoảng số, nhập min:"));
+        let num_8_2 = parseInt(prompt("Nhập max"));
+        let num_random_1 = (Math.floor(Math.random() * num_8_2)) + num_8_1;
+        let num_random_2;
+        for (let count = 1; count <= 3; count++) {
+        num_random_2 = parseInt(prompt("Nhập số ngẫu nhiên:"));
+        if (num_random_2 === num_random_1) {
+            alert("Bạn đã đoán đúng");
+            break;
+        }
+        else if (count === 3){
+            alert("Chúc bạn may mắn lần sau")
+        }
+        else {
+            alert("Bạn đã đoán sai, bạn còn " + (3 - count) + " lượt đoán nữa");
+        }
+        }
+    }
+
+</script>
+</body>
+</html>
