@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <!--    Bài 1: Nối các phần tử trong mảng-->
+    <p>Bài 1: Nối các phần tử trong mảng</p>
+    <p>myColor = ["Red", "Green", "White", "Black"];</p>
+    <input type="button" onclick="join_1()" value="Nối các phần tử">
+    <br>
+    <hr>
+
+    <!--    Bài 2: thêm dấu - vào giữa 2 chữ số chẵn-->
+    <p>Bài 2: thêm dấu - vào giữa 2 chữ số chẵn</p>
+    <input type="button" onclick="add_2()" value="Nối các phần tử">
+    <br>
+    <hr>
+
+    <!--    Bài 3: Chuyển chữ thường thành chữ hoa-->
+    <p>Bài 3: Chuyển chữ thường thành chữ hoa</p>
+    <p>The Quick Brown Fox</p>
+    <input type="button" onclick="convert_3()" value="Chuyển chữ">
+    <br>
+    <hr>
+</form>
+</body>
+<script>
+    // Bài 1: Nối các phần tử trong mảng
+    function join_1() {
+        let myColor = ["Red", "Green", "White", "Black"];
+        alert(myColor.join());
+    }
+
+    // Bài 2: thêm dấu - vào giữa 2 chữ số chẵn
+    function add_2() {
+        let num=window.prompt();
+        let str = num.toString();
+        let result = [str[0]];
+
+        for(let x=1; x<str.length; x++)
+        {
+            if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+            {
+                result.push('-', str[x]);
+            }
+            else
+            {
+                result.push(str[x]);
+            }
+        }
+        alert(result.join(''));
+    }
+
+    // Bài 3: Chuyển chữ thường thành chữ hoa
+    function convert_3() {
+        let str = prompt("Nhập 1 dòng tiếng anh");
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result = [];
+
+        for(let x=0; x<str.length; x++)
+        {
+            if(UPPER.indexOf(str[x]) !== -1)
+            {
+                result.push(str[x].toLowerCase());
+            }
+            else if(LOWER.indexOf(str[x]) !== -1)
+            {
+                result.push(str[x].toUpperCase());
+            }
+            else
+            {
+                result.push(str[x]);
+            }
+        }
+        alert(result.join(''));
+    }
+</script>
+</html>

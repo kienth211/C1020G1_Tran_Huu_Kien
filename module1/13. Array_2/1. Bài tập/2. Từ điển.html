@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let eng = ["apple", "orange", "banana"];
+    let vnese = ["quả táo", "quả cam", "quả chuối"];
+    let text = prompt("Nhập từ cần tra" + "\n" + eng.join());
+    for (let i = 0; i < eng.length; i++){
+        if (text === eng[i]){
+            alert("Nghĩa của từ " + eng[i] + " là " + vnese[i]);
+            break;
+        }
+        if (i === (eng.length - 1)) {
+            alert("Từ bạn tra không có trong từ điển");
+        }
+
+    }
+</script>
+</body>
+</html>

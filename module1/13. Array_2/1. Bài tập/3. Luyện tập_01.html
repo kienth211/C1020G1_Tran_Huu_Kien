@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <!--    Bài 1: Số nguyên lớn hơn 10-->
+    <p>Bài 1: Số nguyên lớn hơn 10</p>
+    <input type="button" onclick="compare_1()" value="Nhập 5 phần tử">
+    <br>
+    <hr>
+
+    <!--    Bài 2: Số nguyên lớn nhất-->
+    <p>Bài 2: Số nguyên lớn nhất</p>
+    <p>arr_1 = [1, 2, 5, 4, 9, 6, 8, 7]</p>
+    <input type="button" onclick="max_2()" value="Phần tử lớn nhất">
+    <br>
+    <hr>
+
+    <!--    Bài 3: Giá trị trung bình các phần tử-->
+    <p>Bài 3: Giá trị trung bình các phần tử</p>
+    <p>arr_1 = [1, 2, 5, 4, 9, 6, 8, 7]</p>
+    <input type="button" onclick="averaged_3()" value="Tính trung bình">
+    <br>
+    <hr>
+
+    <!--    Bài 4: Đảo ngược phần tử-->
+    <p>Bài 4: Đảo ngược phần tử</p>
+    <input type="button" onclick="reverse_4()" value="Đảo ngược">
+    <br>
+    <hr>
+
+    <!--    Bài 5: Đếm số nguyên âm-->
+    <p>Bài 5: Đếm số nguyên âm</p>
+    <p>arr_1 = [1, -2, 5, -4, 9, -6, 8, -7]</p>
+    <input type="button" onclick="negative_5()" value="Só lượng sô nguyên âm">
+    <br>
+    <hr>
+
+    <!--    Bài 6: Kiểm tra số có trong mảng-->
+    <p>Bài 6: Kiểm tra số có trong mảng</p>
+    <p>arr_1 = [1, 2, 5, 4, 9, 6, 8, 7]</p>
+    <input type="button" onclick="check_6()" value="Kiểm tra">
+    <br>
+    <hr>
+
+    <!--    Bài 7: Xóa phần tử-->
+    <p>Bài 7: Xóa phần tử</p>
+    <p>arr_1 = [1, 2, 5, 4, 9, 6, 8, 7]</p>
+    <input type="button" onclick="delete_7()" value="Xóa phần tử">
+    <br>
+    <hr>
+
+    <!--    Bài 8: Sắp xếp phần tử-->
+    <p>Bài 8: Sắp xếp phần tử</p>
+    <p>arr_1 = [1, 2, 22, 4, 44, 6, 66, 7]</p>
+    <input type="button" onclick="sort_8()" value="Sắp xếp">
+    <br>
+    <hr>
+
+    <!--    Bài 9: Nối mảng-->
+    <p>Bài 9: Nối mảng</p>
+    <p>arr_1 = [1, 2, 3, 4, 5]</p>
+    <p>arr_1 = [6, 7, 8, 9]</p>
+    <input type="button" onclick="concat_9()" value="Nối">
+    <br>
+    <hr>
+
+</form>
+</body>
+<script>
+    // Bài 1: Số nguyên lớn hơn 10
+    function compare_1() {
+        let arr_1 = [];
+        let arr_2 = [];
+        for (let i = 0, j = 0; i < 5; i++){
+            arr_1[i] = parseInt(prompt("Nhập phần tử thứ " + i));
+            if (arr_1[i] >= 10){
+                arr_2[j] = arr_1[i];
+                j++
+            }
+        }
+        alert("Các phần tử lớn hơn 10" + "\n" + arr_2.join());
+    }
+
+    // Bài 2: Số nguyên lớn nhất
+    function max_2() {
+        let arr_1 = [1, 2, 5, 4, 9, 6, 8, 7];
+        let max = arr_1[0];
+        let index;
+        for (let i = 1; i < arr_1.length; i++){
+            if ( max < arr_1[i]){
+                max = arr_1[i];
+                index = i;
+            }
+        }
+        alert("Phần tử lớn nhất là " + max + "\n" + "Vị trí phần tử lớn nhất là " + index );
+    }
+
+    // Bài 3: Giá trị trung bình các phần tử
+    function averaged_3() {
+        let arr_1 = [1, 2, 5, 4, 9, 6, 8, 7];
+        let max = arr_1[0];
+        let sum = 0;
+        for (let i = 1; i < arr_1.length; i++){
+            if ( max < arr_1[i]){
+                max = arr_1[i];
+            }
+            sum += arr_1[i];
+        }
+
+        alert("Phần tử lớn nhất là " + max + "\n" + "Trung bình các phần tử là " + (sum / (arr_1.length + 1)) );
+    }
+
+    // Bài 4: Đảo ngược phần tử
+    function reverse_4() {
+        let count = parseInt(prompt("Nhập số lượng phần tử"));
+        let arr_1 = [];
+        for (let i = 0; i < count; i++){
+            arr_1[i] = parseInt(prompt("Nhập phần tử thứ " + i));
+        }
+        alert("Các phần tử đảo ngược" + "\n" + arr_1.reverse());
+    }
+
+    // Bài 5: Đếm số nguyên âm
+    function negative_5() {
+        let arr_1 = [1, -2, 5, -4, 9, -6, 8, -7];
+        let count = 0;
+        for (let i = 0; i < arr_1.length; i++){
+            if ( arr_1[i] < 0){
+                count++;
+            }
+        }
+        alert("Mảng có số lượng số nguyên âm là " + count);
+    }
+
+    // Bài 6: Giá trị trung bình các phần tử
+    function check_6() {
+        let arr_1 = [1, 2, 5, 4, 9, 6, 8, 7];
+        let num = parseInt(prompt("Nhập 1 số nguyên"));
+        for (let i = 0; i < arr_1.length; i++) {
+            if (num === arr_1[i]) {
+                alert("Số này có trong mảng");
+                break;
+            }
+            if (i === (arr_1.length - 1)) {
+                alert("Số này không có trong mảng");
+            }
+        }
+    }
+
+    // Bài 7: Xóa phần tử
+    function delete_7() {
+        let arr_1 = [1, 2, 5, 4, 9, 6, 8, 7];
+        let num = parseInt(prompt("Nhập 1 số nguyên"));
+        for (let i = 0; i < arr_1.length; i++) {
+            if (num === arr_1[i]) {
+                for (; i < arr_1.length; i++ ) {
+                    arr_1[i] = arr_1[i + 1];
+                }
+                break;
+            }
+        }
+        arr_1.pop();
+        alert(arr_1);
+    }
+
+    // Bài 8: Sắp xếp phần tử
+    function sort_8() {
+        let arr_1 = [1, 2, 22, 4, 44, 6, 66, 7];
+        arr_1.sort(function(a, b){return a - b});
+        alert(arr_1);
+    }
+
+    // Bài 9: Nối mảng
+    function concat_9() {
+        let arr_1 = [1, 2, 3, 4, 5];
+        let arr_2 = [6, 7, 8, 9];
+        let arr_3 = arr_1.concat(arr_2);
+        alert(arr_3);
+    }
+</script>
+</html>

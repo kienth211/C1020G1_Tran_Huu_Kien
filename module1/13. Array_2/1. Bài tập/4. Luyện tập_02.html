@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <!--    Bài 1: In mảng 2 chiều-->
+    <p>Bài 1: In mảng 2 chiều</p>
+    <input type="button" onclick="print_1()" value="In mảng">
+    <br>
+    <hr>
+
+    <!--    Bài 2: Đảo ngược phần tử-->
+    <p>Bài 2: Đảo ngược phần tử</p>
+    <input type="button" onclick="reverse_2()" value="Đảo ngược">
+    <br>
+    <hr>
+
+    <!--    Bài 3: Đếm số ký tự số-->
+    <p>Bài 3: Đếm số ký tự số</p>
+    <p>arr_1 = [c, s, c, 2, 6, 1, 8]</p>
+    <input type="button" onclick="count_3()" value="Đếm số">
+    <br>
+    <hr>
+
+    <!--    Bài 4: Đếm ký tự chuỗi-->
+    <p>Bài 4: Đếm ký tự chuỗi</p>
+    <input type="button" onclick="count_4()" value="Đếm ký tự">
+    <br>
+    <hr>
+
+    <!--    Bài 5: Kiểm tra chuỗi giống nhau-->
+    <p>Bài 5: Kiểm tra chuỗi giống nhau</p>
+    <input type="button" onclick="check_5()" value="Kiểm tra">
+    <br>
+    <hr>
+
+    <!--    Bài 6: Đổi ký tự-->
+    <p>Bài 6: Đổi ký tự</p>
+    <input type="button" onclick="change_6()" value="Đổi ký tự">
+    <br>
+    <hr>
+
+</form>
+<script>
+    // Bài 1: Số nguyên lớn hơn 10
+    function print_1() {
+        let arr_1 = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]
+        ];
+        for (let i = 0; i < arr_1.length; i++){
+            document.write("Row " + i + "<br>");
+            for (let j = 0; j < arr_1[i].length; j++){
+                document.write(arr_1[i][j] + "<br>");
+            }
+            j = 0;
+        }
+    }
+
+    // Bài 2: Đảo ngược phần tử
+    function reverse_2() {
+        let arr_1 = ['c', 's', 'c', '2', '6', '1'];
+        alert(arr_1.reverse().join(""));
+    }
+
+    // Bài 3: Đếm số ký tự số
+    function count_3() {
+        let arr_1 = ['c', 's', 'c', 2, 6, 1, 8];
+        let count = 0;
+        for (let i = 0; i < arr_1.length; i++){
+            if (!isNaN(arr_1[i])){
+                count++;
+            }
+        }
+        alert(count);
+    }
+
+    // Bài 4: Đếm ký tự chuỗi
+    function count_4() {
+        let str = prompt("Nhập 1 dòng chữ có chữ vào số");
+        let count = 0;
+        for(let i=0; i<str.length; i++) {
+            if (isNaN(str[i])){
+                count++;
+            }
+        }
+        alert(count);
+    }
+
+    // Bài 5: Kiểm tra chuỗi giống nhau
+    function check_5() {
+        let str_1 = prompt("Nhập 1 dòng chữ có chữ vào số thứ 1");
+        let str_2 = prompt("Nhập 1 dòng chữ có chữ vào số thứ 2");
+        for(let i = 0; i < str_1.length || i < str_2.length; i++) {
+            if (str_1[i] !== str_2[i]) {
+                alert("Hai chuỗi không giống nhau");
+                break;
+            }
+            if (str_1.length === str_2.length
+                && str_1[str_1.length - 1] === str_2[str_1.length - 1]
+                && (i === str_1.length - 1 || i === str_2.length - 1)){
+                alert("Hai chuỗi giống nhau");
+            }
+        }
+    }
+
+    // Bài 6: Đổi ký tự
+    function change_6() {
+        let str_1 = prompt("Nhập 1 dòng chữ");
+        let str_2 = [];
+        for(let i = 0; i < str_1.length; i++) {
+            if (str_1[i] === "-") {
+                str_2.push("_");
+                continue;
+            }
+            str_2.push(str_1[i]);
+        }
+        alert(str_2.join(""));
+    }
+</script>
+</body>
+</html>
