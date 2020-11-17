@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onpageshow="
+    // Bài 1: Xin chào
+    alertMessage();
+    // Bài 2: Nhập đối số cho kết quả tăng thêm 1
+    addNumber_2();
+    // Bài 3: Nhập 2 số
+    twoNum(parseInt(prompt('Nhập số a')),parseInt(prompt('Nhập số b')));
+    // Bài 4: Cho ra kết quả trước return
+    addNumbers();
+    // Bài 5: Tên ngôi sao
+    star(prompt('Nhập tên ngôi sao' + '\n' + 'Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus'))">
+<script>
+    // Bài 1: Xin chào
+    function alertMessage() {
+        alert("Xin chào");
+    }
+    // Bài 2: Nhập đối số cho kết quả tăng thêm 1
+    function addNumber_2() {
+        let num_1 = parseInt(prompt("Nhập 1 số vào"));
+        alert(num_1 + 1);
+    }
+    // Bài 3: Nhập 2 số
+    function twoNum(a,b) {
+        if (a > b){
+            alert("Số " + a + "lớn hơn số " + b);
+        }
+        else {
+            alert("Tổng của 2 số là " + (a + b));
+        }
+    }
+    // Bài 4: Cho ra kết quả trước return
+    function addNumbers() {
+        let firstNum = 4;
+        let secondNum = 8;
+        let result = firstNum + secondNum;
+        alert(result);
+        return result;
+    }
+    // Bài 5: Tên ngôi sao
+    function star(a) {
+        let arr_1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arr_2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        for (let i = 0; i < arr_1.length; i++){
+            if (a === arr_1[i]){
+                alert("Tên chòm sao là " + arr_2[i]);
+                break;
+            }
+            if (a !== arr_1[i] && i === arr_1.length - 1){
+                alert("Bạn nhập sai tên ngôi sao");
+            }
+        }
+    }
+</script>
+</body>
+</html>

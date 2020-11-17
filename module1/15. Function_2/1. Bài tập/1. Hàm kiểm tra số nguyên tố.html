@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num_1 = parseInt(prompt("Nhập số nguyên vào"));
+    isPrime();
+    function isPrime(){
+        if (num_1 === 1 || num_1 === 4){
+            alert("Số bạn vừa nhập không phải là số nguyên tố");
+        }
+        if (num_1 === 2 || num_1 === 3){
+            alert("Số bạn vừa nhập là số nguyên tố");
+        }
+        for (let i = 2; i <= Math.sqrt(num_1); i++){
+            if (num_1 % i === 0) {
+                alert("Số bạn vừa nhập không phải là số nguyên tố");
+                break;
+            }
+            else {
+                if (Math.sqrt(num_1) - i < 1 && Math.sqrt(num_1) - i > 0){
+                    alert("Số bạn vừa nhập là số nguyên tố");
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

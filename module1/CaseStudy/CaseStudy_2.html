@@ -66,7 +66,6 @@
                 case "11":
                     rentDays = prompt("Nhập vào tên rentDays: ");
                     break;
-
                 default: {
                     alert("failed")
                 }
@@ -79,10 +78,6 @@
         }
         case "3":
             let money = 0;
-            //     -	Đà Nẵng giảm giá 20$
-            // -	Huế giảm giá 10$
-            // -	Quảng Nam giảm giá 5$
-
             if (typeService==="Villa") {
                 money = 500;
             } else if (typeService==="House") {
@@ -90,7 +85,9 @@
             } else if (typeService==="Room") {
                 money = 100;
             }
+
             let temp = 0;
+
             if (address === "Đà Nẵng") {
                 temp += 20;
             } else if (address === "Huế") {
@@ -98,9 +95,6 @@
             } else if (address === "Quảng Nam") {
                 temp +=5;
             }
-            //     -	7 ngày trở lên giảm giá 30$
-            // -	Từ 5 – 7 ngày giảm giá 20$
-            // -	Từ 2 – 4 ngày giảm giá 10$
 
             if (rentDays<7) {
                 temp += 30;
@@ -109,11 +103,7 @@
             } else if (rentDays>2) {
                 temp+=10;
             }
-            //     -	Nếu loại Customer là Diamond giảm giá 15$
-            // -	Nếu loại Customer là Platium giảm giá 10$
-            // -	Nếu loại Customer là Gold giảm giá 5$
-            // -	Nếu loại Customer là Silver giảm giá 2$
-            // -	Nếu loại Customer là Member thì không giảm giá
+
             if (typeCustomer==="Diamond") {
                 temp += 15
             } else if (typeCustomer==="Platium") {

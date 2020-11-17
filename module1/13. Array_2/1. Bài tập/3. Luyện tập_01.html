@@ -104,14 +104,13 @@
         let arr_1 = [1, 2, 5, 4, 9, 6, 8, 7];
         let max = arr_1[0];
         let sum = 0;
-        for (let i = 1; i < arr_1.length; i++){
+        for (let i = 0; i < arr_1.length; i++){
             if ( max < arr_1[i]){
                 max = arr_1[i];
             }
             sum += arr_1[i];
         }
-
-        alert("Phần tử lớn nhất là " + max + "\n" + "Trung bình các phần tử là " + (sum / (arr_1.length + 1)) );
+        alert("Phần tử lớn nhất là " + max + "\n" + "Trung bình các phần tử là " + (sum / (arr_1.length)) );
     }
 
     // Bài 4: Đảo ngược phần tử

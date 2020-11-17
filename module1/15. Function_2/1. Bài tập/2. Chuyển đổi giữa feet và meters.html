@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let check = parseInt(prompt("Chọn 1 để chuyển feet sang meters" + "\n" + "Chọn 2 để chuyển meters sang feet"));
+    switch (check) {
+        case 1:
+            let feet = parseInt(prompt("Nhập giá trị feet "));
+            footToMeter();
+        function footToMeter(){
+            alert("Giá trị của meters là " + 0.305 * feet);
+        }
+        break;
+        case 2:
+            let meters = parseInt(prompt("Nhập giá trị meters "));
+            meterToFoot();
+        function meterToFoot(){
+            alert("Giá trị của feet là " + 3.279 * meters);
+        }
+        break;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <!--    Bài 1: Bình phương-->
+    <p>Bài 1: Bình phương</p>
+    <input type="button" onclick="square_1()" value="Nhập số">
+    <br>
+    <hr>
+
+    <!--    Bài 2: Tính chu vi, diện tích hình tròn-->
+    <p>Bài 2: Tính chu vi, diện tích hình tròn</p>
+    <input type="button" onclick="circle_2()" value="Nhập bán kính">
+    <br>
+    <hr>
+
+    <!--    Bài 3: Tính giai thừa-->
+    <p>Bài 3: Tính giai thừa</p>
+    <input type="button" onclick="integer_3()" value="Nhập số nguyên dương">
+    <br>
+    <hr>
+
+    <!--    Bài 4: Kiểm tra ký tự hay số-->
+    <p>Bài 4: Kiểm tra ký tự hay số</p>
+    <input type="button" onclick="check_4()" value="Nhập ký tự">
+    <br>
+    <hr>
+
+    <!--    Bài 5: Số nhỏ nhất-->
+    <p>Bài 5: Số nhỏ nhất</p>
+    <input type="button" onclick="min_5()" value="Nhập 3 số">
+    <br>
+    <hr>
+
+    <!--    Bài 6: Số nguyên dương-->
+    <p>Bài 6: Số nguyên dương</p>
+    <input type="button" onclick="check_6()" value="Nhập số">
+    <br>
+    <hr>
+
+    <!--    Bài 7,8: Đảo ngược mảng-->
+    <p>Bài 7,8: Đảo ngược mảng</p>
+    <input type="button" onclick="swap_7()" value="Nhập số">
+    <br>
+    <hr>
+
+    <!--    Bài 9: Tìm chữ-->
+    <p>Bài 9: Tìm chữ</p>
+    <input type="button" onclick="check_9()" value="Nhập chữ">
+    <br>
+    <hr>
+</form>
+<script>
+    // Bài 1: Bình phương
+    function square_1() {
+        let num_1 = parseInt(prompt("Nhập 1 số"));
+        alert("Bình phương của số vừa nhập là " + Math.pow(num_1, 2));
+    }
+
+    // Bài 2: Tính chu vi, diện tích hình tròn
+    function circle_2() {
+        let radius = parseInt(prompt("Nhập bán kính"));
+        alert("Chu vi và bán kính của hình tròn lần lượt là" + "\n" +
+            2 * 3.14 * radius + "\n" +
+            3.14 * Math.pow(radius, 2));
+    }
+
+    // Bài 3: Tính giai thừa
+    function integer_3() {
+        let num_3 = prompt("Nhập số nguyên dương");
+        let sum_3 = 1;
+        if ((num_3 - 1) === (parseInt(num_3) - 1) && num_3 > 0){
+            for (let i = 1; i <= num_3; i++){
+                sum_3 *= i
+            }
+            alert("Giai thừa của số vừa nhập là " + sum_3);
+        }
+        else {
+            alert("Số bạn vừa nhập không phải là số nguyên dương");
+        }
+    }
+
+    // Bài 4: Kiểm tra ký tự hay số
+    function check_4() {
+        let str_4 = prompt("Nhập ký tự vào");
+        if (isNaN(parseFloat(str_4))) {
+            alert("Ký tự vừa nhập là chữ");
+        }
+        else {
+            alert("Ký tự vừa nhập là số");
+        }
+    }
+
+    // Bài 5: Số nhỏ nhất
+    function min_5() {
+        let num_5_1 = [];
+        for (let i = 0; i < 3; i++){
+            num_5_1[i] = parseInt(prompt("Nhập số thứ " + (i + 1)));
+        }
+        let min_5 = num_5_1[0];
+        for (let i = 1; i < 3; i++){
+            if (min_5 > num_5_1[i]){
+                min_5 = num_5_1[i];
+            }
+            if ( i === 2){
+                alert("Số nhỏ nhất là " + min_5);
+            }
+        }
+    }
+
+    // Bài 6: Số nguyên dương
+    function check_6() {
+        let num_6 = prompt("Nhập số");
+        if ((num_6 - 1) === (parseInt(num_6) - 1) && num_6 > 0){
+            alert("Đây là số nguyên dương");
+        }
+        else {
+            alert("Đây không phải là số nguyên dương");
+        }
+    }
+
+    // Bài 7,8: Đảo ngược mảng
+    function swap_7() {
+        let num_7 = parseInt(prompt("Nhập số phần tử của mảng"));
+        let arr_7 = [];
+        for (let i = 0; i < num_7; i++){
+            arr_7[i] = parseInt(prompt("Nhập phần tử số " + (i)));
+        }
+        alert(arr_7.reverse());
+    }
+
+    // Bài 9: Tìm chữ
+    function check_9() {
+        let num_9 = parseInt(prompt("Nhập số phần tử của mảng"));
+        let arr_9 = [];
+        for (let i = 0; i < num_9; i++){
+            arr_9[i] = prompt("Nhập phần tử thứ " + (i));
+        }
+        let str_9 = prompt("Nhập ký tự");
+        for (let i = 0; i < num_9; i++){
+            if (str_9 === arr_9[i]){
+                alert("Ký tự có trong chuỗi vừa nhập");
+                break;
+            }
+            if (i === num_9 - 1) {
+                alert("Ký tự không có trong chuỗi vừa nhập");
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
