@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onpageshow="nokia.resetPower()">
+<table>
+    <tr>
+        <th>
+            Pin của nokia
+        </th>
+        <th id="powerNokia"></th>
+    </tr>
+    <tr>
+        <th>
+            <input type="text" id="text">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="button" onclick="nokia.onOff()" value="Bật/Tắt">
+        </th>
+        <th>
+            <input type="button" onclick="nokia.resetPower()" value="Xạc">
+        </th>
+        <th>
+            <input type="button" onclick="nokia.saveMes();nokia.powerAct()" value="Lưu">
+        </th>
+        <th>
+            <input type="button" onclick="nokia.sentMes();nokia.powerAct()" value="Gửi">
+        </th>
+        <th>
+            <input type="button" onclick="iphone.showMes()" value="Xem tin iPhone">
+        </th>
+    </tr>
+</table>
+<script>
+    let text = document.getElementById("text");
+    class phone{
+        constructor() {
+            this.power = 100;
+            this.draft = [];
+            this.sent = [];
+            this.inbox = [];
+            this.state = true;
+        }
+        onOff(){
+            if (this.state === true){
+                this.state = false;
+                alert("Điện thoại đang tắt");
+            }
+            else {
+                this.state = true;
+                alert("Điện thoại đang bật");
+            }
+        };
+        powerAct(){
+            if(this.state === true) {
+                this.power--;
+                document.getElementById("powerNokia").innerHTML = this.power
+            }
+        }
+        resetPower(){
+            this.power = 100;
+            document.getElementById("powerNokia").innerHTML = this.power
+        }
+        saveMes(){
+            if(this.state === true) {
+                this.draft[this.draft.length] = text.value;
+                text.value = "";
+                alert(this.draft);
+            }
+        }
+        sentMes(){
+            if(this.state === true) {
+                this.sent[this.sent.length] = text.value;
+                text.value = "";
+                alert(this.sent);
+            }
+        }
+        showMes(toPhone){
+            if(this.state === true){
+
+            }
+        }
+    }
+    let nokia = new phone();
+    let iphone = new phone();
+</script>
+</body>
+</html>

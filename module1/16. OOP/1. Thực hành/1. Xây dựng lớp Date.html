@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class myDate{
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        getDate(){
+            return this.day + "/" + this.month + "/" + this.year
+        }
+        setDate(){
+            this.day = prompt("Nhập lại ngày");
+            this.month = prompt("Nhập lại tháng");
+            this.year = prompt("Nhập lại năm");
+        }
+    }
+    let date_1 = new myDate(2, 2, 2007);
+    alert(date_1.getDate());
+    date_1.setDate();
+    alert(date_1.getDate());
+</script>
+</body>
+</html>

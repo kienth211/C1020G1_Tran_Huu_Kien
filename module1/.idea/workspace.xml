@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b20a986e-5d27-42e7-93e4-7890d2a06f4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/14. Function_1/1. Thực hành/1. Tạo và gọi hàm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/14. Function_1/1. Thực hành/2. Chuyển đổi nhiệt độ.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/14. Function_1/1. Thực hành/3. Tìm giá trị nhỏ nhất của mảng.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/15. Function_2/1. Bài tập/1. Hàm kiểm tra số nguyên tố.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/15. Function_2/1. Bài tập/2. Chuyển đổi giữa feet và meters.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/15. Function_2/1. Bài tập/3. Luyện tập tạo và sử dụng hàm 01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/15. Function_2/1. Bài tập/4. Luyện tập tạo và sử dụng hàm 02.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CaseStudy/CaseStudy_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/16. OOP/1. Thực hành/1. Xây dựng lớp Date.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/16. OOP/1. Thực hành/2. Xây dựng lớp Hình Tròn.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/13. Array_2/1. Bài tập/3. Luyện tập_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/13. Array_2/1. Bài tập/3. Luyện tập_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudy/CaseStudy_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy/CaseStudy_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudy/Variable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy/Variable.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +89,7 @@
       <workItem from="1605165499408" duration="15062000" />
       <workItem from="1605230371957" duration="16814000" />
       <workItem from="1605489206176" duration="21620000" />
+      <workItem from="1605583325160" duration="17279000" />
     </task>
     <servers />
   </component>

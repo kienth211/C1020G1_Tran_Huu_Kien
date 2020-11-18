@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class temp{
+        constructor(tempC) {
+            this.tempC = tempC
+        }
+        cvtCtoF(){
+            return alert("Độ F " + (this.tempC * 1.8 + 32))
+        }
+        cvtCtoK(){
+            return alert("Độ K " + (this.tempC + 273))
+        }
+    }
+    let newTemp = new temp(25);
+    newTemp.cvtCtoF();
+    newTemp.cvtCtoK();
+</script>
+</body>
+</html>
