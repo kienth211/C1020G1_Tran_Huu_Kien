@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b20a986e-5d27-42e7-93e4-7890d2a06f4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/16. OOP/1. Thực hành/1. Xây dựng lớp Date.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/16. OOP/1. Thực hành/2. Xây dựng lớp Hình Tròn.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/16. OOP/2. Bài tập/3. Xây dựng lớp mô tả điện thoại.html" beforeDir="false" afterPath="$PROJECT_DIR$/16. OOP/2. Bài tập/3. Xây dựng lớp mô tả điện thoại.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +89,7 @@
       <workItem from="1605230371957" duration="16814000" />
       <workItem from="1605489206176" duration="21620000" />
       <workItem from="1605583325160" duration="17279000" />
+      <workItem from="1605662402446" duration="895000" />
     </task>
     <servers />
   </component>

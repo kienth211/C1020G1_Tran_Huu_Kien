@@ -8,9 +8,9 @@
 <table>
     <tr>
         <th>
-            Pin của nokia
+            Pin của điện thoại đang dùng
         </th>
-        <th id="powerNokia"></th>
+        <th id="powerPhone"></th>
     </tr>
     <tr>
         <th>
@@ -28,10 +28,10 @@
             <input type="button" onclick="nokia.saveMes();nokia.powerAct()" value="Lưu">
         </th>
         <th>
-            <input type="button" onclick="nokia.sentMes();nokia.powerAct()" value="Gửi">
+            <input type="button" onclick="nokia.sentMes(iphone);nokia.powerAct()" value="Gửi">
         </th>
         <th>
-            <input type="button" onclick="iphone.showMes()" value="Xem tin iPhone">
+            <input type="button" onclick="iphone.showMes();iphone.powerAct()" value="Xem tin iPhone">
         </th>
     </tr>
 </table>
@@ -58,12 +58,12 @@
         powerAct(){
             if(this.state === true) {
                 this.power--;
-                document.getElementById("powerNokia").innerHTML = this.power
+                document.getElementById("powerPhone").innerHTML = this.power
             }
         }
         resetPower(){
             this.power = 100;
-            document.getElementById("powerNokia").innerHTML = this.power
+            document.getElementById("powerPhone").innerHTML = this.power
         }
         saveMes(){
             if(this.state === true) {
@@ -72,16 +72,22 @@
                 alert(this.draft);
             }
         }
-        sentMes(){
+        sentMes(toPhone){
             if(this.state === true) {
                 this.sent[this.sent.length] = text.value;
+                toPhone.receiveMes();
                 text.value = "";
                 alert(this.sent);
             }
         }
-        showMes(toPhone){
+        receiveMes(){
             if(this.state === true){
-
+                this.inbox[this.inbox.length] = text.value;
+            }
+        }
+        showMes(){
+            if (this.state === true){
+                alert(this.inbox);
             }
         }
     }
