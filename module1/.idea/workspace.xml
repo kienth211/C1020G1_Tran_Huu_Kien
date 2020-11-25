@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b20a986e-5d27-42e7-93e4-7890d2a06f4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/16. OOP/1. Thực hành/3. Funny circles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/16. OOP/1. Thực hành/4. Xây dựng lớp mô phỏng sự hoạt động của đèn pin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/16. OOP/2. Bài tập/1. Xây dựng lớp mô tả hình chữ nhật.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/16. OOP/2. Bài tập/4. Game đơn giản - di chuyển đối tượng.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/16. OOP/2. Bài tập/5. Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/16. OOP/2. Bài tập/6. Bóng đèn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaseStudy/CaseStudy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/tuan_1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/16. OOP/2. Bài tập/3. Xây dựng lớp mô tả điện thoại.html" beforeDir="false" afterPath="$PROJECT_DIR$/16. OOP/2. Bài tập/3. Xây dựng lớp mô tả điện thoại.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudy/CaseStudy_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudy/CaseStudy_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudy/CaseStudy_3.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +104,13 @@
       <workItem from="1605230371957" duration="16814000" />
       <workItem from="1605489206176" duration="21620000" />
       <workItem from="1605583325160" duration="17279000" />
-      <workItem from="1605662402446" duration="895000" />
+      <workItem from="1605662402446" duration="21667000" />
+      <workItem from="1605748794507" duration="3789000" />
+      <workItem from="1605774065488" duration="4214000" />
+      <workItem from="1605836352359" duration="11200000" />
+      <workItem from="1606093693528" duration="22578000" />
+      <workItem from="1606180837800" duration="18331000" />
+      <workItem from="1606266291039" duration="7349000" />
     </task>
     <servers />
   </component>
@@ -193,9 +214,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1604647971224" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604396158253">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606105515273">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604396158253" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606105515273" />
   </component>
 </project>

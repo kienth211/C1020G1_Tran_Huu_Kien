@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="button" onclick="addCustomer(prompt('Nhập tên'))" value="Nhập">
+    <input type="button" onclick="show()" value="Show">
+</form>
+<script>
+    // function plusMinus(arr) {
+    //     let count_1 = 0;
+    //     let count_2 = 0;
+    //     let count_3 = 0;
+    //     let a = [];
+    //     for (let i = 0; i < arr.length; i++){
+    //         if(arr[i] > 0){
+    //             count_1++;
+    //             continue;
+    //         }
+    //         if(arr[i] < 0){
+    //             count_2++;
+    //             continue;
+    //         }
+    //         if(arr[i] === 0){
+    //             count_3++;
+    //         }
+    //     }
+    //     a.push((count_1/arr.length).toFixed(6));
+    //     a.push((count_2/arr.length).toFixed(6));
+    //     a.push((count_3/arr.length).toFixed(6));
+    //     return console.log(a)
+    // }
+    // plusMinus([-4, 3, -9, 0, 4, 1]);
+
+    // function staircase(n) {
+    //     let str = "";
+    //     for (let i = 0; i < n; i++){
+    //         for (let j = 0; j < n; j++){
+    //             if (n - j <= i + 1){
+    //                 str += "#";
+    //             }
+    //             else {
+    //                 str += "&nbsp&nbsp";
+    //             }
+    //         }
+    //         // j = 0;
+    //         str += "<br>";
+    //     }
+    //     return document.write(str)
+    // }
+    // staircase(6);
+
+    // function birthdayCakeCandles(candles) {
+    //     let max = candles[0];
+    //     let count = 0;
+    //     for (let i = 0; i < candles.length; i++){
+    //         if (max < candles[i]){
+    //             max = candles[i];
+    //             count = 1;
+    //             continue;
+    //         }
+    //         if (max === candles[i]){
+    //             count++
+    //         }
+    //     }
+    //     console.log(count);
+    // }
+    // birthdayCakeCandles([3,2,1,3])
+
+    // function diagonalDifference(arr) {
+    //     let sum_1 = 0;
+    //     let sum_2 = 0;
+    //     for (let i = 0; i < arr.length; i++){
+    //         for (let j = 0; j < arr[i].length; j++){
+    //             if( i === j){
+    //                 sum_1 += arr[i][j];
+    //             }
+    //             if(i + j === arr.length - 1){
+    //                 sum_2 += arr[i][j];
+    //             }
+    //         }
+    //     }
+    //     console.log(Math.abs(sum_1 - sum_2));
+    // }
+    // diagonalDifference([[11, 2, 4],[4, 5, 6],[10, 8, -12]]);
+
+    // function timeConversion(s) {
+    //     let hour = 0;
+    //     if (s.indexOf("AM") !== -1){
+    //         if (s.substr(0,2) === "12"){
+    //
+    //         }
+    //
+    //         s = s.substr(0, s.indexOf("AM"))
+    //     }
+    //     else{
+    //         if (s.substr(0,2) === "12"){
+    //         s = s.substr(0, s.indexOf("PM"));
+    //         s = s.replace("12","00");
+    //     }
+    //         else {
+    //         s = s.substr(0, s.indexOf("PM"));
+    //         hour = parseInt(s.substr(0,2)) + 12;
+    //         hour = hour.toString();
+    //         s = s.replace(s.substr(0,2),hour);
+    //         }
+    //     }
+    //     console.log(s);
+    // }
+    // timeConversion("12:45:54PM");
+
+    // function gradingStudents(grades) {
+    //     for (let i = 0; i < grades.length; i++) {
+    //         if (grades[i] >= 38) {
+    //             if (grades % 5 < 3) {
+    //                 grades = grades + (grades % 5);
+    //             }
+    //         }
+    //         console.log(grades);
+    //     }
+    // }
+    //     gradingStudents(grades);
+
+    // console.log(38 % 5)
+
+    // function getTotalX(a, b) {
+    //     let validCount = 0;
+    //
+    //     for (let x = 1; x <= 100; x++) {
+    //         if (a.every(int => (x % int === 0))) {
+    //             if (b.every(int => (int % x === 0))) {
+    //                 // console.log(b.every(int => (int % x === 0)));
+    //                 validCount++;
+    //             }
+    //         }
+    //     }
+    //     console.log(validCount);
+    // }
+    // getTotalX([2, 3], [2, 4])
+
+
+    let arr_1 = [];
+    // for (let i = 0; i < arr_1.length; i++){
+    //     for (let j = 0; j < arr_1[i].length; j++){
+    //         arr_1[i][j] = prompt("abc");
+    //     }
+    // }
+
+    class customer{
+        constructor(name) {
+            this.name = name;
+        }
+        add(){
+            this.name = arr_1.push()
+        }
+    }
+    function addCustomer(name){
+        let cus = new customer(name);
+        cus.add();
+    }
+    function show() {
+        alert(arr_1);
+    }
+
+
+
+
+
+</script>
+</body>
+</html>
