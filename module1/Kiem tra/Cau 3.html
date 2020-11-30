@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class Sotietkiem{
+            constructor(num,typeBook,name,noID,date,money) {
+                this.num = num;
+                this.typeBook = typeBook;
+                this.name = name;
+                this.noID = noID;
+                this.date = date;
+                this.money = money;
+            }
+            getNum(){
+                return this.num
+            }
+            setNum(num){
+                this.num = num;
+            }
+            gettypeBook(){
+                return this.typeBook
+            }
+            settypeBook(typeBook){
+                this.num = typeBook;
+            }
+            getName(){
+                return this.name
+            }
+            setName(name){
+                this.name = name;
+            }
+            getnoID(){
+                return this.noID
+            }
+            setnoID(noID){
+                this.noID = noID;
+            }
+            getDate(){
+                return this.date
+            }
+            setDate(date){
+                this.date = date;
+            }
+            getMoney(){
+                return this.money
+            }
+            setMoney(money){
+                this.money = money;
+            }
+
+        }
+        let arrBook = [];
+        let tempList = "";
+        let str = "";
+        let cmnd_1 = 0;
+
+        function listCus(index){
+            tempList = "";
+            tempList += "1. Mã sổ: " +  arrBook[index].getNum() + "\n";
+            tempList += "2. Loại sổ: " +  arrBook[index].gettypeBook() + "\n";
+            tempList += "3. Tên: " +  arrBook[index].getName() + "\n";
+            tempList += "4. CMND: " +  arrBook[index].getnoID() + "\n";
+            tempList += "5. Ngày mở sổ: " +  arrBook[index].getDate() + "\n";
+            tempList += "6. Tiền: " +  arrBook[index].getMoney() + "\n";
+            return tempList
+        }
+
+        function checkNum() {
+            do {
+                str = prompt("Nhập mã sổ" + "\n" +"Nhập chuỗi tối đa 5 ký tự");
+            }
+            while (str.length > 5);
+            return str
+        }
+
+        function checktypeBook() {
+            do {
+                str = prompt("Nhập tên" + "\n" +"Nhập chuỗi tối đa 10 ký tự");
+            }
+            while (str.length > 10);
+            return str
+        }
+
+        function checkName() {
+            do {
+                str = prompt("Nhập tên" + "\n" +"Nhập chuỗi tối đa 30 ký tự");
+            }
+            while (str.length > 30);
+            return str
+        }
+
+
+        function checkCmnd() {
+            do {
+                cmnd = prompt("Nhập số cmnd" + "\n" + "Định dạng 9 số");
+                validateCmnd(cmnd);
+                function validateCmnd() {
+                    const cmnd_1 = /\d/;
+                    return cmnd_1.test(cmnd);
+                }
+            }
+            while (validateCmnd() === false);
+            return cmnd
+        }
+
+        function checkMoney() {
+            do {
+                cmnd_1 = parseInt(prompt("Nhập tiền" + "\n" +"Nhập số"));
+            }
+            while (isNaN(cmnd_1) === true);
+            return cmnd_1
+        }
+
+        function checkDate() {
+            do {
+                birthday = prompt("Nhập ngày mở sổ" + "\n" + "Định dạng: dd-mm-yyyy");
+                validateDate(birthday);
+                function validateDate() {
+                    const date = /(\d{2})+-(\d{2})+-(\d{4})+/;
+                    return date.test(birthday);
+                }
+            }
+            while (validateDate() === false);
+            return birthday
+        }
+
+        function createBook() {
+            let num = checkNum();
+            let typeBook = checktypeBook();
+            let name = checkName();
+            let noID = checkCmnd();
+            let date = checkDate();
+            let money = prompt("Nhập tiền:");
+            let book2 = new Sotietkiem(num,typeBook,name,noID,date,money);
+            arrBook.push(book2);
+            alert(listCus(arrBook.length - 1));
+        }
+
+        createBook();
+        createBook();
+
+
+
+    </script>
+</body>
+</html>

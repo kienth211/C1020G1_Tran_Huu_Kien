@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num_1 = 0;
+    let num_2 = 0;
+    let num_3 = 0;
+    let num_4 = 0;
+    let checkNum = true;
+    function input() {
+        num_1 = parseFloat(prompt("Tử số số thứ 1"));
+        num_2 = parseFloat(prompt("Mẫu số số thứ 1"));
+        num_3 = parseFloat(prompt("Tử số số thứ 2"));
+        num_4 = parseFloat(prompt("Mẫu số số thứ 2"));
+        alert("2 phân số " + "\n" + num_1 + "/" + num_2 + "\n" + num_3 + "/" + num_4);
+    }
+    function check() {
+        if (num_1/num_2 !== num_3/num_4){
+            checkNum = false;
+        }
+        return alert(checkNum);
+    }
+    input();
+    check();
+</script>
+</body>
+</html>

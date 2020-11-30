@@ -3,182 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
+<div id="display"></div>
+<div id="edit"></div>
 <script>
-    let Customer = function () {
-        this.setName = function (name) {
-            this.name = name;
-        };
-        this.getName = function () {
-            return this.name;
-        };
-        this.setCMND = function (cmnd) {
-        this.cmnd = cmnd;
-        };
-        this.getCMND = function () {
-            return this.cmnd;
-        };
-        this.setBirthday = function (birthday) {
-            this.birthday = birthday;
-        };
-        this.getBirthday = function () {
-            return this.birthday;
-        };
-        this.setEmail = function (email) {
-            this.email = email;
-        };
-        this.getEmail = function () {
-            return this.email;
-        };
-        this.setAddress = function (address) {
-            this.address = address;
-        };
-        this.getAddress = function () {
-            return this.address;
-        };
-        this.setTypeCustomer = function (typeCustomer) {
-            this.typeCustomer = typeCustomer;
-        };
-        this.getTypeCustomer = function () {
-            return this.typeCustomer;
-        };
-        this.setDiscount = function (discount) {
-            this.discount = discount;
-        };
-        this.getDiscount = function () {
-            return this.discount;
-        };
-        this.setQuantityIncluded = function (quantityIncluded) {
-            this.quantityIncluded = quantityIncluded;
-        };
-        this.getQuantityIncluded = function () {
-            return this.quantityIncluded;
-        };
-        this.setTypeRoom = function (typeRoom) {
-            this.typeRoom = typeRoom;
-        };
-        this.getTypeRoom = function () {
-            return this.typeRoom;
-        };
-        this.setRentDays = function (rentDays) {
-            this.rentDays = rentDays;
-        };
-        this.getRentDays = function () {
-            return this.rentDays;
-        };
-        this.setTypeService = function (typeService) {
-            this.typeService = typeService;
-        };
-        this.getTypeService = function () {
-            return this.typeService;
-        };
-        this.totalPays = function () {
-            let money = 0;
-            if(this.getTypeService()==="Villa") {
-                money = 500;
-            } else if (this.getTypeService()==="House") {
-                money = 300;
-            } else if (this.getTypeService()==="Room") {
-                money = 200;
-            }
-            return this.getRentDays()*money*(1-this.getDiscount()/100);
+    class Product {
+        constructor(id, name, price, amount) {
+            this._id = id;
+            this._name = name;
+            this._price = price;
+            this._amount = amount;
         }
-    };
-
-    let regexEmail = /\S+@\S+\.\S+/;
-    let regexBirthday = /^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/;
-    let regexCMND = /^[\d]{8,8}$/;
-    let listCustomer = [];
-    function displayMainMenu() {
-        let choose = parseInt(prompt("1.Add new Customer." + "\n2.Display Information Customer" + "\n3.Display total pays Customer"
-            + "\n4.Edit Information Customer" + "\n5.Delete Customer" + "\n6.Exit"));
-        switch (choose) {
-            case 1: {
-                addNewCustomer();
-                break;
-            }
-            case 2: {
-                displaycustomer();
-                break;
-            }
-            case 3: {
-                displayTotalpays();
-                break;
-            }
-            default: {
-                alert("Failed");
-            }
+        getId() {
+            return this._id;
+        }
+        getName() {
+            return this._name;
+        }
+        getPrice() {
+            return this._price;
+        }
+        getAmount() {
+            return this._amount;
+        }
+        setId(value) {
+            this._id = value;
+        }
+        setName(value) {
+            this._name = value;
+        }
+        setPrice(value) {
+            this._price = value;
+        }
+        setAmount(value) {
+            this._amount = value;
         }
     }
-    function displaycustomer() {
-
-    }
-    function displayTotalpays() {
-        let temp = "";
-        for (let i = 0; i<listCustomer.length;i++) {
-            temp += i + ". Name: " + listCustomer[i].getName() + "\n";
+    let productList = [];
+    productList.push(new Product(1, "Iphone", 2000, 5));
+    productList.push(new Product(1, "SamSung", 1000, 5));
+    productList.push(new Product(1, "Oppo", 1000, 5));
+    function displayProduct() {
+        let temp = "<button class='btn btn-info' onclick='createProduct()'>CreateProduct</button>"
+        temp += "<table class='table'>";
+        temp += "<tr>" +
+            "<th>Id</th>" +
+            "<th>Name</th>" +
+            "<th>Price</th>" +
+            "<th>Amount</th>" +
+            "</tr>"
+        for (let i in productList) {
+            temp += "<tr>" +
+                "<td>" + productList[i].getId() + "</td> " +
+                "<td>" + productList[i].getName() + "</td> " +
+                "<td>" + productList[i].getPrice() + "</td> " +
+                "<td>" + productList[i].getAmount() + "</td> " +
+                "<td><button type='button' class='btn btn-primary' onclick='editProduct(" + i + ")'>Edit</button>" +
+                "<button type='button' class='btn btn-danger' onclick='deleteProduct(" + i + ")'>Delete</button></td> " +
+                "</tr>"
         }
-        let chooseDisplay = parseInt(prompt(temp));
-        alert("Total pays của bạn là: " + listCustomer[chooseDisplay].totalPays())
+        temp += "</table>"
+        document.getElementById("display").innerHTML = temp;
     }
-    function addNewCustomer() {
-        let checkvalid=false;
-        let cus = new Customer();
-        let name = prompt("Input name: ");
-        let cmnd = prompt("Input cmnd: ");
-        let email = prompt("Input email: ");
-        let birthday = prompt("Input birthday: ");
-        do {
-            cmnd = prompt("Input cmnd: ");
-            if (regexCMND.test(cmnd)) {
-                checkvalid = true;
-            } else {
-                alert("Chứng minh nhân dân không hợp lệ")
-            }
-        } while (!checkvalid);
-        checkvalid = false;
-        do {
-            birthday = prompt("Input birthday: ");
-            if (regexBirthday.test(birthday)) {
-                checkvalid = true;
-            } else {
-                alert("Ngày sinh bạn nhập không hợp lệ");
-            }
-        } while (!checkvalid);
-        checkvalid = false;
-        do {
-            email = prompt("Input email: ");
-            if (regexEmail.test(email)) {
-                checkvalid = true; // để thoát vòng lặp
-            } else {
-                alert("email không hợp lệ, yêu cầu nhập lại");
-            }
-        } while (!checkvalid);
-        checkvalid = false;
-        let address = prompt("Input address: ");
-        let typeService = prompt("Input typeService: ");
-        let typeRoom = prompt("Input typeRoom: ");
-        let typeCustomer = prompt("Input typeCustomer: ");
-        let discount = prompt("Input discount: ");
-        let quantityIncluded = prompt("Input quantityIncluded: ");
-        let rentDays = prompt("Input renDays: ");
-        cus.setName(name);
-        cus.setCMND(cmnd);
-        cus.setBirthday(birthday);
-        cus.setEmail(email);
-        cus.setAddress(address);
-        cus.setTypeCustomer(typeCustomer);
-        cus.setTypeRoom(typeRoom);
-        cus.setTypeService(typeService);
-        cus.setDiscount(discount);
-        cus.setQuantityIncluded(quantityIncluded);
-        cus.setRentDays(rentDays);
-        listCustomer.push(cus);
-        alert("Bạn đã thêm thành công");
-        displayMainMenu();
+    function editProduct(index) {
+        let temp = "<h1>Edit Product</h1>"
+        temp += "<input type='text' class='form-control' disabled value='" + productList[index].getId() + "'></br>"
+            + "<input type='text' id='nameEdit' class='form-control' value='" + productList[index].getName() + "'></br>"
+            + "<input type='text' id='priceEdit' class='form-control' value='" + productList[index].getPrice() + "'></br>"
+            + "<input type='text' id='amountEdit' class='form-control'  value='" + productList[index].getAmount() + "'></br>"
+            + "<input type='button' class='btn btn-success' value='Edit' onclick='edit(" + index + ")'></br>";
+        document.getElementById("edit").innerHTML = temp;
     }
-
+    function edit(index) {
+        productList[index].setName(document.getElementById("nameEdit").value);
+        productList[index].setPrice(document.getElementById("priceEdit").value);
+        productList[index].setAmount(document.getElementById("amountEdit").value);
+        document.getElementById("edit").innerText = "";
+        displayProduct();
+    }
+    function deleteProduct(index) {
+        if (confirm("Bạn muốn xóa sản phẩm " + productList[index].getName() + " này phải không?") ) {
+            productList.splice(index, 1);
+            displayProduct();
+        }
+    }
+    function createProduct(index) {
+        let temp = "<h1>Create Product</h1>"
+        temp += "Id: <input type='text' id='idProduct' class='form-control'></br>"
+            + "Name: <input type='text' id='nameEdit' class='form-control'></br>"
+            + "Price: <input type='text' id='priceEdit' class='form-control'></br>"
+            + "Amount: <input type='text' id='amountEdit' class='form-control'></br>"
+            + "<input type='button' class='btn btn-success' value='Create' onclick='create()'></br>";
+        document.getElementById("edit").innerHTML = temp;
+    }
+    function create() {
+        let name = (document.getElementById("nameEdit").value);
+        let price = (document.getElementById("priceEdit").value);
+        let amount = (document.getElementById("amountEdit").value);
+        let idProduct = (document.getElementById("idProduct").value);
+        let product = new Product(idProduct, name, price, amount);
+        productList.push(product);
+        document.getElementById("edit").innerText = "";
+        displayProduct();
+    }
+    displayProduct();
 </script>
 </body>
 </html>

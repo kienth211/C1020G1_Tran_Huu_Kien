@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr_A = [];
+    let arr_B = [];
+    let num = 0;
+
+    function create() {
+        do {
+            num = parseFloat(prompt("Nhập số phần tử"));
+            if (num <= 50 && num > 0 && (num - 1) === (parseInt(num) - 1)) {
+                for (let i = 0; i < num; i++) {
+                    while (1) {
+                        arr_A.push((prompt("Nhập phần tử thứ: " + (i + 1))));
+                    if ((arr_A[i] - 1) !== (parseInt(arr_A[i]) - 1) || isNaN(num) === true){
+                        alert("Bạn phải nhập số nguyên");
+                        arr_A.pop();
+                    }
+                    else {
+                        break;
+                    }
+                    }
+                }
+                return alert(arr_A);
+            } else {
+                alert("Bạn nhập sai đinh dạng")
+            }
+        }
+        while (num > 50 || num <= 0 || isNaN(num) === true || (num - 1) !== (parseInt(num) - 1 ));
+    }
+
+    function add(num) {
+        arr_B.push(arr_A);
+        arr_B.push(num);
+        return alert("Mảng cũ " + arr_A + "\n" + "Mảng mới " + arr_B);
+    }
+
+    function isPrime(num_1) {
+        isPrime();
+        function isPrime(){
+            if (num_1 === 1 || num_1 === 4 || num_1 <= 0){
+                alert("Số bạn vừa nhập không phải là số nguyên tố");
+            }
+            if (num_1 === 2 || num_1 === 3){
+                alert("Số bạn vừa nhập là số nguyên tố");
+            }
+            for (let i = 2; i <= Math.sqrt(num_1); i++){
+                if (num_1 % i === 0) {
+                    alert("Số bạn vừa nhập không phải là số nguyên tố");
+                    break;
+                }
+                else {
+                    if (Math.sqrt(num_1) - i < 1 && Math.sqrt(num_1) - i > 0){
+                        alert("Số bạn vừa nhập là số nguyên tố");
+                    }
+                }
+            }
+        }
+    }
+
+    create();
+    add(prompt("Thêm phần tử vào mảng"));
+    isPrime(parseInt(prompt("Nhập phần tử trong mảng cần kiểm tra số nguyên tố" + "\n" + arr_B)));
+</script>
+</body>
+</html>
