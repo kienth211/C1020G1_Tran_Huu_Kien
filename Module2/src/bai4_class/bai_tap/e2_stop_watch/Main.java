@@ -5,7 +5,9 @@ public class Main {
         int[] arr = new int[100000];
         int temp = 0;
         StopWatch check = new StopWatch();
+
         System.out.println(check.getStartTime());
+
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (int)(Math.random()*100000);;
         }
