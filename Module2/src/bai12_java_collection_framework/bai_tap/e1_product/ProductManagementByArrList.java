@@ -1,9 +1,6 @@
 package bai12_java_collection_framework.bai_tap.e1_product;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class ProductManagementByArrList {
     private static final Scanner scanner = new Scanner(System.in);
@@ -36,7 +33,7 @@ public class ProductManagementByArrList {
         if (product == null){
             System.out.println("Not found");
         }
-        System.out.println("Sản phẩm là: " + product);
+        System.out.println(product);
     }
 
     public void setProductInfoById(int id){
@@ -56,8 +53,15 @@ public class ProductManagementByArrList {
         System.out.println("Sản phẩm vừa sửa: " + product);
     }
 
-    Comparator priceSort = new PriceSort();
+    public void sortByAscendingPrice(){
+        Comparator<Product> priceSort = new PriceAscendingSort();
+        myArrList.sort(priceSort);
+    }
 
+    public void sortByDescendingPrice(){
+        Comparator<Product> priceSort = new PriceDescendingSort();
+        myArrList.sort(priceSort);
+    }
 
     private Product getProductById(int id){
         for (Product product: myArrList){

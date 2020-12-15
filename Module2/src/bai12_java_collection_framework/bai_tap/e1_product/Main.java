@@ -35,22 +35,63 @@ public class Main {
         String name = scanner.nextLine();
         list.findProductByName(name);
     }
+
+    private static void sortAscending(){
+        list.sortByAscendingPrice();
+    }
+
+    private static void sortDescending(){
+        list.sortByDescendingPrice();
+    }
+
     public static void main(String[] args) {
+        int num = 0;
         list.addProduct(new Product(1,"a",5));
         list.addProduct(new Product(2,"b",4));
         list.addProduct(new Product(3,"c",3));
         list.addProduct(new Product(4,"d",2));
         list.addProduct(new Product(5,"e",1));
-//        add();
-//        add();
-//        add();
-//        show();
-//        remove();
-//        show();
-//        find();
-        show();
-        set();
-        show();
-//        list.displayProduct();
+    while (num != 8 ){
+        System.out.println();
+        System.out.println("" +
+                "1. Show Product" + "\n" +
+                "2. Add Product" + "\n" +
+                "3. Set Product" + "\n" +
+                "4. Remove Product" + "\n" +
+                "5. Find Product" + "\n" +
+                "6. Sort Ascending Price" + "\n" +
+                "7. Sort Descending Price" + "\n" +
+                "8. Quit" + "\n" +
+                "Input:");
+        num = Integer.parseInt(scanner.nextLine());
+        switch (num){
+            case 1:
+                show();
+                break;
+            case 2:
+                add();
+                break;
+            case 3:
+                set();
+                break;
+            case 4:
+                remove();
+                break;
+            case 5:
+                find();
+                break;
+            case 6:
+                sortAscending();
+                break;
+            case 7:
+                sortDescending();
+                break;
+            case 8:
+                System.out.println("Quit");
+                break;
+            default:
+                System.out.println("False input");
+        }
+    }
     }
 }
