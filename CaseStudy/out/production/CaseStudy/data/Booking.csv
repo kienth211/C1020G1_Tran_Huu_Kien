@@ -1,0 +1,3 @@
++Booking+
+Customer{name='Kiên', birthday='22/10/1991', gender='Male', idNum='123 123 123', mobileNum=0123456789, email='a@a.a', customerType='Diamond', address='a'}
+Services{id='SVVL-0006', name='Cam', area=110.0, price=1.0, maxPeople=15, date='Year'}Villa{roomStandard=Vip, roomFurniture='Classic', poolArea=31.0, floors=5}

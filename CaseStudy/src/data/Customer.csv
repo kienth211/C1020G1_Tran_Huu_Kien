@@ -1,0 +1,9 @@
+name,birthday,gender,id,phonenumber,email,type,address
+Sơn,10/09/2000,Male,123 123 123,0123456789,a@a.a,Diamond,a
+Tuấn,11/11/2001,Male,123 123 123,0123456789,a@a.a,Diamond,a
+Cao,11/10/2000,Female,123 123 123,0123456789,c@c.c,Platinium,c
+Thanh,09/11/2001,Unknown,123 123 123,0123456789,a@a.a,Gold,a
+Dũng,12/08/1999,Male,123 123 123,84123456789,a@a.a,Silver,a
+Phúc,12/08/2000,Female,123 123 123,84123456789,b@b.b,Member,b
+Chánh,08/12/1999,Male,123 123 123,84123456789,d@d.d,Diamond,d
+Kiên,22/10/1991,Unknown,123 123 123,0123456789,a@a.a,Diamond,a

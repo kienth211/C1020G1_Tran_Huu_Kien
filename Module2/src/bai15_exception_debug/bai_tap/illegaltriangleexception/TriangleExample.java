@@ -30,13 +30,15 @@ public class TriangleExample {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Hãy nhập a: ");
-        int a = scanner.nextInt();
-        System.out.println("Hãy nhập b: ");
-        int b = scanner.nextInt();
-        System.out.println("Hãy nhập c: ");
-        int c = scanner.nextInt();
-        test(a, b, c);
+        do {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Hãy nhập a: ");
+            int a = scanner.nextInt();
+            System.out.println("Hãy nhập b: ");
+            int b = scanner.nextInt();
+            System.out.println("Hãy nhập c: ");
+            int c = scanner.nextInt();
+            test(a, b, c);
+        } while (true);
     }
 }
