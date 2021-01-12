@@ -260,4 +260,8 @@ public class VillaManager {
         }
         bufferedWriter.close();
     }
+
+    static {
+
+    }
 }
