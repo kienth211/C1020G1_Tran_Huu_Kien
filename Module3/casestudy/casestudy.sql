@@ -223,17 +223,17 @@ insert  into `kieu_thue`(`id_kieu_thue`,`ten_kieu_thue`,`gia`) values
 
 -- data dich_vu:
 
-insert  into `dich_vu`(`id_dich_vu`,`ten_dich_vu`,`dien_tich`,`so_tang`,`so_nguoi_toi_da`,`id_kieu_thue`,`id_loai_dich_vu`,`trang_thai`) values 
+insert  into `dich_vu`(`id_dich_vu`,`ten_dich_vu`,`dien_tich`,`so_tang`,`so_nguoi_toi_da`,`chi_phi_thue`,`id_kieu_thue`,`id_loai_dich_vu`,`trang_thai`) values 
 
-(1,'xanh',60,2,10,1,1,'dang su dung'),
+(1,'xanh',60,2,10,500,1,1,'dang su dung'),
 
-(2,'trang',70,3,11,2,2,'dang su dung'),
+(2,'trang',70,3,11,400,2,2,'dang su dung'),
 
-(3,'do',80,4,12,3,3,'chua su dung'),
+(3,'do',80,4,12,300,3,3,'chua su dung'),
 
-(4,'hong',90,3,9,4,2,'chua su dung'),
+(4,'hong',90,3,9,600,4,2,'chua su dung'),
 
-(5,'vang',50,4,15,1,3,'dang su dung');
+(5,'vang',50,4,15,700,1,3,'dang su dung');
 
 -- data dich_vu_di_kem:
 
@@ -267,7 +267,7 @@ insert  into `hop_dong_chi_tiet`(`id_hop_dong_chi_tiet`,`id_hop_dong`,`id_dich_v
 
 insert  into `hop_dong`(`id_hop_dong`,`id_nhan_vien`,`id_khach_hang`,`id_dich_vu`,`ngay_lam_hop_dong`,`ngay_ket_thuc`,`tien_dat_coc`,`tong_tien`) values 
 
-(1,1,1,1,'2020-8-8','2020-8-21',1000,2000),
+(1,1,1,1,'2020-8-8','2020-8-21',1000,null),
 
 (2,2,2,2,'2020-9-11','2020-9-21',2000,3000),
 
@@ -303,7 +303,8 @@ group by ho_ten;
 
 -- task 5: 
 
-select khach_hang.id_khach_hang, ho_ten, loai_khach.ten_loai_khach, hop_dong.id_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, sum(dich_vu.chi_phi_thue + hop_dong_chi_tiet.so_luong * dich_vu_di_kem.gia) as tong_tien
+select khach_hang.id_khach_hang, ho_ten, loai_khach.ten_loai_khach, hop_dong.id_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, 
+sum(dich_vu.chi_phi_thue + hop_dong_chi_tiet.so_luong*dich_vu_di_kem.gia) as tong_tien
 from khach_hang
 left join loai_khach on khach_hang.id_loai_khach = loai_khach.id_loai_khach
 left join hop_dong on khach_hang.id_khach_hang = hop_dong.id_khach_hang

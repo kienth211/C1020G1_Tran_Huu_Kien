@@ -7929,12 +7929,15 @@ insert  into `products`(`productCode`,`productName`,`productLine`,`productScale`
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-SELECT * FROM customers;
+select productCode, productName, buyprice, quantityInStock from products
+where buyprice > 56.76 and quantityInStock > 10;
 
-SELECT customerName, phone, city, country FROM customers;
+select productCode, productName, buyprice, textDescription
+FROM products
+INNER JOIN productlines
+ON products.productline = productlines.productline
+WHERE buyprice > 56.76 AND buyprice < 95.59;
 
-SELECT * FROM customers WHERE customerName = 'Atelier Graphique';
-
-SELECT * FROM customers WHERE customername like '%A%';
-
-SELECT * FROM customers WHERE city IN ('Nantes',' Las Vegas',' Warszawa','NYC');
+select productCode, productName, buyprice, quantityInStock, productVendor, productLine 
+from products 
+where productLine = 'Classic Cars' or productVendor = 'Min Lin Diecast'
