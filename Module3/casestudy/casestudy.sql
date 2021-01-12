@@ -311,5 +311,42 @@ left join hop_dong on khach_hang.id_khach_hang = hop_dong.id_khach_hang
 left join dich_vu on hop_dong.id_dich_vu = dich_vu.id_dich_vu
 left join hop_dong_chi_tiet on hop_dong_chi_tiet.id_hop_dong = hop_dong.id_hop_dong
 left join dich_vu_di_kem on hop_dong_chi_tiet.id_dich_vu_di_kem = dich_vu_di_kem.id_dich_vu_di_kem
-group by hop_dong.id_hop_dong
+group by hop_dong.id_hop_dong;
 
+-- task 6: 
+
+select dich_vu.id_dich_vu, dich_vu.ten_dich_vu, dich_vu.dien_tich, dich_vu.chi_phi_thue, loai_dich_vu.ten_loai_dich_vu
+from dich_vu
+inner join loai_dich_vu on dich_vu.id_loai_dich_vu = loai_dich_vu.id_loai_dich_vu
+where not exists (
+select hop_dong.id_dich_vu
+from hop_dong
+where (hop_dong.ngay_lam_hop_dong between '2020-11-1' and '2020-11-30') and hop_dong.id_dich_vu = dich_vu.id_dich_vu);
+
+-- task 7: 
+
+select dich_vu.id_dich_vu, dich_vu.ten_dich_vu, dich_vu.dien_tich, dich_vu.so_nguoi_toi_da, dich_vu.so_nguoi_toi_da, loai_dich_vu.ten_loai_dich_vu
+from dich_vu
+inner join loai_dich_vu on dich_vu.id_loai_dich_vu = loai_dich_vu.id_loai_dich_vu
+where exists (
+select hop_dong.id_hop_dong
+from hop_dong
+where year(hop_dong.ngay_lam_hop_dong) = '2020' and hop_dong.id_dich_vu = dich_vu.id_dich_vu)
+and not exists (
+select hop_dong.id_hop_dong
+from hop_dong
+where year(hop_dong.ngay_lam_hop_dong) = '2021' and hop_dong.id_dich_vu = dich_vu.id_dich_vu);
+
+-- task 8: 
+
+select distinct khach_hang.ho_ten
+from khach_hang;
+
+select  khach_hang.ho_ten
+from khach_hang
+group by khach_hang.ho_ten;
+
+select  khach_hang.ho_ten
+from khach_hang
+union select  khach_hang.ho_ten
+from khach_hang;
