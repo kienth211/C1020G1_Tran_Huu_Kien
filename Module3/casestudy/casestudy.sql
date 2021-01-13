@@ -267,7 +267,7 @@ insert  into `hop_dong_chi_tiet`(`id_hop_dong_chi_tiet`,`id_hop_dong`,`id_dich_v
 
 insert  into `hop_dong`(`id_hop_dong`,`id_nhan_vien`,`id_khach_hang`,`id_dich_vu`,`ngay_lam_hop_dong`,`ngay_ket_thuc`,`tien_dat_coc`,`tong_tien`) values 
 
-(1,1,1,1,'2020-8-8','2020-8-21',1000,null),
+(1,1,1,1,'2020-8-8','2020-8-21',1000,2000),
 
 (2,2,2,2,'2020-9-11','2020-9-21',2000,3000),
 
@@ -350,3 +350,32 @@ select  khach_hang.ho_ten
 from khach_hang
 union select  khach_hang.ho_ten
 from khach_hang;
+
+-- task 9: 
+
+select temp.month, count(hop_dong.ngay_lam_hop_dong) as so_khach_hang_dang_ky, sum(hop_dong.tong_tien) as tong_tien_1 from
+(select 1 as month
+union select 2 as month
+union select 3 as month
+union select 4 as month
+union select 5 as month
+union select 6 as month
+union select 7 as month
+union select 8 as month
+union select 9 as month
+union select 10 as month
+union select 11 as month
+union select 12 as month) as temp
+left join hop_dong on month(hop_dong.ngay_lam_hop_dong) = temp.month
+where year(hop_dong.ngay_lam_hop_dong) = '2020' or month(hop_dong.ngay_lam_hop_dong) is null
+group by temp.month;
+
+-- task 10: 
+
+select hop_dong.id_hop_dong, hop_dong.ngay_lam_hop_dong, hop_dong.ngay_ket_thuc, hop_dong.tien_dat_coc, 
+count(hop_dong_chi_tiet.id_dich_vu_di_kem) as so_luong_dich_vu_di_kem
+from hop_dong
+inner join hop_dong_chi_tiet on hop_dong.id_hop_dong = hop_dong_chi_tiet.id_hop_dong
+group by hop_dong.id_hop_dong
+
+
