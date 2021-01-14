@@ -185,17 +185,17 @@ insert  into `loai_khach`(`id_loai_khach`,`ten_loai_khach`) values
 
 insert  into `khach_hang`(`id_khach_hang`,`id_loai_khach`,`ho_ten`,`ngay_sinh`,`so_cmtnd`,`sdt`,`email`,`dia_chi`) values 
 
-(1,1,'dung','1996-1-1',0123456789,0123456789,'dung@dung.dung','dung'),
+(1,1,'dung','1996-1-1',0123456789,0123456789,'dung@dung.dung','Vinh'),
 
 (2,2,'thinh','1997-2-2',0321456789,0321456789,'thinh@thinh.thinh','thinh'),
 
-(3,3,'phin','1998-3-3',0123654789,0123654789,'phin@phin.phin','phin'),
+(3,1,'phin','1998-3-3',0123654789,0123654789,'phin@phin.phin','Vinh'),
 
 (4,4,'han','1999-4-4',0123456987,0123456987,'han@han.han','han'),
 
-(5,1,'hai','2000-5-5',0123789456,0123789456,'hai@hai.hai','hai'),
+(5,1,'hai','2000-5-5',0123789456,0123789456,'hai@hai.hai','Quảng Ngãi'),
 
-(6,1,'phin','1998-3-3',0123654789,0123654789,'phin@phin.phin','phin'),
+(6,1,'phin','1998-3-3',0123654789,0123654789,'phin@phin.phin','Quảng Ngãi'),
 
 (7,4,'tung','1980-2-2',0123654789,0123654789,'tung@tung.tung','tung');
 
@@ -376,6 +376,34 @@ select hop_dong.id_hop_dong, hop_dong.ngay_lam_hop_dong, hop_dong.ngay_ket_thuc,
 count(hop_dong_chi_tiet.id_dich_vu_di_kem) as so_luong_dich_vu_di_kem
 from hop_dong
 inner join hop_dong_chi_tiet on hop_dong.id_hop_dong = hop_dong_chi_tiet.id_hop_dong
-group by hop_dong.id_hop_dong
+group by hop_dong.id_hop_dong;
+
+-- task 11:
+
+select khach_hang.ho_ten, loai_khach.ten_loai_khach, khach_hang.dia_chi, dich_vu_di_kem.ten_dich_vu_di_kem
+from khach_hang
+left join loai_khach on khach_hang.id_loai_khach = loai_khach.id_loai_khach
+inner join hop_dong on khach_hang.id_khach_hang = hop_dong.id_khach_hang
+inner join hop_dong_chi_tiet on hop_dong.id_hop_dong = hop_dong_chi_tiet.id_hop_dong
+inner join dich_vu_di_kem on hop_dong_chi_tiet.id_dich_vu_di_kem = dich_vu_di_kem.id_dich_vu_di_kem
+where loai_khach.ten_loai_khach = 'diamond' and (khach_hang.dia_chi = 'Quảng Ngãi' or khach_hang.dia_chi = 'Vinh')
+group by khach_hang.id_khach_hang;
+
+-- task 12: 
+
+select hop_dong.id_hop_dong, nhan_vien.ho_ten 'tenNhanVien', khach_hang.ho_ten 'tenKhachHang', khach_hang.sdt 'sdtKhachHang', dich_vu.ten_dich_vu,
+hop_dong_chi_tiet.so_luong, hop_dong.tien_dat_coc
+from hop_dong
+left join khach_hang on hop_dong.id_khach_hang = khach_hang.id_khach_hang
+left join dich_vu on hop_dong.id_dich_vu = dich_vu.id_dich_vu
+left join hop_dong_chi_tiet on hop_dong.id_hop_dong = hop_dong_chi_tiet.id_hop_dong
+left join nhan_vien on hop_dong.id_nhan_vien = nhan_vien.id_nhan_vien
+where (month(hop_dong.ngay_lam_hop_dong) in (10,11,12)) and (month(hop_dong.ngay_lam_hop_dong) not in (1,2,3,4,5,6))
+group by hop_dong.id_hop_dong;
+
+
+
+
+
 
 
