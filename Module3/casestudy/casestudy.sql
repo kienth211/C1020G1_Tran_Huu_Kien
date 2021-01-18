@@ -185,28 +185,30 @@ insert  into `loai_khach`(`id_loai_khach`,`ten_loai_khach`) values
 
 insert  into `khach_hang`(`id_khach_hang`,`id_loai_khach`,`ho_ten`,`ngay_sinh`,`so_cmtnd`,`sdt`,`email`,`dia_chi`) values 
 
-(1,1,'dung','1996-1-1',0123456789,0123456789,'dung@dung.dung','Vinh'),
+(1,1,'Dũng','1996-1-1',0123456789,0123456789,'dung@dung.dung','Vinh'),
 
-(2,2,'thinh','1997-2-2',0321456789,0321456789,'thinh@thinh.thinh','thinh'),
+(2,2,'Thịnh','1997-2-2',0321456789,0321456789,'thinh@thinh.thinh','thinh'),
 
-(3,1,'phin','1998-3-3',0123654789,0123654789,'phin@phin.phin','Vinh'),
+(3,1,'Phin','1998-3-3',0123654789,0123654789,'phin@phin.phin','Vinh'),
 
-(4,4,'han','1999-4-4',0123456987,0123456987,'han@han.han','han'),
+(4,4,'Hân','1999-4-4',0123456987,0123456987,'han@han.han','han'),
 
-(5,1,'hai','2000-5-5',0123789456,0123789456,'hai@hai.hai','Quảng Ngãi'),
+(5,1,'Hải','2000-5-5',0123789456,0123789456,'hai@hai.hai','Quảng Ngãi'),
 
-(6,1,'phin','1998-3-3',0123654789,0123654789,'phin@phin.phin','Quảng Ngãi'),
+(6,1,'Tuấn','1998-3-3',0123654789,0123654789,'phin@phin.phin','Quảng Ngãi'),
 
-(7,4,'tung','1980-2-2',0123654789,0123654789,'tung@tung.tung','tung');
+(7,4,'Tùng','1980-2-2',0123654789,0123654789,'tung@tung.tung','tung'),
+
+(8,2,'Cao','1990-2-2',0123654789,0123654789,'tung@tung.tung','tung'),
+
+(9,2,'Long','1991-2-2',0123654789,0123654789,'tung@tung.tung','tung');
 
 -- data loai_dich_vu:
 
 insert  into `loai_dich_vu`(`id_loai_dich_vu`,`ten_loai_dich_vu`) values 
 
 (1,'villa'),
-
 (2,'house'),
-
 (3,'room');
 
 -- data kieu_thue:
@@ -214,11 +216,8 @@ insert  into `loai_dich_vu`(`id_loai_dich_vu`,`ten_loai_dich_vu`) values
 insert  into `kieu_thue`(`id_kieu_thue`,`ten_kieu_thue`,`gia`) values 
 
 (1,'nam',100),
-
 (2,'thang',200),
-
 (3,'ngay',300),
-
 (4,'gio',400);
 
 -- data dich_vu:
@@ -226,13 +225,9 @@ insert  into `kieu_thue`(`id_kieu_thue`,`ten_kieu_thue`,`gia`) values
 insert  into `dich_vu`(`id_dich_vu`,`ten_dich_vu`,`dien_tich`,`so_tang`,`so_nguoi_toi_da`,`chi_phi_thue`,`id_kieu_thue`,`id_loai_dich_vu`,`trang_thai`) values 
 
 (1,'xanh',60,2,10,500,1,1,'dang su dung'),
-
 (2,'trang',70,3,11,400,2,2,'dang su dung'),
-
 (3,'do',80,4,12,300,3,3,'chua su dung'),
-
 (4,'hong',90,3,9,600,4,2,'chua su dung'),
-
 (5,'vang',50,4,15,700,1,3,'dang su dung');
 
 -- data dich_vu_di_kem:
@@ -240,13 +235,9 @@ insert  into `dich_vu`(`id_dich_vu`,`ten_dich_vu`,`dien_tich`,`so_tang`,`so_nguo
 insert  into `dich_vu_di_kem`(`id_dich_vu_di_kem`,`ten_dich_vu_di_kem`,`gia`,`don_vi`,`trang_thai_kha_dung`) values 
 
 (1,'massage',10,'dollar','dang kha dung'),
-
 (2,'karaoke',20,'dollar','dang kha dung'),
-
 (3,'thuc an',30,'dollar','dang kha dung'),
-
 (4,'nuoc uong',40,'dollar','dang kha dung'),
-
 (5,'xe',50,'dollar','dang kha dung');
 
 -- data hop_dong_chi_tiet:
@@ -254,32 +245,28 @@ insert  into `dich_vu_di_kem`(`id_dich_vu_di_kem`,`ten_dich_vu_di_kem`,`gia`,`do
 insert  into `hop_dong_chi_tiet`(`id_hop_dong_chi_tiet`,`id_hop_dong`,`id_dich_vu_di_kem`,`so_luong`) values 
 
 (1,1,1,2),
-
 (2,2,2,3),
-
 (3,3,3,4),
-
 (4,4,4,5),
-
-(5,5,5,6);
+(5,5,5,6),
+(6,4,2,5),
+(7,3,4,6);
 
 -- data hop_dong:
 
 insert  into `hop_dong`(`id_hop_dong`,`id_nhan_vien`,`id_khach_hang`,`id_dich_vu`,`ngay_lam_hop_dong`,`ngay_ket_thuc`,`tien_dat_coc`,`tong_tien`) values 
 
-(1,1,1,1,'2020-8-8','2020-8-21',1000,2000),
-
-(2,2,2,2,'2020-9-11','2020-9-21',2000,3000),
-
-(3,3,3,3,'2020-10-12','2020-12-21',3000,4000),
-
-(4,4,4,4,'2020-11-11','2020-11-21',4000,5000),
-
-(5,5,5,5,'2020-12-12','2020-12-21',5000,6000),
-
-(6,5,6,4,'2020-12-12','2020-12-15',5000,7000),
-
-(7,5,6,3,'2020-12-17','2020-12-20',5000,8000);
+(1,1,1,1,'2020-1-8','2020-1-21',1000,2000),
+(2,2,2,2,'2020-2-11','2020-2-21',2000,3000),
+(3,3,3,3,'2020-3-12','2020-3-21',3000,4000),
+(4,4,4,4,'2020-4-11','2020-4-21',4000,5000),
+(5,5,5,5,'2021-5-12','2021-5-21',5000,6000),
+(6,5,6,4,'2021-6-12','2021-6-15',5000,7000),
+(7,5,6,3,'2021-7-17','2021-7-20',5000,8000),
+(8,5,6,4,'2021-8-12','2021-8-15',5000,7000),
+(9,3,2,1,'2021-9-12','2021-9-15',5000,7000),
+(10,3,8,1,'2021-9-12','2021-9-15',5000,7000),
+(11,3,8,2,'2021-9-12','2021-9-15',5000,7000);
 
 -- task 2: 
 
@@ -400,6 +387,132 @@ left join hop_dong_chi_tiet on hop_dong.id_hop_dong = hop_dong_chi_tiet.id_hop_d
 left join nhan_vien on hop_dong.id_nhan_vien = nhan_vien.id_nhan_vien
 where (month(hop_dong.ngay_lam_hop_dong) in (10,11,12)) and (month(hop_dong.ngay_lam_hop_dong) not in (1,2,3,4,5,6))
 group by hop_dong.id_hop_dong;
+
+-- task 13: 
+
+create temporary table temp
+select dich_vu_di_kem.ten_dich_vu_di_kem as ten_dich_vu_di_kem, count(hop_dong_chi_tiet.id_dich_vu_di_kem) as so_lan_su_dung
+from hop_dong_chi_tiet
+inner join dich_vu_di_kem on dich_vu_di_kem.id_dich_vu_di_kem = hop_dong_chi_tiet.id_dich_vu_di_kem
+group by dich_vu_di_kem.ten_dich_vu_di_kem;
+
+-- select *
+-- from temp;
+
+create temporary table temp_1
+select max(temp.so_lan_su_dung) as max_so_lan_su_dung
+from temp;
+
+-- select *
+-- from temp_1;
+
+select temp.ten_dich_vu_di_kem, temp.so_lan_su_dung
+from temp
+inner join temp_1 on temp.so_lan_su_dung = temp_1.max_so_lan_su_dung;
+
+drop table temp;
+drop table temp_1;
+
+-- task 14
+
+select nhan_vien.id_nhan_vien, loai_dich_vu.ten_loai_dich_vu, dich_vu_di_kem.ten_dich_vu_di_kem, count(dich_vu_di_kem.id_dich_vu_di_kem) as so_lan_su_dung
+from dich_vu_di_kem
+left join hop_dong_chi_tiet on dich_vu_di_kem.id_dich_vu_di_kem = hop_dong_chi_tiet.id_dich_vu_di_kem
+left join hop_dong on hop_dong.id_hop_dong = hop_dong_chi_tiet.id_hop_dong
+left join nhan_vien on nhan_vien.id_nhan_vien = hop_dong.id_nhan_vien
+left join dich_vu on dich_vu.id_dich_vu = hop_dong.id_dich_vu
+left join loai_dich_vu on loai_dich_vu.id_loai_dich_vu = dich_vu.id_loai_dich_vu
+group by dich_vu_di_kem.id_dich_vu_di_kem
+having so_lan_su_dung = 1;
+
+-- task 15
+
+select nhan_vien.id_nhan_vien, nhan_vien.ho_ten, trinh_do.trinh_do, bo_phan.ten_bo_phan, nhan_vien.sdt, nhan_vien.dia_chi
+from nhan_vien
+left join trinh_do on nhan_vien.id_trinh_do = trinh_do.id_trinh_do
+inner join bo_phan on nhan_vien.id_bo_phan = bo_phan.id_bo_phan
+inner join hop_dong on nhan_vien.id_nhan_vien = hop_dong.id_nhan_vien
+where month(hop_dong.ngay_lam_hop_dong) between 1 and 3;
+
+-- task 16:
+
+create temporary table temp_table 
+select hop_dong.id_nhan_vien as id_nhan_vien
+from hop_dong
+where hop_dong.ngay_lam_hop_dong < '2021-01-01'
+group by hop_dong.id_nhan_vien;
+
+DELETE FROM hop_dong 
+WHERE hop_dong.id_nhan_vien in (
+select temp_table.id_nhan_vien
+from temp_table);
+
+delete from nhan_vien
+where nhan_vien.id_nhan_vien in (
+select temp_table.id_nhan_vien
+from temp_table);
+
+drop temporary table temp_table;
+
+-- task 17:
+
+drop temporary table temp;
+
+create temporary table temp
+select khach_hang.id_khach_hang, sum(hop_dong.tong_tien)
+from khach_hang
+left join hop_dong on khach_hang.id_khach_hang = hop_dong.id_khach_hang
+inner join loai_khach on khach_hang.id_loai_khach = loai_khach.id_loai_khach
+where loai_khach.ten_loai_khach = 'platinium'
+group by hop_dong.id_khach_hang
+having sum(hop_dong.tong_tien) > 10000;
+
+update khach_hang
+set khach_hang.id_loai_khach = 1
+where khach_hang.id_khach_hang in (
+select temp.id_khach_hang
+from temp);
+
+-- task 18:
+
+create temporary table temp 
+select hop_dong.id_khach_hang
+from hop_dong
+where hop_dong.ngay_lam_hop_dong < '2021-01-01'
+group by hop_dong.id_khach_hang;
+
+DELETE FROM hop_dong 
+WHERE hop_dong.id_khach_hang in (
+select temp.id_khach_hang
+from temp);
+
+delete from khach_hang
+where khach_hang.id_khach_hang in (
+select temp.id_khach_hang
+from temp);
+
+-- task 19:
+
+create temporary table temp
+select dich_vu_di_kem.ten_dich_vu_di_kem, count(hop_dong_chi_tiet.id_dich_vu_di_kem) as so_lan_su_dung
+from hop_dong_chi_tiet
+left join dich_vu_di_kem on dich_vu_di_kem.id_dich_vu_di_kem = hop_dong_chi_tiet.id_dich_vu_di_kem
+group by hop_dong_chi_tiet.id_dich_vu_di_kem
+having count(hop_dong_chi_tiet.id_dich_vu_di_kem) > 1;
+
+update dich_vu_di_kem
+set gia = gia * 2
+where dich_vu_di_kem.ten_dich_vu_di_kem in (
+select temp.ten_dich_vu_di_kem
+from temp);
+
+-- task 20:
+
+select id_nhan_vien as id, ho_ten, email, sdt, ngay_sinh, dia_chi
+from nhan_vien
+union all
+select id_khach_hang as id, ho_ten, email, sdt, ngay_sinh, dia_chi
+from khach_hang;
 
 
 
