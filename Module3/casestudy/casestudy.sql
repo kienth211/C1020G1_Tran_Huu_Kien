@@ -508,11 +508,15 @@ from temp);
 
 -- task 20:
 
-select id_nhan_vien as id, ho_ten, email, sdt, ngay_sinh, dia_chi
+select id_nhan_vien as id, ho_ten, email, sdt, ngay_sinh, dia_chi, 'nhan_vien' as chuc_vu
 from nhan_vien
 union all
-select id_khach_hang as id, ho_ten, email, sdt, ngay_sinh, dia_chi
+select id_khach_hang as id, ho_ten, email, sdt, ngay_sinh, dia_chi,'khach_hang' as chuc_vu
 from khach_hang;
+
+-- task 21:
+
+
 
 
 
