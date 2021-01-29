@@ -60,8 +60,8 @@
             </tr>
         </c:forEach>
     </table>
-<%--    ${tmp}--%>
-<%--    <c:out value="${tmp}" />--%>
+    ${tmp}
+    <c:out value="${tmp}" />
 <%--    <c:set scope=""--%>
 </body>
 </html>
