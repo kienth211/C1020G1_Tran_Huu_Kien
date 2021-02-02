@@ -7,10 +7,10 @@ import java.util.List;
 
 public interface EmployeeRepository {
 
-//    void save(User user);
+    void save(Employee employee);
     List<Employee> findAll();
-//    User findById(Integer id);
-//    User findByName(String name);
-//    void deleteById(Integer id);
+    Employee findById(Integer id);
+    List<Employee> findByName(String name);
+    void deleteById(Integer id);
 //    User getUserById(Integer id);
 }
