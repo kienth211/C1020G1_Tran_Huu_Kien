@@ -1,7 +1,6 @@
 package service.impl;
 
 import bean.Employee;
-import bean.User;
 import repository.EmployeeRepository;
 import repository.impl.EmployeeRepositoryImpl;
 import service.EmployeeService;

@@ -32,7 +32,7 @@ foreign key (role_id) references `role`(role_id),
 foreign key (user_username) references `user`(user_username)
 );
 create table employee(
-employee_id int auto_increment primary key,
+employee_id int primary key auto_increment,
 employee_name varchar(45) not null,
 employee_birthday date not null,
 employee_id_card varchar(45) not null,
@@ -47,7 +47,8 @@ division_id int,
 foreign key (position_id) references `position`(position_id),
 foreign key (education_degree_id) references education_degree(education_degree_id),
 foreign key (division_id) references division(division_id),
-foreign key (user_username) references `user`(user_username)
+foreign key (user_username) references `user`(user_username) 
+-- on delete cascade
 );
 create table customer_type(
 customer_type_id int primary key,
@@ -119,35 +120,80 @@ foreign key (contract_id) references contract(contract_id)
 );
 
 insert into `position`(position_id, position_name) values
-(1, 'Manager');
+(1, 'Receptionist'),
+(2, 'Server'),
+(3, 'Expert'),
+(4, 'Supervisor'),
+(5, 'Manager'),
+(6, 'President'),
+(7, 'Other');
 
 insert into education_degree(education_degree_id, education_degree_name) values
-(1, 'University');
+(1, 'Intermediate'),
+(2, 'Colleges'),
+(3, 'University'),
+(4, 'After University'),
+(5, 'Other');
 
 insert into division(division_id, division_name) values
-(1, 'Manager');
+(1, 'Sale Marketing'),
+(2, 'Server'),
+(3, 'Manager'),
+(4, 'Administration'),
+(5, 'Other');
 
 insert into `user`(user_username, user_password) values
-('kien221091', '123456878');
+('kien221091', '123456878'),
+('son241097', '123456878'),
+('cao070696', '123456878'),
+('dung250197', '123456878'),
+('thanh221294', '123456878');
 
-insert into employee(employee_id, employee_name, employee_birthday, employee_id_card, employee_salary, employee_phone,
+insert into employee(employee_name, employee_birthday, employee_id_card, employee_salary, employee_phone,
 employee_email, employee_address, user_username, position_id, education_degree_id, division_id) values
-(1, 'Kien', '1991-10-22', '123456879', 5000.0, '0123456879', 'kien@kien.kien', 'Nghe An', 'kien221091', 1, 1, 1);
+('Kiên', '1991-10-22', '123456879', 5000.0, '0123456879', 'kien@kien.kien', 'Nghệ An', 'kien221091', 1, 1, 1),
+('Sơn', '1997-10-24', '123456879', 5000.0, '0123456879', 'son@son.son', 'Tây Ninh', 'son241097', 2, 2, 2),
+('Cao', '1996-06-07', '123456879', 5000.0, '0123456879', 'cao@cao.cao', 'Huế', 'cao070696', 3, 3, 3),
+('Dũng', '1997-01-25', '123456879', 5000.0, '0123456879', 'dung@dung.dung', 'Nghệ An', 'dung250197', 4, 4, 4),
+('Thanh', '1994-12-22', '123456879', 5000.0, '0123456879', 'thanh@thanh.thanh', 'Quảng Nam', 'thanh221294', 5, 5, 5);
 
-delimiter //
+-- delimiter //
 
-create procedure employee_view()
-begin
-select employee_id, employee_name, employee_birthday, employee_id_card, employee_salary, employee_phone,
-employee_email, employee_address, user_username, position_name, education_degree_name, division_name
-from  employee
-left join `position` on employee.position_id = `position`.position_id
-left join education_degree on employee.education_degree_id = education_degree.education_degree_id
-left join division on employee.division_id = division.division_id;
-end
+-- create procedure employee_view()
+-- begin
+-- select employee_id, employee_name, employee_birthday, employee_id_card, employee_salary, employee_phone,
+-- employee_email, employee_address, user_username, position_name, education_degree_name, division_name
+-- from  employee
+-- left join `position` on employee.position_id = `position`.position_id
+-- left join education_degree on employee.education_degree_id = education_degree.education_degree_id
+-- left join division on employee.division_id = division.division_id;
+-- end
 
-// delimiter ;
+-- // delimiter ;
 
-call employee_view();
+-- call employee_view();
 
 drop procedure employee_view;
+
+create trigger add_username before insert on employee
+for each row
+insert into `user`(user_username)
+values (new.user_username);
+
+drop trigger add_username;
+
+create trigger delete_username after delete on employee
+for each row
+delete from `user`
+where old.user_username = `user`.user_username;
+
+drop trigger delete_username;
+
+delete from `user`
+where user_username = 'son241097';
+
+create trigger delete_employee before delete on `user`
+for each row
+delete from employee
+where old.user_username = employee.user_username;
+

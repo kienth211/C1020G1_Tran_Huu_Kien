@@ -1,7 +1,5 @@
 package service.function;
 
-import service.exception.*;
-
 import java.util.Date;
 
 public class Regex {
@@ -246,6 +244,7 @@ public class Regex {
         String regex = "\\w+@\\w+(\\.\\w+){1,5}";
         return email.matches(regex);
     }
+    
 //
 //    public String regexCustomerType() throws CustomerTypeException {
 //        String regex = "(Diamond|Platinum|Gold|Silver|Member)";

@@ -1,7 +1,6 @@
 package controller;
 
 import bean.Employee;
-import bean.User;
 import service.EmployeeService;
 import service.function.Input;
 import service.impl.EmployeeServiceImpl;
@@ -13,19 +12,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "EmployeeServlet", urlPatterns = {"", "/EmployeeServlet"})
+@WebServlet(name = "EmployeeServlet", urlPatterns = "/EmployeeServlet")
 public class EmployeeServlet extends HttpServlet {
-    Input input = new Input();
-    //    List<String> list = new ArrayList<>();
     private EmployeeService employeeService = new EmployeeServiceImpl();
     String actionUser;
-    String temp;
-    Boolean status;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
+
         actionUser = request.getParameter("actionUser");
         switch (actionUser) {
             case "create":
@@ -42,6 +40,10 @@ public class EmployeeServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
+
         actionUser = request.getParameter("actionUser");
 
         if (actionUser == null) {
@@ -176,9 +178,7 @@ public class EmployeeServlet extends HttpServlet {
     }
 
     private void showViewForm(HttpServletRequest request, HttpServletResponse response) {
-//        List<Employee> listView = new ArrayList<>();
         String name = request.getParameter("name");
-//        listView = employeeService.findByName(name);
         List<Employee> listView = employeeService.findByName(name);
         RequestDispatcher dispatcher;
         String messenger;

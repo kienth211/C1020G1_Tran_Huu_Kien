@@ -10,107 +10,256 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
-        /*td {*/
-        /*    white-space: nowrap;*/
-        /*}*/
-
-        /*.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {*/
-        /*    background-color: #ffc77e;*/
-        /*}*/
+        td {
+            width: 24%;
+        }
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-dark" style="height: 50px">
-    <div class="d-flex align-items-center justify-content-begin">
-        <a class="btn btn-primary" href="/EmployeeServlet" role="button">Back to Employee list</a>
-    </div>
-    <div class="d-flex align-items-center justify-content-begin">
-        <h1 style="color: white">Create new user</h1>
-    </div>
-</nav>
-<p>
-    <c:if test='${requestScope["messenger"] == "OK"}'>
-<div class="alert alert-success" role="alert">
-    Employee created successfully
-</div>
-</c:if>
+<ul class="nav nav-pills mb-3 bg-secondary" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" href="/MainServlet" role="tab">Main Page</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#pills-profile" role="tab">Service</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#pills-contact" role="tab">Customer</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="/EmployeeServlet" role="tab">Employee</a>
+    </li>
+</ul>
 
-<c:if test='${(requestScope["messenger"] != "OK") && (requestScope["messenger"] != null)}'>
-    <div class="alert alert-danger" role="alert">
-            ${requestScope["messenger"]}
+<div>
+    <div class="d-flex align-items-center float-left">
+        <a class="btn btn-primary" href="/EmployeeServlet" role="button">
+            Back to Employee list
+        </a>
     </div>
-</c:if>
-</p>
-<%--<p>--%>
-<%--    <a href="/EmployeeServlet">Back to Employee list</a>--%>
-<%--</p>--%>
+    <div class="d-flex align-items-center float-right">
+        <h2>
+            Create Employee
+        </h2>
+    </div>
+</div>
+
+<div style="clear:both">
+    <c:if test='${requestScope["messenger"] == "OK"}'>
+        <div class="alert alert-success" role="alert">
+            Employee created successfully
+        </div>
+    </c:if>
+    <c:if test='${(requestScope["messenger"] != "OK") && (requestScope["messenger"] != null)}'>
+        <div class="alert alert-danger" role="alert">
+                ${requestScope["messenger"]}
+        </div>
+    </c:if>
+</div>
+
 <c:if test='${requestScope["messenger"] != "OK"}'>
-<form method="post" action="/EmployeeServlet">
-    <input type="hidden" name="actionUser" value="create">
-    <fieldset>
-        <legend>Employee information</legend>
-        <table>
-            <tr>
-                <td>*Name:</td>
-                <td><input type="text" value="${employeeInfo.employee_name}" name="employee_name"></td>
-            </tr>
-            <tr>
-                <td>*Birthday:</td>
-                <td><input type="text" value="${employeeInfo.employee_birthday}" name="employee_birthday"></td>
-            </tr>
-            <tr>
-                <td>*ID Card:</td>
-                <td>
-                    <input type="text" value="${employeeInfo.employee_id_card}" name="employee_id_card">
-                </td>
-            </tr>
-            <tr>
-                <td>*Salary:</td>
-                <td>
-                    <input type="text" value="${employeeInfo.employee_salary}" name="employee_salary">
-                </td>
-            </tr>
-            <tr>
-                <td>*Phone:</td>
-                <td><input type="text" value="${employeeInfo.employee_phone}" name="employee_phone"></td>
-            </tr>
-            <tr>
-                <td>Email:</td>
-                <td><input type="text" value="${employeeInfo.employee_email}" name="employee_email"></td>
-            </tr>
-            <tr>
-                <td>Address:</td>
-                <td><input type="text" value="${employeeInfo.employee_address}" name="employee_address"></td>
-            </tr>
-            <tr>
-                <td>Username:</td>
-                <td><input type="text" value="${employeeInfo.user_username}" name="user_username"></td>
-            </tr>
-            <tr>
-                <td>Position:</td>
-                <td>
-                    <input type="text" value="${employeeInfo.position_id}" name="position_id">
-                </td>
-            </tr>
-            <tr>
-                <td>Education Degree:</td>
-                <td>
-                    <input type="text" value="${employeeInfo.education_degree_id}" name="education_degree_id">
-                </td>
-            </tr>
-            <tr>
-                <td>Division:</td>
-                <td>
-                    <input type="text" value="${employeeInfo.division_id}" name="division_id">
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" value="Create employee"></td>
-            </tr>
-        </table>
-    </fieldset>
-</form>
+    <div class="container" style="clear:both">
+        <form method="post" action="/EmployeeServlet">
+            <input type="hidden" name="actionUser" value="create">
+            <table>
+                <tr>
+                    <td>*Name:</td>
+                    <td><input type="text" value="${employeeInfo.employee_name}" name="employee_name"></td>
+                    <td>Address:</td>
+                    <td><input type="text" value="${employeeInfo.employee_address}" name="employee_address"></td>
+                </tr>
+                <tr>
+                    <td>*Birthday:</td>
+                    <td><input type="text" value="${employeeInfo.employee_birthday}" name="employee_birthday"></td>
+                    <td>Username:</td>
+                    <td><input type="text" value="${employeeInfo.user_username}" name="user_username"></td>
+                </tr>
+                <tr>
+                    <td>*ID Card:</td>
+                    <td>
+                        <input type="text" value="${employeeInfo.employee_id_card}" name="employee_id_card">
+                    </td>
+                    <td>Position:</td>
+                    <td>
+                        <div class="input-group mb-3">
+                            <select class="custom-select" name="position_id">
+                                <c:set var="num" value="${employeeInfo.position_id}"></c:set>
+                                <c:if test="${(num == null) || (num == 7)}">
+                                    <option selected value="7">Other</option>
+                                    <option value="1">Receptionist</option>
+                                    <option value="2">Server</option>
+                                    <option value="3">Expert</option>
+                                    <option value="4">Supervisor</option>
+                                    <option value="5">Manager</option>
+                                    <option value="6">President</option>
+                                </c:if>
+                                <c:if test="${num == 1}">
+                                    <option value="7">Other</option>
+                                    <option selected value="1">Receptionist</option>
+                                    <option value="2">Server</option>
+                                    <option value="3">Expert</option>
+                                    <option value="4">Supervisor</option>
+                                    <option value="5">Manager</option>
+                                    <option value="6">President</option>
+                                </c:if>
+                                <c:if test="${num == 2}">
+                                    <option value="7">Other</option>
+                                    <option value="1">Receptionist</option>
+                                    <option selected value="2">Server</option>
+                                    <option value="3">Expert</option>
+                                    <option value="4">Supervisor</option>
+                                    <option value="5">Manager</option>
+                                    <option value="6">President</option>
+                                </c:if>
+                                <c:if test="${num == 3}">
+                                    <option value="7">Other</option>
+                                    <option value="1">Receptionist</option>
+                                    <option value="2">Server</option>
+                                    <option selected value="3">Expert</option>
+                                    <option value="4">Supervisor</option>
+                                    <option value="5">Manager</option>
+                                    <option value="6">President</option>
+                                </c:if>
+                                <c:if test="${num == 4}">
+                                    <option value="7">Other</option>
+                                    <option value="1">Receptionist</option>
+                                    <option value="2">Server</option>
+                                    <option value="3">Expert</option>
+                                    <option selected value="4">Supervisor</option>
+                                    <option value="5">Manager</option>
+                                    <option value="6">President</option>
+                                </c:if>
+                                <c:if test="${num == 5}">
+                                    <option value="7">Other</option>
+                                    <option value="1">Receptionist</option>
+                                    <option value="2">Server</option>
+                                    <option value="3">Expert</option>
+                                    <option value="4">Supervisor</option>
+                                    <option selected value="5">Manager</option>
+                                    <option value="6">President</option>
+                                </c:if>
+                                <c:if test="${num == 6}">
+                                    <option value="7">Other</option>
+                                    <option value="1">Receptionist</option>
+                                    <option value="2">Server</option>
+                                    <option value="3">Expert</option>
+                                    <option value="4">Supervisor</option>
+                                    <option value="5">Manager</option>
+                                    <option selected value="6">President</option>
+                                </c:if>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>*Salary:</td>
+                    <td>
+                        <input type="text" value="${employeeInfo.employee_salary}" name="employee_salary">
+                    </td>
+                    <td>Education Degree:</td>
+                    <td>
+                        <div class="input-group mb-3">
+                            <select class="custom-select" name="education_degree_id">
+                                <c:set var="num" value="${employeeInfo.education_degree_id}"></c:set>
+                                <c:if test="${(num == null) || (num == 5)}">
+                                    <option selected value="5">Other</option>
+                                    <option value="1">Intermediate</option>
+                                    <option value="2">Colleges</option>
+                                    <option value="3">University</option>
+                                    <option value="4">After University</option>
+                                </c:if>
+                                <c:if test="${num == 1}">
+                                    <option value="5">Other</option>
+                                    <option selected value="1">Intermediate</option>
+                                    <option value="2">Colleges</option>
+                                    <option value="3">University</option>
+                                    <option value="4">After University</option>
+                                </c:if>
+                                <c:if test="${num == 2}">
+                                    <option value="5">Other</option>
+                                    <option value="1">Intermediate</option>
+                                    <option selected value="2">Colleges</option>
+                                    <option value="3">University</option>
+                                    <option value="4">After University</option>
+                                </c:if>
+                                <c:if test="${num == 3}">
+                                    <option value="5">Other</option>
+                                    <option value="1">Intermediate</option>
+                                    <option value="2">Colleges</option>
+                                    <option selected value="3">University</option>
+                                    <option value="4">After University</option>
+                                </c:if>
+                                <c:if test="${num == 4}">
+                                    <option value="5">Other</option>
+                                    <option value="1">Intermediate</option>
+                                    <option value="2">Colleges</option>
+                                    <option value="3">University</option>
+                                    <option selected value="4">After University</option>
+                                </c:if>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>*Phone:</td>
+                    <td><input type="text" value="${employeeInfo.employee_phone}" name="employee_phone"></td>
+                    <td>
+                        Division:
+                    </td>
+                    <td>
+                        <div class="input-group mb-3">
+                            <select class="custom-select" name="division_id">
+                                <c:set var="num" value="${employeeInfo.division_id}"></c:set>
+                                <c:if test="${(num == null) || (num == 5)}">
+                                    <option selected value="5">Other</option>
+                                    <option value="1">Sale Marketing</option>
+                                    <option value="2">Server</option>
+                                    <option value="3">Manager</option>
+                                    <option value="4">Administration</option>
+                                </c:if>
+                                <c:if test="${num == 1}">
+                                    <option value="5">Other</option>
+                                    <option selected value="1">Sale Marketing</option>
+                                    <option value="2">Server</option>
+                                    <option value="3">Manager</option>
+                                    <option value="4">Administration</option>
+                                </c:if>
+                                <c:if test="${num == 2}">
+                                    <option value="5">Other</option>
+                                    <option value="1">Sale Marketing</option>
+                                    <option selected value="2">Server</option>
+                                    <option value="3">Manager</option>
+                                    <option value="4">Administration</option>
+                                </c:if>
+                                <c:if test="${num == 3}">
+                                    <option value="5">Other</option>
+                                    <option value="1">Sale Marketing</option>
+                                    <option value="2">Server</option>
+                                    <option selected value="3">Manager</option>
+                                    <option value="4">Administration</option>
+                                </c:if>
+                                <c:if test="${num == 4}">
+                                    <option value="5">Other</option>
+                                    <option value="1">Sale Marketing</option>
+                                    <option value="2">Server</option>
+                                    <option value="3">Manager</option>
+                                    <option selected value="4">Administration</option>
+                                </c:if>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="text" value="${employeeInfo.employee_email}" name="employee_email"></td>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Create employee">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </c:if>
 </body>
 </html>

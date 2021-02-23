@@ -1,10 +1,8 @@
 package repository.impl;
 
 import bean.Employee;
-import bean.User;
 import repository.EmployeeRepository;
 
-import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -168,9 +166,14 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
                 employee.setEmployee_name(resultSet.getString("employee_name"));
                 employee.setEmployee_birthday(resultSet.getString("employee_birthday"));
                 employee.setEmployee_id_card(resultSet.getString("employee_id_card"));
+                employee.setEmployee_salary(resultSet.getString("employee_salary"));
                 employee.setEmployee_phone(resultSet.getString("employee_phone"));
                 employee.setEmployee_email(resultSet.getString("employee_email"));
                 employee.setEmployee_address(resultSet.getString("employee_address"));
+                employee.setUser_username(resultSet.getString("user_username"));
+                employee.setPosition_id(resultSet.getString("position_id"));
+                employee.setEducation_degree_id(resultSet.getString("education_degree_id"));
+                employee.setDivision_id(resultSet.getString("division_id"));
 
                 employeeList.add(employee);
             }
