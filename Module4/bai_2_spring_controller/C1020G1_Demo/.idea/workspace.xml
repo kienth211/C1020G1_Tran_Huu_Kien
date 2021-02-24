@@ -6,12 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5db964-ea1d-443d-8ecb-32ae04c6f476" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Module3/casestudy/casestudyMain/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module3/casestudy/casestudyMain/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai_1_tong_quan_spring/bai tap/e2/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_1_tong_quan_spring/bai tap/e2/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai_1_tong_quan_spring/bai tap/e2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_1_tong_quan_spring/bai tap/e2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai_1_tong_quan_spring/thuc hanh/p1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_1_tong_quan_spring/thuc hanh/p1/.idea/gradle.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8e5db964-ea1d-443d-8ecb-32ae04c6f476" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,11 +160,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -189,6 +179,7 @@
       <updated>1614046820790</updated>
       <workItem from="1614046824351" duration="4071000" />
       <workItem from="1614052026610" duration="4140000" />
+      <workItem from="1614129115851" duration="242000" />
     </task>
     <servers />
   </component>
@@ -204,10 +195,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="360" y="71" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1536.824@0.0.1536.824" timestamp="1614052286949" />
-    <state x="549" y="115" key="FileChooserDialogImpl" timestamp="1614054312869">
+    <state x="549" y="115" key="FileChooserDialogImpl" timestamp="1614129204972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="115" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614054312869" />
+    <state x="549" y="115" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614129204972" />
     <state width="1024" height="210" key="GridCell.Tab.0.bottom" timestamp="1614075433005">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -260,10 +251,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1614052112951" />
-    <state x="209" y="25" key="new project wizard" timestamp="1614054320339">
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1614129162292">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="209" y="25" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1614054320339" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1614129162292" />
+    <state x="209" y="25" key="new project wizard" timestamp="1614129206892">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="25" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1614129206892" />
   </component>
   <component name="masterDetails">
     <states>
