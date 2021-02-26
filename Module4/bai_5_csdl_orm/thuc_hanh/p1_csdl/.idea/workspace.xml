@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fe370275-8966-4e39-b253-3debefc06387" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/5.2.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/java/e1/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/java/e1/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/java/e1/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/java/e1/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/java/e1/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/java/e1/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/webapp/WEB-INF/views/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/webapp/WEB-INF/views/save.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.idea/artifacts/p1_customer_main_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/classes/java/main/p1/AppConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/classes/java/main/p1/AppInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/classes/java/main/p1/controller/CustomerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/classes/java/main/p1/model/Customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/classes/java/main/p1/service/CustomerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/classes/java/main/p1/service/CustomerServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/classes/p1/AppConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/classes/p1/AppInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/classes/p1/controller/CustomerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/classes/p1/model/Customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/classes/p1/service/CustomerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/classes/p1/service/CustomerServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/spring-aop-4.3.17.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/spring-beans-4.3.17.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/spring-context-4.3.17.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/spring-core-4.3.17.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/spring-expression-4.3.17.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/spring-web-4.3.17.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/spring-webmvc-4.3.17.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/p1_customer-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/classes/p1/AppConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/classes/p1/AppInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/classes/p1/controller/CustomerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/classes/p1/model/Customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/classes/p1/service/CustomerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/classes/p1/service/CustomerServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/junit-4.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/spring-aop-4.3.17.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/spring-beans-4.3.17.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/spring-context-4.3.17.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/spring-core-4.3.17.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/spring-expression-4.3.17.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/spring-web-4.3.17.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/spring-webmvc-4.3.17.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/p1_customer-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/java/p1/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/p1/AppConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/p1/AppInit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/p1/controller/CustomerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/p1/model/Customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/p1/service/CustomerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/p1/service/impl/SimpleCustomerServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/libs/p1_csdl-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/p1/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/p1/AppInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/p1/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/p1/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/p1/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/p1/service/impl/SimpleCustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customers/info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customers/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_3_data_binding/thuc_hanh/C1020G1_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_3_data_binding/thuc_hanh/C1020G1_Demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/java/p1/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/java/p1/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/java/p1/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/java/p1/service/CustomerServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="G:\C1020G1_Tran_Huu_Kien\Module4\bai_5_csdl_orm\thuc_hanh\p1_csdl\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1p0EL0sCj4Ep70ZYkY8mhBitIbq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\C1020G1_Tran_Huu_Kien\Module4\bai_5_csdl_orm\thuc_hanh\p1_csdl\src\main\webapp\WEB-INF\views" />
+      <recent name="G:\C1020G1_Tran_Huu_Kien\Module4\bai_5_csdl_orm\thuc_hanh\p1_csdl\src\main\java\p1" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.21" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.21" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="HOT_SWAP_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+      <deployment>
+        <artifact name="Gradle : org.example : p1_csdl-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_p1_csdl" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56892" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : org.example : p1_csdl-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_p1_csdl" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56892" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="targets">
+            <list>
+              <WatchedTargetModelImpl>
+                <option name="name" value="CONTEXT_XML" />
+                <name>CONTEXT_XML</name>
+              </WatchedTargetModelImpl>
+              <StagingTargetModelImpl>
+                <option name="name" value="STAGING" />
+                <name>STAGING</name>
+              </StagingTargetModelImpl>
+            </list>
+          </option>
+          <option name="transportHostId" />
+        </data>
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="TOMCAT_LOCALHOST_LOG_ID" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56891" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fe370275-8966-4e39-b253-3debefc06387" name="Default Changelist" comment="" />
+      <created>1614311547913</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614311547913</updated>
+      <workItem from="1614311550775" duration="4856000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="72" key="#Project_Structure" timestamp="1614311591343">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="72" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1614311591343" />
+    <state x="223" y="68" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614311677846">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="68" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1614311677846" />
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614313843312">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1614313843312" />
+    <state width="1024" height="273" key="GridCell.Tab.0.bottom" timestamp="1614334567169">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="273" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614334567169" />
+    <state width="1024" height="273" key="GridCell.Tab.0.center" timestamp="1614334567168">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="273" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614334567168" />
+    <state width="1024" height="273" key="GridCell.Tab.0.left" timestamp="1614334567168">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="273" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614334567168" />
+    <state width="1024" height="273" key="GridCell.Tab.0.right" timestamp="1614334567168">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="273" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614334567168" />
+    <state width="1024" height="273" key="GridCell.Tab.1.bottom" timestamp="1614334567169">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="273" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614334567169" />
+    <state width="1024" height="273" key="GridCell.Tab.1.center" timestamp="1614334567169">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="273" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1614334567169" />
+    <state width="1024" height="273" key="GridCell.Tab.1.left" timestamp="1614334567169">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="273" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1614334567169" />
+    <state width="1024" height="273" key="GridCell.Tab.1.right" timestamp="1614334567169">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="273" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1614334567169" />
+    <state width="1024" height="273" key="GridCell.Tab.2.bottom" timestamp="1614334567169">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="273" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614334567169" />
+    <state width="1024" height="273" key="GridCell.Tab.2.center" timestamp="1614334567169">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="273" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1614334567169" />
+    <state width="1024" height="273" key="GridCell.Tab.2.left" timestamp="1614334567169">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="273" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1614334567169" />
+    <state width="1024" height="273" key="GridCell.Tab.2.right" timestamp="1614334567169">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="273" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1614334567169" />
+  </component>
+</project>

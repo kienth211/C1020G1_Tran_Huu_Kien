@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a th:href="@{/save}">
+        Add new product
+    </a>
+</p>
+<table id="products" border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="row,rowStat : ${products}">
+        <td th:text="${row.id}"></td>
+        <td th:text="${row.name}"></td>
+        <td th:text="${row.price}"></td>
+        <td><a th:href="@{edit(id=${row.id})}">edit</a></td>
+        <td><a th:href="@{delete(id=${row.id})}">delete</a></td>
+    </tr>
+    </tbody>
+</table>
+<div class="notify">
+    <!--/*@thymesVar id="messenger" type="e1"*/-->
+    <div th:if="${messenger}">
+        <h2 th:text="${messenger}"></h2>
+    </div>
+</div>
+</body>
+</html>

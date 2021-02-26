@@ -1,5 +1,6 @@
 package p1.service;
 
+import org.springframework.stereotype.Service;
 import p1.model.Customer;
 
 import java.util.ArrayList;
@@ -7,6 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Service
 public class CustomerServiceImpl implements CustomerService {
     private static Map<Integer, Customer> customers;
 
