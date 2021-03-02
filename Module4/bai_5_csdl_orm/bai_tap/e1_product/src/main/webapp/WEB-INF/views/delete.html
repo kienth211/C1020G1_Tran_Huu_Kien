@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <form action="#" th:action="@{/delete}" th:object="${product}"
+          method="POST" novalidate="novalidate">
+        <input th:hidden="${product.id}">
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <!--                <td th:field="*{id}" th:name="id"></td>-->
+                <!--                <td th:field="*{name}"></td>-->
+                <!--                <td th:field="*{price}"></td>-->
+                <td>
+                    <input th:field="*{id}">
+                </td>
+                <td>
+                    <input th:field="*{name}">
+                </td>
+                <td>
+                    <input th:field="*{price}">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Delete">
+    </form>
+</table>
+</body>
+</html>

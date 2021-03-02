@@ -1,6 +1,13 @@
 package p1.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "customer")
 public class Customer implements Cloneable {
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
     private String name;
     private String email;

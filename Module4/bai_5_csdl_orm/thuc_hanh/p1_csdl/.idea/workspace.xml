@@ -2,146 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe370275-8966-4e39-b253-3debefc06387" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/5.2.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/java/e1/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/java/e1/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/java/e1/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/java/e1/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/java/e1/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/java/e1/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/webapp/WEB-INF/views/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/e1_product/src/main/webapp/WEB-INF/views/save.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.idea/artifacts/p1_customer_main_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/classes/java/main/p1/AppConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/classes/java/main/p1/AppInitializer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/classes/java/main/p1/controller/CustomerController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/classes/java/main/p1/model/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/classes/java/main/p1/service/CustomerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/classes/java/main/p1/service/CustomerServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/classes/p1/AppConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/classes/p1/AppInitializer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/classes/p1/controller/CustomerController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/classes/p1/model/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/classes/p1/service/CustomerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/classes/p1/service/CustomerServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/spring-aop-4.3.17.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/spring-beans-4.3.17.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/spring-context-4.3.17.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/spring-core-4.3.17.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/spring-expression-4.3.17.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/spring-web-4.3.17.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/lib/spring-webmvc-4.3.17.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/exploded/p1_customer-1.0-SNAPSHOT.war/WEB-INF/views/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build/libs/p1_customer-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/classes/p1/AppConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/classes/p1/AppInitializer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/classes/p1/controller/CustomerController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/classes/p1/model/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/classes/p1/service/CustomerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/classes/p1/service/CustomerServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/hamcrest-core-1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/junit-4.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/spring-aop-4.3.17.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/spring-beans-4.3.17.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/spring-context-4.3.17.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/spring-core-4.3.17.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/spring-expression-4.3.17.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/spring-web-4.3.17.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/lib/spring-webmvc-4.3.17.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/WEB-INF/views/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/out/artifacts/p1_customer_main_war_exploded/p1_customer-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/java/p1/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/p1/AppConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/p1/AppInit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/p1/controller/CustomerController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/p1/model/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/p1/service/CustomerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/p1/service/impl/SimpleCustomerServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/p1_csdl-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/p1/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/p1/AppInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/p1/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/p1/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/p1/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/p1/service/impl/SimpleCustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customers/info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customers/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bai_3_data_binding/thuc_hanh/C1020G1_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_3_data_binding/thuc_hanh/C1020G1_Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/java/p1/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/java/p1/AppConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/java/p1/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/thuc_hanh/p1_customer/src/main/java/p1/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/artifacts/CodeGym_Module2_18_CSDL_ORM_CustomerORM_main_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/modules/18.CSDL_ORM.CustomerORM.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/modules/18.CSDL_ORM.CustomerORM.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/modules/18.CSDL_ORM.CustomerORM.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/modules/CustomerORM.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/modules/CustomerORM.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/modules/CustomerORM.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/modules/Module2.18.CSDL_ORM.CustomerORM.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/modules/Module2.18.CSDL_ORM.CustomerORM.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/modules/Module2.18.CSDL_ORM.CustomerORM.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/modules/codegym.com.CustomerORM.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/modules/codegym.com.CustomerORM.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/modules/codegym.com.CustomerORM.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/build/classes/java/main/com/codegym/cms/ApplicationConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/build/classes/java/main/com/codegym/cms/ApplicationInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.CSDL_ORM/build/libs/CustomerORM-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../customer.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/p1/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/p1/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/p1/repository/impl/CustomerRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/p1/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/p1/AppInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/p1/ApplicationInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/p1/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/p1/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/p1/service/impl/SimpleCustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/p1/service/impl/CustomerServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -153,7 +70,17 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="p1_csdl" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="p1_csdl" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -199,15 +126,15 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\C1020G1_Tran_Huu_Kien\Module4\bai_5_csdl_orm\thuc_hanh\p1_csdl\src\main\webapp\WEB-INF\views" />
       <recent name="G:\C1020G1_Tran_Huu_Kien\Module4\bai_5_csdl_orm\thuc_hanh\p1_csdl\src\main\java\p1" />
+      <recent name="G:\C1020G1_Tran_Huu_Kien\Module4\bai_5_csdl_orm\thuc_hanh\p1_csdl\src\main\webapp\WEB-INF\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -388,11 +315,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -411,6 +333,8 @@
       <option name="presentableId" value="Default" />
       <updated>1614311547913</updated>
       <workItem from="1614311550775" duration="4856000" />
+      <workItem from="1614562293842" duration="4647000" />
+      <workItem from="1614567738957" duration="313000" />
     </task>
     <servers />
   </component>
@@ -425,14 +349,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="72" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1614311591343" />
-    <state x="223" y="68" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614311677846">
+    <state x="223" y="68" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614566828944">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="68" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1614311677846" />
+    <state x="223" y="68" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1614566828944" />
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614313843312">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1614313843312" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1614563082575">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614563082575" />
     <state width="1024" height="273" key="GridCell.Tab.0.bottom" timestamp="1614334567169">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -481,5 +409,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1024" height="273" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1614334567169" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1614562293726">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1614562293726" />
   </component>
 </project>
