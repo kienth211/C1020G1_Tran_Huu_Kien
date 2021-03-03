@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Manager</title>
+</head>
+<body>
+<h3>Customer Manager</h3>
+<p>
+    <a th:href="@{/create}">
+        Add new customer
+    </a>
+</p>
+<p>
+    <a th:href="@{/provinces}">
+        Province
+    </a>
+</p>
+<form>
+    Search by name:
+    <input name="s" type="text"/>
+    <input type="submit" value="Search"/>
+</form><br/>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Province</th>
+        <th>Action</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customer : ${customers}">
+        <td th:text="${customer.id}"></td>
+        <td th:text="${customer.name}"></td>
+        <td th:text="${customer.age}"></td>
+        <td th:text="${customer.province.name}"></td>
+        <td><a th:href="@{edit(id=${customer.id})}">edit</a></td>
+        <td><a th:href="@{delete(id=${customer.id})}">delete</a></td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <a th:href="@{'/'(page=${customers.number - 1})}" th:if="${customers.hasPrevious()}">Previous</a>
+    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>
+    <a th:href="@{'/'(page=${customers.number + 1})}" th:if="${customers.hasNext()}">Next</a>
+</div>
+<div class="notify">
+    <!--/*@thymesVar id="messenger" type="p1"*/-->
+    <div th:if="${messenger}">
+        <h2 th:text="${messenger}"></h2>
+    </div>
+</div>
+</body>
+</html>

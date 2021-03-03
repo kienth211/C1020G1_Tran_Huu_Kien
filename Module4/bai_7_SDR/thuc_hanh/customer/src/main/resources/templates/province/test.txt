@@ -1,0 +1,10 @@
+    public ModelAndView listCustomers(@RequestParam("s") Optional<String> s, Pageable pageable){
+        Page<Customer> customers;
+        if(s.isPresent()){
+            customers = customerService.findByName(s.get(), pageable);
+        } else {
+            customers = customerService.findAll(pageable);
+        }
+        ModelAndView modelAndView = new ModelAndView("/home");
+        modelAndView.addObject("customers", customers);
+        return modelAndView;
