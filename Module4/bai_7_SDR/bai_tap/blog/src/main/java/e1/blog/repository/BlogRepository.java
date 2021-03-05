@@ -11,5 +11,5 @@ import org.springframework.stereotype.Repository;
 public interface BlogRepository extends JpaRepository<Blog, Integer> {
     Page<Blog> findByOrderByDateUpdateDesc(Pageable pageable);
     Iterable<Blog> findAllByCategory(Category category);
-    Page<Blog> findByName(String name, Pageable pageable);
+    Page<Blog> findByNameContaining(String name, Pageable pageable);
 }

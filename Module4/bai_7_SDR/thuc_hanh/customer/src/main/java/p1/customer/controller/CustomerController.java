@@ -81,4 +81,6 @@ public class CustomerController {
         redirectAttributes.addFlashAttribute("messenger", "Product deleted successful");
         return "redirect:/";
     }
+
+
 }
