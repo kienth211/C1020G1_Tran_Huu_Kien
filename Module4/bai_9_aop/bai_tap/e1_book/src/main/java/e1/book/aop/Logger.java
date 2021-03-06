@@ -11,11 +11,11 @@ public class Logger {
 
     @After("execution(* e1.book.controller.BookController.borrowBook(*,*))")
     public void afterBorrowing(){
-        LOGGER.info("operation : borrow");
+        LOGGER.info("borrow");
     }
 
     @After("execution(* e1.book.controller.BookController.returnBook(*,*))")
     public void afterReturning(){
-        LOGGER.info("operation : return");
+        LOGGER.info("return");
     }
 }
