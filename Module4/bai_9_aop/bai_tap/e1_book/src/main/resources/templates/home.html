@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Manager</title>
+</head>
+<body>
+<h3>Book Manager</h3>
+<!--<p>-->
+<!--    <a th:href="@{/categories}">-->
+<!--        Category-->
+<!--    </a>-->
+<!--</p>-->
+<!--<p>-->
+<!--    <a th:href="@{/create}">-->
+<!--        Add new Blog-->
+<!--    </a>-->
+<!--</p>-->
+<form th:action="@{/return}" method="POST" novalidate="novalidate">
+    Borrow Code:
+    <input name="borrowCode" type="text"/>
+    <input type="submit" value="Return"/>
+</form><br/>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Borrow Code</th>
+        <th>Remaining Amount</th>
+        <th>Max Quantity</th>
+        <th>Action</th>
+<!--        <th>Action</th>-->
+<!--        <th>Action</th>-->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book : ${books}">
+        <td th:text="${book.id}"></td>
+        <td th:text="${book.name}"></td>
+        <td th:text="${book.borrowCode}"></td>
+        <td th:text="${book.remainingAmount}"></td>
+        <td th:text="${book.maxQuantity}"></td>
+        <td><a th:href="@{borrow(borrowCode=${book.borrowCode})}">borrow</a></td>
+<!--        <td><a th:href="@{delete(id=${book.id})}">delete</a></td>-->
+<!--        <td><a th:href="@{view(id=${book.id})}">view</a></td>-->
+    </tr>
+    </tbody>
+</table>
+<div>
+    <a th:href="@{'/'(page=${books.number - 1})}" th:if="${books.hasPrevious()}">Previous</a>
+    <span th:text="${books.number + 1}"></span>/<span th:text="${books.totalPages}"></span>
+    <a th:href="@{'/'(page=${books.number + 1})}" th:if="${books.hasNext()}">Next</a>
+</div>
+<div class="notify">
+    <!--/*@thymesVar id="messenger" type="p1"*/-->
+    <div th:if="${messenger}">
+        <h2 th:text="${messenger}"></h2>
+    </div>
+</div>
+</body>
+</html>
