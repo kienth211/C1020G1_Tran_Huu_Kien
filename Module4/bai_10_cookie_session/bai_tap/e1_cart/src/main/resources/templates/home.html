@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<form th:action="@{/cart}" method="POST" novalidate="novalidate" th:object="${cart}">-->
+<!--    <input type="submit" value="Go to cart">-->
+<!--</form>-->
+<p>
+    <a th:href="@{/cart}">
+        Go to cart
+    </a>
+</p>
+<br>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Iphone</th>
+        <th>SamSung</th>
+        <th>Nokia</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${cart.iphoneCount}"></td>
+        <td th:text="${cart.samsungCount}"></td>
+        <td th:text="${cart.nokiaCount}"></td>
+    </tr>
+    <tr>
+        <td><a th:href="@{addIphone}">add</a></td>
+        <td><a th:href="@{addSamSung}">add</a></td>
+        <td><a th:href="@{addNokia}">add</a></td>
+    </tr>
+    <tr>
+        <td><a th:href="@{removeIphone}">remove</a></td>
+        <td><a th:href="@{removeSamSung}">remove</a></td>
+        <td><a th:href="@{removeNokia}">remove</a></td>
+    </tr>
+    </tbody>
+</table>
+<h2>Cart have: <span th:text="${counter}" th:name="counter"></span></h2>
+</body>
+</html>

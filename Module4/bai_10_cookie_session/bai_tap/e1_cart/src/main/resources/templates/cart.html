@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a th:href="@{/}">
+        Go to home
+    </a>
+</p>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Iphone</th>
+        <th>SamSung</th>
+        <th>Nokia</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${cart.iphoneCount}"></td>
+        <td th:text="${cart.samsungCount}"></td>
+        <td th:text="${cart.nokiaCount}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
