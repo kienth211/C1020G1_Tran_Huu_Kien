@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@SessionAttributes("cart")
+@SessionAttributes({"cart"})
 public class CartController {
 
     @ModelAttribute("cart")
@@ -15,14 +15,12 @@ public class CartController {
     }
 
     @GetMapping("/")
-    public String showHome(Model model, @CookieValue(name = "counter", defaultValue = "0") Integer counter,
-                           @ModelAttribute("cart") Cart cart) {
+    public String showHome(Model model, @ModelAttribute("cart") Cart cart) {
         if (cart == null) {
             model.addAttribute("cart", new Cart());
         } else {
             model.addAttribute("cart", cart);
         }
-        model.addAttribute("counter", counter);
         return "home";
     }
 
@@ -32,39 +30,37 @@ public class CartController {
         return "cart";
     }
 
-    @GetMapping("/addIphone")
-    public String addIphone(@ModelAttribute("cart") Cart cart) {
-        cart.setIphoneCount(cart.getIphoneCount() + 1);
+    @GetMapping("/add")
+    public String addIphone(@ModelAttribute("cart") Cart cart, @RequestParam("string") String string) {
+        switch (string) {
+            case "Iphone":
+                cart.setIphoneCount(cart.getIphoneCount() + 1);
+                break;
+            case "SamSung":
+                cart.setSamsungCount(cart.getSamsungCount() + 1);
+                break;
+            case "Nokia":
+                cart.setNokiaCount(cart.getNokiaCount() + 1);
+                break;
+        }
+        cart.setTotal(cart.getTotal() + 1);
         return "redirect:/";
     }
 
-    @GetMapping("/addSamSung")
-    public String addSamSung(@ModelAttribute("cart") Cart cart) {
-        cart.setSamsungCount(cart.getSamsungCount() + 1);
-        return "redirect:/";
-    }
-
-    @GetMapping("/addNokia")
-    public String addNokia(@ModelAttribute("cart") Cart cart) {
-        cart.setNokiaCount(cart.getNokiaCount() + 1);
-        return "redirect:/";
-    }
-
-    @GetMapping("/removeIphone")
-    public String removeIphone(@ModelAttribute("cart") Cart cart) {
-        cart.setIphoneCount(cart.getIphoneCount() - 1);
-        return "redirect:/";
-    }
-
-    @GetMapping("/removeSamSung")
-    public String removeSamSung(@ModelAttribute("cart") Cart cart) {
-        cart.setSamsungCount(cart.getSamsungCount() - 1);
-        return "redirect:/";
-    }
-
-    @GetMapping("/removeNokia")
-    public String removeNokia(@ModelAttribute("cart") Cart cart) {
-        cart.setNokiaCount(cart.getNokiaCount() - 1);
+    @GetMapping("/remove")
+    public String removeIphone(@ModelAttribute("cart") Cart cart, @RequestParam("string") String string) {
+        switch (string) {
+            case "Iphone":
+                cart.setIphoneCount(cart.getIphoneCount() - 1);
+                break;
+            case "SamSung":
+                cart.setSamsungCount(cart.getSamsungCount() - 1);
+                break;
+            case "Nokia":
+                cart.setNokiaCount(cart.getNokiaCount() - 1);
+                break;
+        }
+        cart.setTotal(cart.getTotal() - 1);
         return "redirect:/";
     }
 }

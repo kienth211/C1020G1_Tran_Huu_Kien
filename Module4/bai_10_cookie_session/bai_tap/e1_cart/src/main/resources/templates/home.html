@@ -29,17 +29,17 @@
         <td th:text="${cart.nokiaCount}"></td>
     </tr>
     <tr>
-        <td><a th:href="@{addIphone}">add</a></td>
-        <td><a th:href="@{addSamSung}">add</a></td>
-        <td><a th:href="@{addNokia}">add</a></td>
+        <td><a th:href="@{add(string='Iphone')}">add</a></td>
+        <td><a th:href="@{add(string='SamSung')}">add</a></td>
+        <td><a th:href="@{add(string='Nokia')}">add</a></td>
     </tr>
     <tr>
-        <td><a th:href="@{removeIphone}">remove</a></td>
-        <td><a th:href="@{removeSamSung}">remove</a></td>
-        <td><a th:href="@{removeNokia}">remove</a></td>
+        <td><a th:href="@{remove(string='Iphone')}">remove</a></td>
+        <td><a th:href="@{remove(string='SamSung')}">remove</a></td>
+        <td><a th:href="@{remove(string='Nokia')}">remove</a></td>
     </tr>
     </tbody>
 </table>
-<h2>Cart have: <span th:text="${counter}" th:name="counter"></span></h2>
+<h2>Cart have: <span th:text="${cart.total}"></span></h2>
 </body>
 </html>
