@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Manager</title>
+</head>
+<body>
+<h3>Blog Manager</h3>
+<p>
+    <a th:href="@{/categories}">
+        Category
+    </a>
+</p>
+<p>
+    <a th:href="@{/create}">
+        Add new Blog
+    </a>
+</p>
+<form id="searchByName">
+    Search by name:
+    <input name="name" type="text"/>
+    <input type="submit" value="Search"/>
+</form>
+<br/>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Content</th>
+        <th>Category</th>
+        <th>Action</th>
+        <th>Action</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody id="listBlog">
+    <!--    <tr th:each="blog : ${blogs}">-->
+    <!--        <td th:text="${blog.id}"></td>-->
+    <!--        <td th:text="${blog.name}"></td>-->
+    <!--        <td th:text="${blog.content}"></td>-->
+    <!--        <td th:text="${blog.category.name}"></td>-->
+    <!--        <td><a th:href="@{edit(id=${blog.id})}">edit</a></td>-->
+    <!--        <td><a th:href="@{delete(id=${blog.id})}">delete</a></td>-->
+    <!--        <td><a th:href="@{view(id=${blog.id})}">view</a></td>-->
+    <!--    </tr>-->
+    </tbody>
+</table>
+<div id="reload"></div>
+<div class="notify">
+    <!--/*@thymesVar id="messenger" type="p1"*/-->
+    <div th:if="${messenger}">
+        <h2 th:text="${messenger}"></h2>
+    </div>
+</div>
+</body>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function (event) {
+        let size = 2;
+        $.ajax({
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            url: "http://localhost:8080/blogs",
+            dataType: "json",
+            success: function (blogs) {
+                let row = "<tr>";
+                for (let i = 0; i < blogs.content.length; i++) {
+                    row += "<td>" + blogs.content[i].id + "</td>";
+                    row += "<td>" + blogs.content[i].name + "</td>";
+                    row += "<td>" + blogs.content[i].content + "</td>";
+                    row += "<td>" + blogs.content[i].name + "</td>";
+                    row += "<td><a href=/edit/" + blogs.content[i].id + ">Edit</a></td>";
+                    row += "<td><a href=/delete/" + blogs.content[i].id + ">Delete</a></td>";
+                    row += "<td><a href=/view/" + blogs.content[i].id + ">View</a></td>";
+                    row += "</tr>";
+                    $('#listBlog').html(row);
+                }
+                if (blogs.last === false) {
+                    $('#reload').append("<button id='load_more' type='button'>Load</button>")
+                }
+            },
+            error: function (event) {
+                console.log("Fail");
+            }
+        });
+
+        $(document).on('click', '#load_more', function (event) {
+            size += 2;
+            $.ajax({
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                data: {"size": size},
+                url: "http://localhost:8080/reload",
+                dataType: "json",
+                success: function (blogs) {
+                    let row = "<tr>";
+                    for (let i = 0; i < blogs.content.length; i++) {
+                        row += "<td>" + blogs.content[i].id + "</td>";
+                        row += "<td>" + blogs.content[i].name + "</td>";
+                        row += "<td>" + blogs.content[i].content + "</td>";
+                        row += "<td>" + blogs.content[i].name + "</td>";
+                        row += "<td><a href=/edit/" + blogs.content[i].id + ">Edit</a></td>";
+                        row += "<td><a href=/delete/" + blogs.content[i].id + ">Delete</a></td>";
+                        row += "<td><a href=/view/" + blogs.content[i].id + ">View</a></td>";
+                        row += "</tr>";
+                        $('#listBlog').html(row);
+                    }
+                    if (blogs.last === false) {
+                        $('#reload').html("<button id='load_more' type='button'>Load</button>")
+                    }
+                }
+            });
+            event.preventDefault();
+        });
+
+        $('#searchByName').submit(function (event) {
+            let name = $('input[name="name"]').val();
+            $.ajax({
+                headers: {
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+                    'Accept': "application/json",
+                    'Content-Type': 'application/json'
+                },
+                type: "GET",
+                data: {"name": name},
+                url: "http://localhost:8080/search",
+                dataType: "json",
+                success: function (blogs) {
+                    console.log(blogs);
+                    let row = "<tr>";
+                    for (let i = 0; i < blogs.content.length; i++) {
+                        row += "<td>" + blogs.content[i].id + "</td>";
+                        row += "<td>" + blogs.content[i].name + "</td>";
+                        row += "<td>" + blogs.content[i].content + "</td>";
+                        row += "<td>" + blogs.content[i].name + "</td>";
+                        row += "<td><a href=/edit/" + blogs.content[i].id + ">Edit</a></td>";
+                        row += "<td><a href=/delete/" + blogs.content[i].id + ">Delete</a></td>";
+                        row += "<td><a href=/view/" + blogs.content[i].id + ">View</a></td>";
+                        row += "</tr>";
+                        $('#listBlog').html(row);
+                    }
+                    if (blogs.last === false) {
+                  
+                        $('#reload').html("<button id='load_more_2' type='button'>Load</button>")
+                    }
+                }
+            });
+            event.preventDefault();
+        });
+
+        $(document).on('click', '#load_more_2', function (event) {
+            let name = $('input[name="name"]').val();
+            size += 2;
+            $.ajax({
+                headers: {
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+                    'Accept': "application/json",
+                    'Content-Type': 'application/json'
+                },
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                data: {"size": size, "name": name},
+                url: "http://localhost:8080/search_2",
+                dataType: "json",
+                success: function (blogs) {
+                    let row = "<tr>";
+                    for (let i = 0; i < blogs.content.length; i++) {
+                        row += "<td>" + blogs.content[i].id + "</td>";
+                        row += "<td>" + blogs.content[i].name + "</td>";
+                        row += "<td>" + blogs.content[i].content + "</td>";
+                        row += "<td>" + blogs.content[i].name + "</td>";
+                        row += "<td><a href=/edit/" + blogs.content[i].id + ">Edit</a></td>";
+                        row += "<td><a href=/delete/" + blogs.content[i].id + ">Delete</a></td>";
+                        row += "<td><a href=/view/" + blogs.content[i].id + ">View</a></td>";
+                        row += "</tr>";
+                        $('#listBlog').html(row);
+                    }
+                    if (blogs.last === false) {
+                        $('#reload').html("<button id='load_more_2' type='button'>Load</button>")
+                    }
+                }
+            });
+            event.preventDefault();
+        });
+    });
+</script>
+</html>
