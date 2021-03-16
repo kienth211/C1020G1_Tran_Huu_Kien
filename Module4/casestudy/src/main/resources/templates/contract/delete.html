@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <form action="#" th:action="@{/contract/delete}" th:object="${contract}"
+          method="POST" novalidate="novalidate">
+        <table border="1">
+            <tr>
+                <th>Id</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Deposit</th>
+                <th>Total Money</th>
+                <th>Employee</th>
+                <th>Customer</th>
+                <th>Service</th>
+                <th>Attach Contract</th>
+            </tr>
+            <tr>
+                <td th:text="${contract.contractId}"></td>
+                <td th:text="${contract.contractStartDate}"></td>
+                <td th:text="${contract.contractEndDate}"></td>
+                <td th:text="${contract.contractDeposit}"></td>
+                <td th:text="${contract.contractTotalMoney}"></td>
+                <td th:text="${contract.employee.employeeName}"></td>
+                <td th:text="${contract.customer.customerName}"></td>
+                <td th:text="${contract.service.serviceName}"></td>
+                <td th:text="${contract.attachServices}"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Delete">
+    </form>
+</table>
+</body>
+</html>

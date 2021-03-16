@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Manager</title>
+</head>
+<body>
+<h3>Employee Manager</h3>
+<!--<p>-->
+<!--    <a th:href="@{/categories}">-->
+<!--        Category-->
+<!--    </a>-->
+<!--</p>-->
+<p>
+    <a th:href="@{/employee/create}">
+        Add new Employee
+    </a>
+</p>
+<!--<form>-->
+<!--    Search by name:-->
+<!--    <input name="s" type="text"/>-->
+<!--    <input type="submit" value="Search"/>-->
+<!--</form><br/>-->
+<table border="1">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Birthday</th>
+        <th>Id Card</th>
+        <th>Salary</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Position</th>
+        <th>Education Degree</th>
+        <th>Division</th>
+        <th>Action</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="employee : ${employees}">
+        <td th:text="${employee.employeeId}"></td>
+        <td th:text="${employee.employeeName}"></td>
+        <td th:text="${employee.employeeBirthday}"></td>
+        <td th:text="${employee.employeeIdCard}"></td>
+        <td th:text="${employee.employeeSalary}"></td>
+        <td th:text="${employee.employeePhone}"></td>
+        <td th:text="${employee.employeeEmail}"></td>
+        <td th:text="${employee.employeeAddress}"></td>
+        <td th:text="${employee.position.positionName}"></td>
+        <td th:text="${employee.educationDegree.educationDegreeName}"></td>
+        <td th:text="${employee.division.divisionName}"></td>
+        <td><a th:href="@{employee/edit(id=${employee.employeeId})}">edit</a></td>
+        <td><a th:href="@{employee/delete(id=${employee.employeeId})}">delete</a></td>
+<!--        <td><a th:href="@{view(id=${employee.id})}">view</a></td>-->
+    </tr>
+    </tbody>
+</table>
+<div>
+    <a th:href="@{'/'(page=${employees.number - 1})}" th:if="${employees.hasPrevious()}">Previous</a>
+    <span th:text="${employees.number + 1}"></span>/<span th:text="${employees.totalPages}"></span>
+    <a th:href="@{'/'(page=${employees.number + 1})}" th:if="${employees.hasNext()}">Next</a>
+</div>
+<div class="notify">
+    <!--/*@thymesVar id="messenger" type="p1"*/-->
+    <div th:if="${messenger}">
+        <h2 th:text="${messenger}"></h2>
+    </div>
+</div>
+</body>
+</html>

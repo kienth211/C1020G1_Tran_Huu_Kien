@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Manager</title>
+</head>
+<body>
+<h3>Customer Manager</h3>
+<!--<p>-->
+<!--    <a th:href="@{/categories}">-->
+<!--        Category-->
+<!--    </a>-->
+<!--</p>-->
+<p>
+    <a th:href="@{/customer/create}">
+        Add new Customer
+    </a>
+</p>
+<!--<form>-->
+<!--    Search by name:-->
+<!--    <input name="s" type="text"/>-->
+<!--    <input type="submit" value="Search"/>-->
+<!--</form><br/>-->
+<table border="1">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Birthday</th>
+        <th>Gender</th>
+        <th>Id Card</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Customer Type</th>
+        <th>Action</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customer : ${customers}">
+        <td th:text="${customer.customerId}"></td>
+        <td th:text="${customer.customerName}"></td>
+        <td th:text="${customer.customerBirthday}"></td>
+        <td th:text="${customer.customerGender}"></td>
+        <td th:text="${customer.customerIdCard}"></td>
+        <td th:text="${customer.customerPhone}"></td>
+        <td th:text="${customer.customerEmail}"></td>
+        <td th:text="${customer.customerAddress}"></td>
+        <td th:text="${customer.customerType.customerTypeName}"></td>
+        <td><a th:href="@{customer/edit(id=${customer.customerId})}">edit</a></td>
+        <td><a th:href="@{customer/delete(id=${customer.customerId})}">delete</a></td>
+<!--        <td><a th:href="@{view(id=${customer.id})}">view</a></td>-->
+    </tr>
+    </tbody>
+</table>
+<div>
+    <a th:href="@{'/'(page=${customers.number - 1})}" th:if="${customers.hasPrevious()}">Previous</a>
+    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>
+    <a th:href="@{'/'(page=${customers.number + 1})}" th:if="${customers.hasNext()}">Next</a>
+</div>
+<div class="notify">
+    <!--/*@thymesVar id="messenger" type="p1"*/-->
+    <div th:if="${messenger}">
+        <h2 th:text="${messenger}"></h2>
+    </div>
+</div>
+</body>
+</html>

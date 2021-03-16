@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contract Manager</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        td {
+            width: 24%;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <ul class="nav nav-pills mb-3 bg-secondary" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/}" role="tab">Main Page</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/}" role="tab">Contract</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/}" role="tab">Customer</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/EmployeeServlet" role="tab">Employee</a>
+        </li>
+    </ul>
+</div>
+
+
+<h3>Contract Manager</h3>
+<!--<p>-->
+<!--    <a th:href="@{/categories}">-->
+<!--        Category-->
+<!--    </a>-->
+<!--</p>-->
+<p>
+    <a th:href="@{/contract/create}">
+        Add new Contract
+    </a>
+</p>
+<!--<form>-->
+<!--    Search by name:-->
+<!--    <input name="s" type="text"/>-->
+<!--    <input type="submit" value="Search"/>-->
+<!--</form><br/>-->
+<table border="1">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Deposit</th>
+        <th>Total Money</th>
+        <th>Employee</th>
+        <th>Customer</th>
+        <th>Service</th>
+        <th>Attach Contract</th>
+        <th>Action</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="contract : ${contracts}">
+        <td th:text="${contract.contractId}"></td>
+        <td th:text="${contract.contractStartDate}"></td>
+        <td th:text="${contract.contractEndDate}"></td>
+        <td th:text="${contract.contractDeposit}"></td>
+        <td th:text="${contract.contractTotalMoney}"></td>
+        <td th:text="${contract.employee.employeeName}"></td>
+        <td th:text="${contract.customer.customerName}"></td>
+        <td th:text="${contract.service.serviceName}"></td>
+        <td>
+            <span th:each="attachService : ${contract.attachServices}" th:text="${attachService.attachServiceName}">
+
+            </span>
+        </td>
+        <td><a th:href="@{contract/edit(id=${contract.contractId})}">edit</a></td>
+        <td><a th:href="@{contract/delete(id=${contract.contractId})}">delete</a></td>
+<!--        <td><a th:href="@{view(id=${contract.id})}">view</a></td>-->
+    </tr>
+    </tbody>
+</table>
+<div>
+    <a th:href="@{'/'(page=${contracts.number - 1})}" th:if="${contracts.hasPrevious()}">Previous</a>
+    <span th:text="${contracts.number + 1}"></span>/<span th:text="${contracts.totalPages}"></span>
+    <a th:href="@{'/'(page=${contracts.number + 1})}" th:if="${contracts.hasNext()}">Next</a>
+</div>
+<div class="notify">
+    <!--/*@thymesVar id="messenger" type="p1"*/-->
+    <div th:if="${messenger}">
+        <h2 th:text="${messenger}"></h2>
+    </div>
+</div>
+</body>
+</html>

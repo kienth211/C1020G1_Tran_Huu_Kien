@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="form">
+    <form action="#" th:action="@{/contract/create}" th:object="${contract}"
+          method="POST" novalidate="novalidate">
+        <input type="hidden" th:field="*{contractId}"/>
+        <div>
+            <label>Start Date</label>
+            <input type="text" th:field="*{contractStartDate}"/>
+        </div>
+        <div>
+            <label>End Date</label>
+            <input type="text" th:field="*{contractEndDate}"/>
+        </div>
+        <div>
+            <label>Deposit</label>
+            <input type="text" th:field="*{contractDeposit}"/>
+        </div>
+        <div>
+            <label>Total Money</label>
+            <input type="text" th:field="*{contractTotalMoney}"/>
+        </div>
+        <div>
+            <label>Employee</label>
+            <select th:field="*{employee}">
+                <option th:each="employee : ${employees}"
+                        th:value="${employee.employeeId}"
+                        th:text="${employee.employeeName}"></option>
+            </select>
+        </div>
+        <div>
+            <label>Customer</label>
+            <select th:field="*{customer}">
+                <option th:each="customer : ${customers}"
+                        th:value="${customer.customerId}"
+                        th:text="${customer.customerName}"></option>
+            </select>
+        </div>
+        <div>
+            <label>Service</label>
+            <select th:field="*{service}">
+                <option th:each="service : ${services}"
+                        th:value="${service.serviceId}"
+                        th:text="${service.serviceName}"></option>
+            </select>
+        </div>
+        <div>
+            <label>Attach Service</label>
+            <select th:field="*{attachServices}">
+                <option th:each="attachService : ${attachServices}"
+                        th:value="${attachService.attachServiceId}"
+                        th:text="${attachService.attachServiceName}"></option>
+            </select>
+<!--            <input type="checkbox" th:name="${attachServices}" th:text="karaoke" checked="" />-->
+
+        </div>
+        <input type="submit" value="Create">
+    </form>
+</div>
+</body>
+</html>

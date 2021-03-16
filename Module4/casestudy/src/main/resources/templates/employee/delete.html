@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <form action="#" th:action="@{/employee/delete}" th:object="${employee}"
+          method="POST" novalidate="novalidate">
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Birthday</th>
+                <th>Gender</th>
+                <th>Id Card</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Customer Type</th>
+            </tr>
+            <tr>
+                <td>
+                    <input th:field="*{employeeId}">
+                </td>
+                <td>
+                    <input th:field="*{employeeName}">
+                </td>
+                <td>
+                    <input th:field="*{employeeBirthday}">
+                </td>
+                <td>
+                    <input th:field="*{employeeIdCard}">
+                </td>
+                <td>
+                    <input th:field="*{employeeSalary}">
+                </td>
+                <td>
+                    <input th:field="*{employeePhone}">
+                </td>
+                <td>
+                    <input th:field="*{employeeEmail}">
+                </td>
+                <td>
+                    <input th:field="*{employeeAddress}">
+                </td>
+                <td>
+                    <input th:field="*{position.positionName}">
+                </td>
+                <td>
+                    <input th:field="*{educationDegree.educationDegreeName}">
+                </td>
+                <td>
+                    <input th:field="*{division.divisionName}">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Delete">
+    </form>
+</table>
+</body>
+</html>

@@ -16,6 +16,7 @@
     </style>
 </head>
 <body>
+
 <ul class="nav nav-pills mb-3 bg-secondary" role="tablist">
     <li class="nav-item">
         <a class="nav-link" href="/MainServlet" role="tab">Main Page</a>
