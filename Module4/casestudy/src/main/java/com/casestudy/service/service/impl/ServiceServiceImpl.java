@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
+import java.util.Optional;
 
 @org.springframework.stereotype.Service
 public class ServiceServiceImpl implements ServiceService {
@@ -22,6 +23,11 @@ public class ServiceServiceImpl implements ServiceService {
     @Override
     public Page<Service> findAll(Pageable pageable) {
         return serviceRepository.findAll(pageable);
+    }
+
+    @Override
+    public Page<Service> findAllInput(Pageable pageable, Optional<String> text) {
+        return serviceRepository.findAllInput(pageable, text);
     }
 
     @Override

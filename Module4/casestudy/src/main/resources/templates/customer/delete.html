@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<head th:replace="fragments :: html_head">
 </head>
+
 <body>
-<table>
-    <form action="#" th:action="@{/customer/delete}" th:object="${customer}"
-          method="POST" novalidate="novalidate">
-        <table border="1">
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Birthday</th>
-                <th>Gender</th>
-                <th>Id Card</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Address</th>
-                <th>Customer Type</th>
-            </tr>
-            <tr>
-                <td>
-                    <input th:field="*{customerId}">
-                </td>
-                <td>
-                    <input th:field="*{customerName}">
-                </td>
-                <td>
-                    <input th:field="*{customerBirthday}">
-                </td>
-                <td>
-                    <input th:field="*{customerGender}">
-                </td>
-                <td>
-                    <input th:field="*{customerIdCard}">
-                </td>
-                <td>
-                    <input th:field="*{customerPhone}">
-                </td>
-                <td>
-                    <input th:field="*{customerEmail}">
-                </td>
-                <td>
-                    <input th:field="*{customerAddress}">
-                </td>
-                <td>
-                    <input th:field="*{customerType.customerTypeName}">
-                </td>
-            </tr>
-        </table>
-        <input type="submit" value="Delete">
-    </form>
-</table>
+
+<div th:replace="fragments :: nav_top">
+</div>
+
+<h3>Customer Manager</h3>
+
+<section>
+    <nav id="nav_left">
+        <ul>
+            <li><a href="/customer">Customer list</a></li>
+            <li><a href="/customer/create">Create customer</a></li>
+        </ul>
+    </nav>
+    <article>
+        <div class="table-fit justify-content-center">
+            <form action="#" th:action="@{/customer/delete}" th:object="${customer}"
+                  method="POST" novalidate="novalidate">
+                <table class="table table-striped table-bordered table-hover thead-dark table-responsive">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Birthday</th>
+                        <th>Gender</th>
+                        <th>Id Card</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Customer Type</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td th:text="${customer.customerId}"></td>
+                        <td th:text="${customer.customerName}"></td>
+                        <td th:text="${customer.customerBirthday}"></td>
+                        <td th:text="${customer.customerGender}"></td>
+                        <td th:text="${customer.customerIdCard}"></td>
+                        <td th:text="${customer.customerPhone}"></td>
+                        <td th:text="${customer.customerEmail}"></td>
+                        <td th:text="${customer.customerAddress}"></td>
+                        <td th:text="${customer.customerType.customerTypeName}"></td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+
+                    </tfoot>
+                </table>
+                <input type="submit" value="Delete">
+            </form>
+        </div>
+    </article>
+</section>
+
+<footer th:replace="fragments :: footer">
+
+</footer>
+
 </body>
 </html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:fragment="main-fragment (title, otherStaticResources, header, nav, mainContent, footer)">
+    <head>
+        <meta charset="UTF-8" />
+        <title th:replace="${title}">Page 1 Title</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/static/main.css}" href="../../static/main.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css"/>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+<!--        <th:block th:replace="${otherStaticResources} ?: ~{}"></th:block>-->
+    </head>
+    <body>
+    <div th:fragment="header">
+        <header th:insert="${header} ?: ~{}">
+            <div>
+                <ul class="nav nav-pills" style="background-color: cornflowerblue" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/static" role="tab" style="color: white">Main Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contract" style="color: white" role="tab">Contract</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/customer" style="color: white" role="tab">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/employee" style="color: white" role="tab">Employee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/service" style="color: white" role="tab">Service</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+        <section>
+            <nav th:insert="${nav} ?: ~{}">
+<!--                <ul>-->
+<!--                    <li><a href="#">Page 1</a></li>-->
+<!--                    <li><a href="#">Page 2</a></li>-->
+<!--                </ul>-->
+            </nav>
+            <article th:insert="${mainContent} ?: ~{}">
+<!--                <h1>Page 1</h1>-->
+<!--                <p>Main content of Page 1</p>-->
+            </article>
+        </section>
+        <footer th:insert="${footer} ?: ~{}">
+            <p>Footer</p>
+        </footer>
+    </body>
+</html>

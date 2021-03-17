@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="html_head">
+    <meta charset="UTF-8"/>
+    <!--    <title>App Fragments</title>-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <style>
+        td {
+            width: 24%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /*header {*/
+        /*    !*background-color: #666;*!*/
+        /*    !*padding: 5px;*!*/
+        /*    text-align: center;*/
+        /*    !*font-size: 35px;*!*/
+        /*    color: white;*/
+        /*}*/
+
+        nav {
+            float: left;
+            width: 10%;
+            /*height: 300px;*/
+            /*background: #ccc;*/
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            /*padding: 20px;*/
+            width: 90%;
+            background-color: #f1f1f1;
+            /*height: 300px;*/
+        }
+
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: cornflowerblue;
+            padding: 5px;
+            text-align: center;
+            color: white;
+        }
+
+        @media ( max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<div th:fragment="nav_top">
+    <ul class="nav nav-pills" style="background-color: cornflowerblue" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link" href="/" role="tab" style="color: white">Main Page</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/contract" style="color: white" role="tab">Contract</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/customer" style="color: white" role="tab">Customer</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/employee" style="color: white" role="tab">Employee</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/service" style="color: white" role="tab">Service</a>
+        </li>
+    </ul>
+</div>
+<nav th:fragment="nav_left">
+    <!--                <ul>-->
+    <!--                    <li><a href="#">Page 1</a></li>-->
+    <!--                    <li><a href="#">Page 2</a></li>-->
+    <!--                </ul>-->
+</nav>
+<article th:fragment="main_content">
+    <!--                <h1>Page 1</h1>-->
+    <!--                <p>Main content of Page 1</p>-->
+</article>
+<footer th:fragment="footer">
+    <h3>Furama Resort</h3>
+</footer>
+
+
+<!--<ul th:fragment="nav-default">-->
+<!--    <li><a th:href="@{/}">Home</a></li>-->
+<!--    <li><a th:href="@{/products}">Products</a></li>-->
+<!--    <li><a th:href="@{/about}">About</a></li>-->
+<!--</ul>-->
+
+<!--&lt;!&ndash; Admin Navigator &ndash;&gt;-->
+
+<!--<ul th:fragment="nav-admin">-->
+<!--    <li><a th:href="@{/admin/products}">Product Management</a></li>-->
+<!--    <li><a th:href="@{/admin/orders}">Order Management</a></li>-->
+<!--</ul>-->
+
+
+<div th:fragment="copyright">
+    &copy; o7planning.org
+</div>
+
+
+</body>
+</html>

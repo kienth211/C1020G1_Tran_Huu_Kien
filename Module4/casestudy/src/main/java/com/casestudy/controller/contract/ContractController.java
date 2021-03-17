@@ -12,12 +12,10 @@ import com.casestudy.service.employee.EmployeeService;
 import com.casestudy.service.service.ServiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -61,8 +59,8 @@ public class ContractController {
         return serviceService.findAll();
     }
 
-    @GetMapping("/contract")
-    public String showHome(Model model, Pageable pageable) {
+    @RequestMapping("/contract")
+    public String showHome(Model model,@PageableDefault(value = 3) Pageable pageable) {
         model.addAttribute("contracts", contractService.findAll(pageable));
         return "contract/home";
     }
@@ -103,6 +101,12 @@ public class ContractController {
 //        blog.setDateUpdate(new Date());
         contractService.delete(contract);
 //        redirectAttributes.addFlashAttribute("messenger", "Blog create successful");
+        return "redirect:/contract";
+    }
+
+    @GetMapping("/contract/find")
+    public String doFind(Model model,@PageableDefault(value = 3) Pageable pageable){
+        contractService.findContractsByCurrentDate(pageable);
         return "redirect:/contract";
     }
 }

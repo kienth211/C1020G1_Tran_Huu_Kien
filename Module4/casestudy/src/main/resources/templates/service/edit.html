@@ -1,65 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+<head th:replace="fragments :: html_head">
 </head>
+
 <body>
-<div id="form">
-    <form action="#" th:action="@{/service/edit}" th:object="${service}"
-          method="POST" novalidate="novalidate">
-        <input type="hidden" th:field="*{serviceId}"/>
-        <div>
-            <label>Name</label>
-            <input type="text" th:field="*{serviceName}"/>
-        </div>
-        <div>
-            <label>Area</label>
-            <input type="text" th:field="*{serviceArea}"/>
-        </div>
-        <div>
-            <label>Cost</label>
-            <input type="text" th:field="*{serviceCost}"/>
-        </div>
-        <div>
-            <label>Max People</label>
-            <input type="text" th:field="*{serviceMaxPeople}"/>
-        </div>
-        <div>
-            <label>Standard Room</label>
-            <input type="text" th:field="*{standardRoom}"/>
-        </div>
-        <div>
-            <label>Description</label>
-            <input type="text" th:field="*{descriptionOtherConvenience}"/>
-        </div>
-        <div>
-            <label>Pool Area</label>
-            <input type="text" th:field="*{poolArea}"/>
-        </div>
-        <div>
-            <label>Numbers of Floors</label>
-            <input type="text" th:field="*{numberOfFloors}"/>
-        </div>
-        <div>
-            <label>Service Type</label>
-            <select th:field="*{serviceType}">
-                <option th:each="serviceType : ${serviceTypes}"
-                        th:value="${serviceType.serviceTypeId}"
-                        th:text="${serviceType.serviceTypeName}"></option>
-            </select>
-        </div>
-        <div>
-            <label>Rent Type</label>
-            <select th:field="*{rentType}">
-                <option th:each="rentType : ${rentTypes}"
-                        th:value="${rentType.rentTypeId}"
-                        th:text="${rentType.rentTypeName}"></option>
-            </select>
-        </div>
-        <input type="submit" value="Edit">
-    </form>
+<div th:replace="fragments :: nav_top">
+
 </div>
+<h3>Service Manager</h3>
+
+<section>
+    <nav id="nav_left">
+        <ul>
+            <li><a href="/service">Service list</a></li>
+            <li><a href="/service/edit">Create service</a></li>
+        </ul>
+    </nav>
+    <article>
+        <div id="form">
+            <form th:action="@{/service/edit}" th:object="${service}"
+                  method="POST" novalidate="novalidate">
+                <input type="hidden" th:field="*{serviceId}"/>
+
+                <div class="form-group col-md-6">
+                    <label>Name</label>
+                    <input type="text" class="form-control" th:field="*{serviceName}">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>Area</label>
+                    <input type="text" class="form-control" th:field="*{serviceArea}">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>MaxPeople</label>
+                    <input type="text" class="form-control" th:field="*{serviceMaxPeople}">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>Standard Room</label>
+                    <input type="text" class="form-control" th:field="*{standardRoom}">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>Description</label>
+                    <input type="text" class="form-control" th:field="*{descriptionOtherConvenience}">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>Pool Area</label>
+                    <input type="text" class="form-control" th:field="*{poolArea}">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>Floors</label>
+                    <input type="text" class="form-control" th:field="*{numberOfFloors}">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>Service Type</label>
+                    <select class="form-control" th:field="*{serviceType}">
+                        <option th:each="serviceType : ${serviceTypes}"
+                                th:value="${serviceType.serviceTypeId}"
+                                th:text="${serviceType.serviceTypeName}"></option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>Rent Type</label>
+                    <select class="form-control" th:field="*{rentType}">
+                        <option th:each="rentType : ${rentTypes}"
+                                th:value="${rentType.rentTypeId}"
+                                th:text="${rentType.rentTypeName}"></option>
+                    </select>
+                </div>
+
+                <input type="submit" value="Edit">
+            </form>
+        </div>
+    </article>
+</section>
+<footer th:replace="fragments :: footer">
+
+</footer>
 </body>
 </html>

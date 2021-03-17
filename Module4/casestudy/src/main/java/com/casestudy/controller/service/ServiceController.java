@@ -8,16 +8,15 @@ import com.casestudy.service.service.ServiceService;
 import com.casestudy.service.service.ServiceTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 //@RequestMapping("/service")
@@ -41,9 +40,13 @@ public class ServiceController {
         return rentTypeService.findAll();
     }
 
-    @GetMapping("/service")
-    public String showHome(Model model, Pageable pageable) {
-        model.addAttribute("services", serviceService.findAll(pageable));
+    @RequestMapping("/service")
+    public String showHome(Model model, @RequestParam(name = "text") Optional<String> text, @PageableDefault(value = 3) Pageable pageable) {
+        if (!text.isPresent()) {
+            model.addAttribute("services", serviceService.findAll(pageable));
+        } else {
+            model.addAttribute("services", serviceService.findAllInput(pageable, text));
+        }
         return "service/home";
     }
 

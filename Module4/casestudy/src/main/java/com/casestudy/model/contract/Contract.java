@@ -6,6 +6,7 @@ import com.casestudy.model.employee.Role;
 import com.casestudy.model.service.Service;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -15,8 +16,8 @@ public class Contract {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer contractId;
     
-    private String contractStartDate;
-    private String contractEndDate;
+    private Date contractStartDate;
+    private Date contractEndDate;
     private String contractDeposit;
     private String contractTotalMoney;
     
@@ -48,19 +49,19 @@ public class Contract {
         this.contractId = contractId;
     }
 
-    public String getContractStartDate() {
+    public Date getContractStartDate() {
         return contractStartDate;
     }
 
-    public void setContractStartDate(String contractStartDate) {
+    public void setContractStartDate(Date contractStartDate) {
         this.contractStartDate = contractStartDate;
     }
 
-    public String getContractEndDate() {
+    public Date getContractEndDate() {
         return contractEndDate;
     }
 
-    public void setContractEndDate(String contractEndDate) {
+    public void setContractEndDate(Date contractEndDate) {
         this.contractEndDate = contractEndDate;
     }
 

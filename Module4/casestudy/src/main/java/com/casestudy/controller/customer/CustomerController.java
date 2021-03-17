@@ -6,6 +6,7 @@ import com.casestudy.service.customer.CustomerService;
 import com.casestudy.service.customer.CustomerTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 //@RequestMapping("/customer")
@@ -29,11 +31,21 @@ public class CustomerController {
         return customerTypeService.findAll();
     }
 
-    @GetMapping("/customer")
-    public String showHome(Model model, Pageable pageable) {
-        model.addAttribute("customers", customerService.findAll(pageable));
+    @RequestMapping("/customer")
+    public String showHome(Model model, @RequestParam(name = "text") Optional<String> text, @PageableDefault(value = 3) Pageable pageable) {
+        if (!text.isPresent()) {
+            model.addAttribute("customers", customerService.findAll(pageable));
+        } else {
+            model.addAttribute("customers", customerService.findAllInput(pageable, text));
+        }
         return "customer/home";
     }
+
+//    @GetMapping("/customer")
+//    public String showHome(Model model, @PageableDefault(value = 3) Pageable pageable) {
+//        model.addAttribute("customers", customerService.findAll(pageable));
+//        return "customer/home";
+//    }
 
     @GetMapping("/customer/create")
     public ModelAndView showCreate() {
@@ -50,7 +62,7 @@ public class CustomerController {
 
     @GetMapping("/customer/edit")
     public ModelAndView showEdit(@RequestParam(name = "id") Integer id) {
-        return new ModelAndView("customer/edit","customer", customerService.findById(id));
+        return new ModelAndView("customer/edit", "customer", customerService.findById(id));
     }
 
     @PostMapping("/customer/edit")
@@ -63,7 +75,7 @@ public class CustomerController {
 
     @GetMapping("/customer/delete")
     public ModelAndView showDelete(@RequestParam(name = "id") Integer id) {
-        return new ModelAndView("customer/delete","customer", customerService.findById(id));
+        return new ModelAndView("customer/delete", "customer", customerService.findById(id));
     }
 
     @PostMapping("/customer/delete")
@@ -73,4 +85,5 @@ public class CustomerController {
 //        redirectAttributes.addFlashAttribute("messenger", "Blog create successful");
         return "redirect:/customer";
     }
+
 }

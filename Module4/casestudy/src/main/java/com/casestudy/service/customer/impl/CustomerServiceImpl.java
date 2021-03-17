@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -39,5 +40,10 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void save(Customer customer) {
         customerRepository.save(customer);
+    }
+
+    @Override
+    public Page<Customer> findAllInput(Pageable pageable, Optional<String> text) {
+        return customerRepository.findAllInput(pageable, text);
     }
 }

@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+<head th:replace="fragments :: html_head">
 </head>
 <body>
-<p>
-    <a th:href="@{/service}">
-        Service
-    </a>
-</p>
-<p>
-    <a th:href="@{/customer}">
-        Customer
-    </a>
-</p>
-<p>
-    <a th:href="@{/employee}">
-        Employee
-    </a>
-</p>
-<p>
-    <a th:href="@{/contract}">
-        Contract
-    </a>
-</p>
+<div th:replace="fragments :: nav_top">
+
+</div>
+<h3>Main Page</h3>
+<section>
+    <nav id="nav_left">
+
+    </nav>
+    <article>
+        <h3>Furama</h3>
+        <a href="/contract/find"><h3>Customer Are Using Service</h3></a>
+    </article>
+</section>
+<footer th:replace="fragments :: footer">
+
+</footer>
 </body>
 </html>

@@ -1,66 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<head th:replace="fragments :: html_head">
 </head>
+
 <body>
-<table>
-    <form action="#" th:action="@{/service/delete}" th:object="${service}"
-          method="POST" novalidate="novalidate">
-        <table border="1">
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Area</th>
-                <th>Cost</th>
-                <th>Max People</th>
-                <th>Standard Room</th>
-                <th>Description</th>
-                <th>Pool Area</th>
-                <th>Numbers Of Floors</th>
-                <th>Service Type</th>
-                <th>Rent Type</th>
-            </tr>
-            <tr>
-                <td>
-                    <input th:field="*{serviceId}">
-                </td>
-                <td>
-                    <input th:field="*{serviceName}">
-                </td>
-                <td>
-                    <input th:field="*{serviceArea}">
-                </td>
-                <td>
-                    <input th:field="*{serviceCost}">
-                </td>
-                <td>
-                    <input th:field="*{serviceMaxPeople}">
-                </td>
-                <td>
-                    <input th:field="*{standardRoom}">
-                </td>
-                <td>
-                    <input th:field="*{descriptionOtherConvenience}">
-                </td>
-                <td>
-                    <input th:field="*{poolArea}">
-                </td>
-                <td>
-                    <input th:field="*{numberOfFloors}">
-                </td>
-                <td>
-                    <input th:field="*{serviceType.serviceTypeName}">
-                </td>
-                <td>
-                    <input th:field="*{rentType.rentTypeName}">
-                </td>
-            </tr>
-        </table>
-        <input type="submit" value="Delete">
-    </form>
-</table>
+
+<div th:replace="fragments :: nav_top">
+</div>
+
+<h3>Service Manager</h3>
+
+<section>
+    <nav id="nav_left">
+        <ul>
+            <li><a href="/service">Service list</a></li>
+            <li><a href="/service/create">Create service</a></li>
+        </ul>
+    </nav>
+    <article>
+        <div class="table-fit justify-content-center">
+            <form action="#" th:action="@{/service/delete}" th:object="${service}"
+                  method="POST" novalidate="novalidate">
+                <table class="table table-striped table-bordered table-hover thead-dark table-responsive">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Area</th>
+                        <th>Cost</th>
+                        <th>MaxPeople</th>
+                        <th>Standard Room</th>
+                        <th>Description</th>
+                        <th>Pool Area</th>
+                        <th>Floors</th>
+                        <th>Service Type</th>
+                        <th>Rent Type</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td th:text="${service.serviceId}"></td>
+                        <td th:text="${service.serviceName}"></td>
+                        <td th:text="${service.serviceArea}"></td>
+                        <td th:text="${service.serviceCost}"></td>
+                        <td th:text="${service.serviceMaxPeople}"></td>
+                        <td th:text="${service.standardRoom}"></td>
+                        <td th:text="${service.descriptionOtherConvenience}"></td>
+                        <td th:text="${service.poolArea}"></td>
+                        <td th:text="${service.numberOfFloors}"></td>
+                        <td th:text="${service.serviceType.serviceTypeName}"></td>
+                        <td th:text="${service.rentType.rentTypeName}"></td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+
+                    </tfoot>
+                </table>
+                <input type="submit" value="Delete">
+            </form>
+        </div>
+    </article>
+</section>
+
+<footer th:replace="fragments :: footer">
+
+</footer>
+
 </body>
 </html>

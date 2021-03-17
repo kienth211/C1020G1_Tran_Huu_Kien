@@ -1,73 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Employee Manager</title>
+
+<head th:replace="fragments :: html_head">
 </head>
 <body>
+<div th:replace="fragments :: nav_top">
+
+</div>
 <h3>Employee Manager</h3>
-<!--<p>-->
-<!--    <a th:href="@{/categories}">-->
-<!--        Category-->
-<!--    </a>-->
-<!--</p>-->
-<p>
-    <a th:href="@{/employee/create}">
-        Add new Employee
-    </a>
-</p>
-<!--<form>-->
-<!--    Search by name:-->
-<!--    <input name="s" type="text"/>-->
-<!--    <input type="submit" value="Search"/>-->
-<!--</form><br/>-->
-<table border="1">
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Birthday</th>
-        <th>Id Card</th>
-        <th>Salary</th>
-        <th>Phone</th>
-        <th>Email</th>
-        <th>Address</th>
-        <th>Position</th>
-        <th>Education Degree</th>
-        <th>Division</th>
-        <th>Action</th>
-        <th>Action</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="employee : ${employees}">
-        <td th:text="${employee.employeeId}"></td>
-        <td th:text="${employee.employeeName}"></td>
-        <td th:text="${employee.employeeBirthday}"></td>
-        <td th:text="${employee.employeeIdCard}"></td>
-        <td th:text="${employee.employeeSalary}"></td>
-        <td th:text="${employee.employeePhone}"></td>
-        <td th:text="${employee.employeeEmail}"></td>
-        <td th:text="${employee.employeeAddress}"></td>
-        <td th:text="${employee.position.positionName}"></td>
-        <td th:text="${employee.educationDegree.educationDegreeName}"></td>
-        <td th:text="${employee.division.divisionName}"></td>
-        <td><a th:href="@{employee/edit(id=${employee.employeeId})}">edit</a></td>
-        <td><a th:href="@{employee/delete(id=${employee.employeeId})}">delete</a></td>
-<!--        <td><a th:href="@{view(id=${employee.id})}">view</a></td>-->
-    </tr>
-    </tbody>
-</table>
-<div>
-    <a th:href="@{'/'(page=${employees.number - 1})}" th:if="${employees.hasPrevious()}">Previous</a>
-    <span th:text="${employees.number + 1}"></span>/<span th:text="${employees.totalPages}"></span>
-    <a th:href="@{'/'(page=${employees.number + 1})}" th:if="${employees.hasNext()}">Next</a>
-</div>
-<div class="notify">
-    <!--/*@thymesVar id="messenger" type="p1"*/-->
-    <div th:if="${messenger}">
-        <h2 th:text="${messenger}"></h2>
-    </div>
-</div>
+<section>
+    <nav id="nav_left">
+        <ul>
+            <li><a href="/employee">Employee list</a></li>
+            <li><a href="/employee/create">Create employee</a></li>
+        </ul>
+    </nav>
+
+    <form class="form-inline my-2 my-lg-0" th:action="@{/employee}" method="POST" novalidate="novalidate">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="text">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+    <article>
+        <div class="table-fit justify-content-center">
+            <table class="table table-striped table-bordered table-hover thead-dark table-responsive"
+                   id="tableEmployee">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Birthday</th>
+                    <th>Id Card</th>
+                    <th>Salary</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Position</th>
+                    <th>Education Degree</th>
+                    <th>Division</th>
+                    <th>Action</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="employee : ${employees}">
+                    <td th:text="${employee.employeeId}"></td>
+                    <td th:text="${employee.employeeName}"></td>
+                    <td th:text="${employee.employeeBirthday}"></td>
+                    <td th:text="${employee.employeeIdCard}"></td>
+                    <td th:text="${employee.employeeSalary}"></td>
+                    <td th:text="${employee.employeePhone}"></td>
+                    <td th:text="${employee.employeeEmail}"></td>
+                    <td th:text="${employee.employeeAddress}"></td>
+                    <td th:text="${employee.position.positionName}"></td>
+                    <td th:text="${employee.educationDegree.educationDegreeName}"></td>
+                    <td th:text="${employee.division.divisionName}"></td>
+                    <td><a th:href="@{employee/edit(id=${employee.employeeId})}">edit</a></td>
+                    <td><a th:href="@{employee/delete(id=${employee.employeeId})}">delete</a></td>
+                </tr>
+                </tbody>
+            </table>
+            <div>
+                <a th:href="@{'/employee'(page=${employees.number - 1})}" th:if="${employees.hasPrevious()}">Previous</a>
+                <span th:text="${employees.number + 1}"></span>/<span th:text="${employees.totalPages}"></span>
+                <a th:href="@{'/employee'(page=${employees.number + 1})}" th:if="${employees.hasNext()}">Next</a>
+            </div>
+        </div>
+    </article>
+</section>
+<footer th:replace="fragments :: footer">
+
+</footer>
 </body>
 </html>
