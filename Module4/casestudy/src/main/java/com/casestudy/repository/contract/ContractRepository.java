@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface ContractRepository extends JpaRepository<Contract, Integer> {
+public interface ContractRepository extends JpaRepository<Contract, String> {
 
     @Query("select c from Contract c " +
     "where CURRENT_DATE between c.contractStartDate and c.contractEndDate")

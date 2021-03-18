@@ -2,22 +2,36 @@ package com.casestudy.model.contract;
 
 import com.casestudy.model.customer.Customer;
 import com.casestudy.model.employee.Employee;
-import com.casestudy.model.employee.Role;
 import com.casestudy.model.service.Service;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import java.util.Date;
-import java.util.List;
 import java.util.Set;
 
 @Entity
 public class Contract {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer contractId;
-    
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String contractId;
+
+    @Column(nullable = false)
+    @NotBlank(message = "Need value")
+    @Pattern(regexp = "^([0-9]{4}[-]?((0[13-9]|1[012])[-]?(0[1-9]|[12][0-9]|30)|(0[13578]|1[02])[-]?31|02[-]?(0[1-9]|" +
+            "1[0-9]|2[0-8]))|([0-9]{2}(([2468][048]|[02468][48])|[13579][26])|([13579][26]|[02468][048])00)[-]?02[-]?29)$",
+            message = "format DD/MM/YYYY")
     private Date contractStartDate;
+
+    @Column(nullable = false)
+    @NotBlank(message = "Need value")
+    @Pattern(regexp = "^([0-9]{4}[-]?((0[13-9]|1[012])[-]?(0[1-9]|[12][0-9]|30)|(0[13578]|1[02])[-]?31|02[-]?(0[1-9]|" +
+            "1[0-9]|2[0-8]))|([0-9]{2}(([2468][048]|[02468][48])|[13579][26])|([13579][26]|[02468][048])00)[-]?02[-]?29)$",
+            message = "format DD/MM/YYYY")
     private Date contractEndDate;
+
+    @Column(nullable = false)
+    @NotBlank(message = "Need value")
     private String contractDeposit;
     private String contractTotalMoney;
     
@@ -41,11 +55,11 @@ public class Contract {
             inverseJoinColumns = @JoinColumn(name = "attach_service_id"))
     private Set<AttachService> attachServices;
 
-    public Integer getContractId() {
+    public String getContractId() {
         return contractId;
     }
 
-    public void setContractId(Integer contractId) {
+    public void setContractId(String contractId) {
         this.contractId = contractId;
     }
 

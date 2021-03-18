@@ -1,48 +1,55 @@
 package com.casestudy.model.employee;
 
 import com.casestudy.model.contract.Contract;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @Entity
 public class Employee {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer employeeId;
 
-//    @NotNull(message = "not blank")
-//    @Size(min = 5, max = 45, message = "value must > 5 and < 45")
+    @NotBlank(message = "Need value")
+    @Pattern(regexp = "((NV-)([0-9]{4}))", message = "Wrong format")
+    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String employeeId;
+
     @Column(nullable = false)
+    @NotBlank(message = "Need value")
+    @Pattern(regexp = "([\\p{Lu}][\\p{Ll}]{0,8})(\\s([\\p{Lu}]|[\\p{Lu}][\\p{Ll}]{1,10})){1,10}$",
+            message = "Wrong format")
     private String employeeName;
 
-//    @NotBlank(message = "not blank")
-//    @DateTimeFormat
     @Column(nullable = false)
+    @NotBlank(message = "Need value")
+    @Pattern(regexp = "^([0-9]{4}[-]?((0[13-9]|1[012])[-]?(0[1-9]|[12][0-9]|30)|(0[13578]|1[02])[-]?31|02[-]?(0[1-9]|" +
+            "1[0-9]|2[0-8]))|([0-9]{2}(([2468][048]|[02468][48])|[13579][26])|([13579][26]|[02468][048])00)[-]?02[-]?29)$",
+            message = "format DD/MM/YYYY")
     private String employeeBirthday;
 
-//    @NotBlank(message = "not blank")
     @Column(nullable = false)
+    @NotBlank(message = "Need value")
+    @Pattern(regexp = "^([0-9]{9})$", message = "Wrong format")
     private String employeeIdCard;
 
-//    @NotBlank(message = "not blank")
     @Column(nullable = false)
+    @NotBlank(message = "Need value")
     private String employeeSalary;
 
-//    @NotBlank(message = "not blank")
     @Column(nullable = false)
+    @Pattern(regexp = "^(090|091|[(]84[+][)]90|[(]84+[)]91)\\d{7}$", message = "Wrong format")
     private String employeePhone;
 
-//    @NotBlank(message = "not blank")
     @Column(nullable = false)
+    @NotBlank(message = "Need value")
+    @Email(message = "Wrong format")
     private String employeeEmail;
 
-//    @NotBlank(message = "not blank")
     @Column(nullable = false)
+    @NotBlank(message = "Need value")
     private String employeeAddress;
 
     @ManyToOne
@@ -59,16 +66,16 @@ public class Employee {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "username", referencedColumnName = "username")
-    private User user;
+    private AppUser appUser;
 
     @OneToMany(mappedBy = "employee")
     List<Contract> contracts;
 
-    public Integer getEmployeeId() {
+    public String getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(Integer employeeId) {
+    public void setEmployeeId(String employeeId) {
         this.employeeId = employeeId;
     }
 
@@ -152,12 +159,12 @@ public class Employee {
         this.division = division;
     }
 
-    public User getUser() {
-        return user;
+    public AppUser getUser() {
+        return appUser;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(AppUser appUser) {
+        this.appUser = appUser;
     }
 
     public List<Contract> getContracts() {

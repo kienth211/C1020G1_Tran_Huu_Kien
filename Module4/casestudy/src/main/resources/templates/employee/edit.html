@@ -27,36 +27,57 @@
                 <div class="form-group col-md-6">
                     <label>Name</label>
                     <input type="text" class="form-control" th:field="*{employeeName}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('employeeName')}" th:errors="*{employeeName}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Birthday</label>
                     <input type="date" class="form-control" th:field="*{employeeBirthday}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('employeeBirthday')}" th:errors="*{employeeBirthday}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Id Card</label>
                     <input type="text" class="form-control" th:field="*{employeeIdCard}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('employeeIdCard')}" th:errors="*{employeeIdCard}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Salary</label>
-                    <input type="text" class="form-control" th:field="*{employeeSalary}">
+                    <input type="number" class="form-control" th:field="*{employeeSalary}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('employeeSalary')}" th:errors="*{employeeSalary}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Phone</label>
                     <input type="text" class="form-control" th:field="*{employeePhone}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('employeePhone')}" th:errors="*{employeePhone}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Email</label>
                     <input type="text" class="form-control" th:field="*{employeeEmail}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('employeeEmail')}" th:errors="*{employeeEmail}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Address</label>
                     <input type="text" class="form-control" th:field="*{employeeAddress}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('employeeAddress')}" th:errors="*{employeeAddress}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">

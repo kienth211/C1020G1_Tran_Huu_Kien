@@ -1,5 +1,6 @@
 package com.casestudy.controller.service;
 
+import com.casestudy.model.customer.Customer;
 import com.casestudy.model.service.RentType;
 import com.casestudy.model.service.Service;
 import com.casestudy.model.service.ServiceType;
@@ -11,10 +12,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,6 +33,24 @@ public class ServiceController {
 
     @Autowired
     RentTypeService rentTypeService;
+
+    @ModelAttribute("standardRoom")
+    public List<String> standardRoom() {
+        List<String> standardRoom = new ArrayList<>();
+        standardRoom.add("Vip");
+        standardRoom.add("Business");
+        standardRoom.add("Normal");
+        return standardRoom;
+    }
+
+    @ModelAttribute("description")
+    public List<String> description() {
+        List<String> description = new ArrayList<>();
+        description.add("Classic");
+        description.add("Modern");
+        description.add("Normal");
+        return description;
+    }
 
     @ModelAttribute("serviceTypes")
     public List<ServiceType> serviceType() {
@@ -56,28 +78,38 @@ public class ServiceController {
     }
 
     @PostMapping("/service/create")
-    public String doCreate(@ModelAttribute Service service, RedirectAttributes redirectAttributes) {
-//        blog.setDateUpdate(new Date());
-        serviceService.save(service);
-//        redirectAttributes.addFlashAttribute("messenger", "Blog create successful");
-        return "redirect:/service";
+    public String doCreate(@Validated @ModelAttribute("service") Service service, BindingResult bindingResult,
+                           RedirectAttributes redirectAttributes) {
+        if (bindingResult.hasFieldErrors()){
+            return "/service/create";
+        }
+        else {
+            serviceService.save(service);
+            redirectAttributes.addFlashAttribute("messenger", "Service create successful");
+            return "redirect:/service";
+        }
     }
 
     @GetMapping("/service/edit")
-    public ModelAndView showEdit(@RequestParam(name = "id") Integer id) {
+    public ModelAndView showEdit(@RequestParam(name = "id") String id) {
         return new ModelAndView("service/edit","service", serviceService.findById(id));
     }
 
     @PostMapping("/service/edit")
-    public String doEdit(@ModelAttribute Service service, RedirectAttributes redirectAttributes) {
-//        blog.setDateUpdate(new Date());
-        serviceService.save(service);
-//        redirectAttributes.addFlashAttribute("messenger", "Blog create successful");
-        return "redirect:/service";
+    public String doEdit(@Validated @ModelAttribute("service") Service service, RedirectAttributes redirectAttributes,
+                         BindingResult bindingResult) {
+        if (bindingResult.hasFieldErrors()){
+            return "/service/edit";
+        }
+        else {
+            serviceService.save(service);
+            redirectAttributes.addFlashAttribute("messenger", "Service edit successful");
+            return "redirect:/service";
+        }
     }
 
     @GetMapping("/service/delete")
-    public ModelAndView showDelete(@RequestParam(name = "id") Integer id) {
+    public ModelAndView showDelete(@RequestParam(name = "id") String id) {
         return new ModelAndView("service/delete","service", serviceService.findById(id));
     }
 

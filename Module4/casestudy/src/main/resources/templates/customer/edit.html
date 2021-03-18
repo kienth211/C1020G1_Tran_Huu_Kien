@@ -15,7 +15,7 @@
     <nav id="nav_left">
         <ul>
             <li><a href="/customer">Customer list</a></li>
-            <li><a href="/customer/edit">Create customer</a></li>
+            <li><a href="/customer/create">Create customer</a></li>
         </ul>
     </nav>
     <article>
@@ -26,11 +26,17 @@
                 <div class="form-group col-md-6">
                     <label>Name</label>
                     <input type="text" class="form-control" th:field="*{customerName}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Birthday</label>
                     <input type="date" class="form-control" th:field="*{customerBirthday}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('customerBirthday')}" th:errors="*{customerBirthday}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
@@ -44,21 +50,33 @@
                 <div class="form-group col-md-6">
                     <label>Id Card</label>
                     <input type="text" class="form-control" th:field="*{customerIdCard}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('customerIdCard')}" th:errors="*{customerIdCard}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Phone</label>
                     <input type="text" class="form-control" th:field="*{customerPhone}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('customerPhone')}" th:errors="*{customerPhone}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Email</label>
                     <input type="text" class="form-control" th:field="*{customerEmail}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('customerEmail')}" th:errors="*{customerEmail}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Address</label>
                     <input type="text" class="form-control" th:field="*{customerAddress}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('customerAddress')}" th:errors="*{customerAddress}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">

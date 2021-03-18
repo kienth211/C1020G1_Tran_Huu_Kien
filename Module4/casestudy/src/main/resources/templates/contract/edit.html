@@ -15,7 +15,7 @@
     <nav id="nav_left">
         <ul>
             <li><a href="/contract">Contract list</a></li>
-            <li><a href="/contract/edit">Create contract</a></li>
+            <li><a href="/contract/create">Create contract</a></li>
         </ul>
     </nav>
     <article>
@@ -23,24 +23,37 @@
             <form th:action="@{/contract/edit}" th:object="${contract}"
                   method="POST" novalidate="novalidate">
                 <input type="hidden" th:field="*{contractId}"/>
+
                 <div class="form-group col-md-6">
                     <label>Start Date</label>
                     <input type="date" class="form-control" th:field="*{contractStartDate}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('contractStartDate')}" th:errors="*{contractStartDate}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>End Date</label>
                     <input type="date" class="form-control" th:field="*{contractEndDate}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('contractEndDate')}" th:errors="*{contractEndDate}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Deposit</label>
-                    <input type="text" class="form-control" th:field="*{contractDeposit}">
+                    <input type="number" class="form-control" th:field="*{contractDeposit}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('contractDeposit')}" th:errors="*{contractDeposit}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Total Money</label>
-                    <input type="text" class="form-control" th:field="*{contractTotalMoney}">
+                    <input type="number" class="form-control" th:field="*{contractTotalMoney}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('contractTotalMoney')}" th:errors="*{contractTotalMoney}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">

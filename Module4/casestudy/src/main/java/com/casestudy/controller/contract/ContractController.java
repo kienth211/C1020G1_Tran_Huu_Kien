@@ -15,6 +15,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -71,28 +73,38 @@ public class ContractController {
     }
 
     @PostMapping("/contract/create")
-    public String doCreate(@ModelAttribute Contract contract, RedirectAttributes redirectAttributes) {
-//        blog.setDateUpdate(new Date());
-        contractService.save(contract);
-//        redirectAttributes.addFlashAttribute("messenger", "Blog create successful");
-        return "redirect:/contract";
+    public String doCreate(@Validated @ModelAttribute("contract") Contract contract, BindingResult bindingResult,
+                           RedirectAttributes redirectAttributes) {
+        if (bindingResult.hasFieldErrors()){
+            return "/contract/create";
+        }
+        else {
+            contractService.save(contract);
+            redirectAttributes.addFlashAttribute("messenger", "Contract create successful");
+            return "redirect:/contract";
+        }
     }
 
     @GetMapping("/contract/edit")
-    public ModelAndView showEdit(@RequestParam(name = "id") Integer id) {
+    public ModelAndView showEdit(@RequestParam(name = "id") String id) {
         return new ModelAndView("contract/edit","contract", contractService.findById(id));
     }
 
     @PostMapping("/contract/edit")
-    public String doEdit(@ModelAttribute Contract contract, RedirectAttributes redirectAttributes) {
-//        blog.setDateUpdate(new Date());
-        contractService.save(contract);
-//        redirectAttributes.addFlashAttribute("messenger", "Blog create successful");
-        return "redirect:/contract";
+    public String doEdit(@Validated @ModelAttribute("contract") Contract contract, RedirectAttributes redirectAttributes,
+                         BindingResult bindingResult) {
+        if (bindingResult.hasFieldErrors()){
+            return "/contract/edit";
+        }
+        else {
+            contractService.save(contract);
+            redirectAttributes.addFlashAttribute("messenger", "Contract edit successful");
+            return "redirect:/contract";
+        }
     }
 
     @GetMapping("/contract/delete")
-    public ModelAndView showDelete(@RequestParam(name = "id") Integer id) {
+    public ModelAndView showDelete(@RequestParam(name = "id") String id) {
         return new ModelAndView("contract/delete","contract", contractService.findById(id));
     }
 
@@ -106,7 +118,7 @@ public class ContractController {
 
     @GetMapping("/contract/find")
     public String doFind(Model model,@PageableDefault(value = 3) Pageable pageable){
-        contractService.findContractsByCurrentDate(pageable);
-        return "redirect:/contract";
+        model.addAttribute("contracts", contractService.findContractsByCurrentDate(pageable));
+        return "contract/find";
     }
 }

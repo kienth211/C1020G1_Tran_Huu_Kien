@@ -9,4 +9,5 @@ import java.util.Optional;
 
 public interface CustomerService extends Service<Customer> {
     Page<Customer> findAllInput(Pageable pageable, Optional<String> text);
+//    Page<Customer> findAllBetween(Pageable pageable);
 }

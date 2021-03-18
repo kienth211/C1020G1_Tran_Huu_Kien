@@ -1,5 +1,6 @@
 package com.casestudy.controller.employee;
 
+import com.casestudy.model.customer.Customer;
 import com.casestudy.model.employee.Division;
 import com.casestudy.model.employee.EducationDegree;
 import com.casestudy.model.employee.Employee;
@@ -13,6 +14,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -66,28 +69,38 @@ public class EmployeeController {
     }
 
     @PostMapping("/employee/create")
-    public String doCreate(@ModelAttribute Employee employee, RedirectAttributes redirectAttributes) {
-//        blog.setDateUpdate(new Date());
-        employeeService.save(employee);
-//        redirectAttributes.addFlashAttribute("messenger", "Blog create successful");
-        return "redirect:/employee";
+    public String doCreate(@Validated @ModelAttribute("employee") Employee employee, BindingResult bindingResult,
+                           RedirectAttributes redirectAttributes) {
+        if (bindingResult.hasFieldErrors()){
+            return "/employee/create";
+        }
+        else {
+            employeeService.save(employee);
+            redirectAttributes.addFlashAttribute("messenger", "Employee create successful");
+            return "redirect:/employee";
+        }
     }
 
     @GetMapping("/employee/edit")
-    public ModelAndView showEdit(@RequestParam(name = "id") Integer id) {
+    public ModelAndView showEdit(@RequestParam(name = "id") String id) {
         return new ModelAndView("employee/edit","employee", employeeService.findById(id));
     }
 
     @PostMapping("/employee/edit")
-    public String doEdit(@ModelAttribute Employee employee, RedirectAttributes redirectAttributes) {
-//        blog.setDateUpdate(new Date());
-        employeeService.save(employee);
-//        redirectAttributes.addFlashAttribute("messenger", "Blog create successful");
-        return "redirect:/employee";
+    public String doEdit(@Validated @ModelAttribute("employee") Employee employee, RedirectAttributes redirectAttributes,
+                         BindingResult bindingResult) {
+        if (bindingResult.hasFieldErrors()){
+            return "/employee/edit";
+        }
+        else {
+            employeeService.save(employee);
+            redirectAttributes.addFlashAttribute("messenger", "Employee edit successful");
+            return "redirect:/employee";
+        }
     }
 
     @GetMapping("/employee/delete")
-    public ModelAndView showDelete(@RequestParam(name = "id") Integer id) {
+    public ModelAndView showDelete(@RequestParam(name = "id") String id) {
         return new ModelAndView("employee/delete","employee", employeeService.findById(id));
     }
 

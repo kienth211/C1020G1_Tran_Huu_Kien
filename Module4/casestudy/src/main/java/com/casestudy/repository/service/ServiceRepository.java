@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface ServiceRepository extends JpaRepository<Service, Integer> {
+public interface ServiceRepository extends JpaRepository<Service, String> {
     @Query("select s from Service s " +
             "where concat(s.serviceName,s.serviceType.serviceTypeName) like %?1%")
     Page<Service> findAllInput(Pageable pageable, Optional<String> text);

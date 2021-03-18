@@ -2,29 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="457d4732-e2f7-4c40-be3c-451764c2bc69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../Module4/bai_9_aop/bai_tap/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Module4/bai_9_aop/bai_tap/.idea/bai_tap.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Module4/bai_9_aop/bai_tap/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Module4/bai_9_aop/bai_tap/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Module4/bai_9_aop/bai_tap/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/static/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/fragments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/layouts/main-layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/model/employee/AppRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/model/employee/AppUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/model/employee/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/repository/employee/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/ValidationMessages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/contract/find.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Module4/bai_9_aop/bai_tap/e1_book/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/bai_9_aop/bai_tap/e1_book/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/bai_14_security/thuc_hanh/p1_login/src/main/java/p1/login/model/AppRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/bai_14_security/thuc_hanh/p1_login/src/main/java/p1/login/model/AppRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/controller/contract/ContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/controller/contract/ContractController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/controller/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/controller/customer/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/controller/employee/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/controller/employee/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/controller/service/ServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/controller/service/ServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/model/contract/AttachService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/model/contract/AttachService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/model/contract/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/model/contract/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/model/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/model/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/model/employee/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/model/employee/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/model/employee/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/model/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/model/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/repository/contract/ContractRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/repository/contract/ContractRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/repository/customer/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/repository/customer/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/repository/employee/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/repository/employee/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/repository/service/ServiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/repository/service/ServiceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/service/contract/impl/ContractServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/service/contract/impl/ContractServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/service/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/service/customer/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/service/customer/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/service/customer/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/contract/abc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/service/employee/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/service/employee/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/service/service/impl/ServiceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/java/com/casestudy/service/service/impl/ServiceServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/contract/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/contract/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/contract/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/contract/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/contract/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/contract/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/customer/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/customer/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/customer/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/customer/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/employee/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/employee/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/service/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/service/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/customer/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/customer/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/employee/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/employee/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/employee/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/employee/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/service/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/service/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/service/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/casestudy/src/main/resources/templates/service/edit.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +92,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Module4/casestudy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -214,6 +231,7 @@
       <workItem from="1615886453179" duration="2571000" />
       <workItem from="1615897050900" duration="2274000" />
       <workItem from="1615943351461" duration="3027000" />
+      <workItem from="1616030908105" duration="3968000" />
     </task>
     <servers />
   </component>

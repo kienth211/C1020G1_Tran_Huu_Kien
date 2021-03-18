@@ -33,7 +33,7 @@ public class ContractServiceImpl implements ContractService {
     }
 
     @Override
-    public Contract findById(Integer id) {
+    public Contract findById(String id) {
         return contractRepository.findById(id).orElse(null);
     }
 

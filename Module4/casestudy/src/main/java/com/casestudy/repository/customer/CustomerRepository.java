@@ -11,10 +11,11 @@ import java.util.Date;
 import java.util.Optional;
 
 @Repository
-public interface CustomerRepository extends JpaRepository<Customer, Integer> {
-//    @Query("select c from Customer c" +
-//    "where ?1 between ")
-//    Page<Customer> findCustomersByContractsIsBetween(Pageable pageable, Date date);
+public interface CustomerRepository extends JpaRepository<Customer, String> {
+//    @Query("select cu from Customer cu " +
+//            "left join Contract co on cu.customerId = co.customer.customerId " +
+//            "where current_date between co.contractStartDate and co.contractEndDate")
+//    Page<Customer> findCustomersByContractsIsBetween(Pageable pageable);
 
 
     @Query("select c from Customer c " +

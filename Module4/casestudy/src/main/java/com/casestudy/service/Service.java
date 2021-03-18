@@ -11,7 +11,7 @@ public interface Service<T> {
     List<T> findAll();
     Page<T> findAll(Pageable pageable);
     Page<T> findAllInput(Pageable pageable, Optional<String> text);
-    T findById(Integer id);
+    T findById(String id);
     void delete(T t);
     void save(T t);
 }

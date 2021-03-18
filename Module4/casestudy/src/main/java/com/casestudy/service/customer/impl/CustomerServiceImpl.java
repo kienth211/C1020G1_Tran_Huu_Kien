@@ -28,7 +28,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer findById(Integer id) {
+    public Customer findById(String id) {
         return customerRepository.findById(id).orElse(null);
     }
 
@@ -46,4 +46,9 @@ public class CustomerServiceImpl implements CustomerService {
     public Page<Customer> findAllInput(Pageable pageable, Optional<String> text) {
         return customerRepository.findAllInput(pageable, text);
     }
+
+//    @Override
+//    public Page<Customer> findAllBetween(Pageable pageable) {
+//        return customerRepository.findCustomersByContractsIsBetween(pageable);
+//    }
 }

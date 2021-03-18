@@ -32,7 +32,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public Employee findById(Integer id) {
+    public Employee findById(String id) {
         return employeeRepository.findById(id).orElse(null);
     }
 

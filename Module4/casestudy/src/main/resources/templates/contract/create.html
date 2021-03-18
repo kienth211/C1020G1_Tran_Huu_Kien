@@ -24,24 +24,37 @@
             <form th:action="@{/contract/create}" th:object="${contract}"
                   method="POST" novalidate="novalidate">
                 <input type="hidden" th:field="*{contractId}"/>
+
                 <div class="form-group col-md-6">
                     <label>Start Date</label>
                     <input type="date" class="form-control" th:field="*{contractStartDate}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('contractStartDate')}" th:errors="*{contractStartDate}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>End Date</label>
                     <input type="date" class="form-control" th:field="*{contractEndDate}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('contractEndDate')}" th:errors="*{contractEndDate}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Deposit</label>
-                    <input type="text" class="form-control" th:field="*{contractDeposit}">
+                    <input type="number" class="form-control" th:field="*{contractDeposit}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('contractDeposit')}" th:errors="*{contractDeposit}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Total Money</label>
-                    <input type="text" class="form-control" th:field="*{contractTotalMoney}">
+                    <input type="number" class="form-control" th:field="*{contractTotalMoney}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('contractTotalMoney')}" th:errors="*{contractTotalMoney}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
@@ -72,7 +85,7 @@
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label>Service</label>
+                    <label>Attach Service</label>
                     <select class="form-control" th:field="*{attachServices}">
                         <option th:each="attachServices : ${attachServices}"
                                 th:value="${attachServices.attachServiceId}"

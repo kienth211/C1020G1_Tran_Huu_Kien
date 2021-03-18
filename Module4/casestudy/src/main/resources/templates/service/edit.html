@@ -27,36 +27,67 @@
                 <div class="form-group col-md-6">
                     <label>Name</label>
                     <input type="text" class="form-control" th:field="*{serviceName}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('serviceName')}" th:errors="*{serviceName}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Area</label>
-                    <input type="text" class="form-control" th:field="*{serviceArea}">
+                    <input type="number" class="form-control" th:field="*{serviceArea}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('serviceArea')}" th:errors="*{serviceArea}"></td>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>Cost</label>
+                    <input type="number" class="form-control" th:field="*{serviceCost}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('serviceCost')}" th:errors="*{serviceCost}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>MaxPeople</label>
-                    <input type="text" class="form-control" th:field="*{serviceMaxPeople}">
+                    <input type="number" class="form-control" th:field="*{serviceMaxPeople}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('serviceMaxPeople')}" th:errors="*{serviceMaxPeople}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Standard Room</label>
-                    <input type="text" class="form-control" th:field="*{standardRoom}">
+                    <select class="form-control" th:field="*{standardRoom}">
+                        <option th:each="standardRoom : ${standardRoom}"
+                                th:value="${standardRoom}"
+                                th:text="${standardRoom}"></option>
+                    </select>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Description</label>
-                    <input type="text" class="form-control" th:field="*{descriptionOtherConvenience}">
+                    <select class="form-control" th:field="*{descriptionOtherConvenience}">
+                        <option th:each="description : ${description}"
+                                th:value="${description}"
+                                th:text="${description}"></option>
+                    </select>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Pool Area</label>
-                    <input type="text" class="form-control" th:field="*{poolArea}">
+                    <input type="number" class="form-control" th:field="*{poolArea}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('poolArea')}" th:errors="*{poolArea}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Floors</label>
-                    <input type="text" class="form-control" th:field="*{numberOfFloors}">
+                    <input type="number" class="form-control" th:field="*{numberOfFloors}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('numberOfFloors')}" th:errors="*{numberOfFloors}"></td>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">

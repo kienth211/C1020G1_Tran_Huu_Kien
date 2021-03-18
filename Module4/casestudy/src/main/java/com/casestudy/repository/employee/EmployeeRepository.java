@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.Optional;
 
-public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+public interface EmployeeRepository extends JpaRepository<Employee, String> {
     @Query("select e from Employee e " +
             "where concat(e.employeeName,e.employeeEmail) like %?1%")
     Page<Employee> findAllInput(Pageable pageable, Optional<String> text);
