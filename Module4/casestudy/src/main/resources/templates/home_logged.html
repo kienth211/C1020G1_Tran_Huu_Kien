@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head">
+</head>
+<body>
+<div th:replace="fragments :: nav_top">
+
+</div>
+<h3>Main Page</h3>
+<section>
+    <nav id="nav_left">
+
+    </nav>
+    <article>
+        <h4>Furama</h4>
+        <a href="/contract/find"><h4>Customer Are Using Service</h4></a>
+
+        <h4>Welcome : <span th:utext="${#request.userPrincipal.name}"></span></h4>
+
+        <a th:href="@{/logout}"><h4>Logout</h4></a>
+    </article>
+</section>
+<footer th:replace="fragments :: footer">
+
+</footer>
+</body>
+</html>

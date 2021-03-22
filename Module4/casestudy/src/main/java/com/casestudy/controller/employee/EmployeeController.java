@@ -106,9 +106,7 @@ public class EmployeeController {
 
     @PostMapping("/employee/delete")
     public String doDelete(@ModelAttribute Employee employee, RedirectAttributes redirectAttributes) {
-//        blog.setDateUpdate(new Date());
         employeeService.delete(employee);
-//        redirectAttributes.addFlashAttribute("messenger", "Blog create successful");
         return "redirect:/employee";
     }
 }

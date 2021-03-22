@@ -23,7 +23,15 @@
         <div id="form">
             <form th:action="@{/contract/create}" th:object="${contract}"
                   method="POST" novalidate="novalidate">
-                <input type="hidden" th:field="*{contractId}"/>
+<!--                <input type="hidden" th:field="*{contractId}"/>-->
+
+                <div class="form-group col-md-6">
+                    <label>ID</label>
+                    <input type="text" class="form-control" th:field="*{contractId}">
+                    <div style="color: red">
+                        <td th:if="${#fields.hasErrors('contractId')}" th:errors="*{contractId}"></td>
+                    </div>
+                </div>
 
                 <div class="form-group col-md-6">
                     <label>Start Date</label>

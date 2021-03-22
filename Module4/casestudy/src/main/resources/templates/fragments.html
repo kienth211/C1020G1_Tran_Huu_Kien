@@ -75,7 +75,8 @@
 <div th:fragment="nav_top">
     <ul class="nav nav-pills" style="background-color: cornflowerblue" role="tablist">
         <li class="nav-item">
-            <a class="nav-link" href="/" role="tab" style="color: white">Main Page</a>
+            <a th:if="${#request.userPrincipal == null}" class="nav-link" href="/" role="tab" style="color: white">Main Page</a>
+            <a th:if="${#request.userPrincipal != null}" class="nav-link" href="/home_logged" role="tab" style="color: white">Main Page</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/contract" style="color: white" role="tab">Contract</a>

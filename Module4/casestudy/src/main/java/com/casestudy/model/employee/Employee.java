@@ -14,7 +14,7 @@ public class Employee {
     @NotBlank(message = "Need value")
     @Pattern(regexp = "((NV-)([0-9]{4}))", message = "Wrong format")
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "employee_id")
     private String employeeId;
 
     @Column(nullable = false)
@@ -64,8 +64,7 @@ public class Employee {
     @JoinColumn(name = "division_id", referencedColumnName = "divisionId")
     private Division division;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "username", referencedColumnName = "username")
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "employee")
     private AppUser appUser;
 
     @OneToMany(mappedBy = "employee")

@@ -13,8 +13,27 @@
 
     </nav>
     <article>
-        <h3>Furama</h3>
-        <a href="/contract/find"><h3>Customer Are Using Service</h3></a>
+        <h4>Furama</h4>
+        <a href="/contract/find"><h4>Customer Are Using Service</h4></a>
+
+        <form name='f' th:action="@{/j_spring_security_check}" method="post"
+              novalidate="novalidate">
+
+            <div class="form-group col-md-6">
+                <label>Username</label>
+                <input type="text" class="form-control" name="username">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password">
+            </div>
+
+            <div>
+                <input type="submit" value="Login">
+            </div>
+
+        </form>
     </article>
 </section>
 <footer th:replace="fragments :: footer">
