@@ -86,15 +86,15 @@ public class CustomerController {
         }
     }
 
-    @GetMapping("/customer/delete")
-    public ModelAndView showDelete(@RequestParam(name = "id") String id) {
-        return new ModelAndView("customer/delete", "customer", customerService.findById(id));
-    }
+//    @GetMapping("/customer/delete")
+//    public ModelAndView showDelete(@RequestParam(name = "id") String id) {
+//        return new ModelAndView("customer/delete", "customer", customerService.findById(id));
+//    }
 
     @PostMapping("/customer/delete")
-    public String doDelete(@ModelAttribute Customer customer, RedirectAttributes redirectAttributes) {
+    public String doDelete(@RequestParam("delete_modal1") String id) {
 //        blog.setDateUpdate(new Date());
-        customerService.delete(customer);
+        customerService.delete(customerService.findById(id));
 //        redirectAttributes.addFlashAttribute("messenger", "Blog create successful");
         return "redirect:/customer";
     }

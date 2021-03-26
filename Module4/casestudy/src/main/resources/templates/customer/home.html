@@ -52,7 +52,21 @@
                     <td th:text="${customer.customerAddress}"></td>
                     <td th:text="${customer.customerType.customerTypeName}"></td>
                     <td><a th:href="@{customer/edit(id=${customer.customerId})}">edit</a></td>
-                    <td><a th:href="@{customer/delete(id=${customer.customerId})}">delete</a></td>
+<!--                    <td><a th:href="@{customer/delete(id=${customer.customerId})}">delete</a></td>-->
+                    <td><a onclick="setValue()" type="button" class="btn btn-primary" data-toggle="modal" th:data-id="${customer.customerId}"
+                    href="#exampleModalLong">
+                        Delete
+                    </a></td>
+<!--                    <td>-->
+<!--                        <a-->
+<!--                                href="#deleteModal"-->
+<!--                                class="delete"-->
+<!--                                title="Delete"-->
+<!--                                data-toggle="modal"-->
+<!--                                th:onclick="|setValue(${customer.customerId})|"-->
+
+<!--                        ></a>-->
+<!--                    </td>-->
                 </tr>
                 </tbody>
             </table>
@@ -62,6 +76,41 @@
                 <a th:href="@{'/customer'(page=${customers.number + 1})}" th:if="${customers.hasNext()}">Next</a>
             </div>
         </div>
+
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="submitForm()">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form th:action="@{/customer/delete}"  method="post" id="formDelete">
+            <input type="hidden" id="input" name="delete_modal1">
+        </form>
+
+        <script>
+            var id = button
+            function setValue(id) {
+                document.getElementById("input").value = id;
+            }
+            function submitForm() {
+                document.getElementById("formDelete").submit();
+            }
+        </script>
+
     </article>
 </section>
 <footer th:replace="fragments :: footer">

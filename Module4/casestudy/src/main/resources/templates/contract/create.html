@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head th:replace="fragments :: html_head">
+
 </head>
-
 <body>
-
 <div th:replace="fragments :: nav_top">
 </div>
 
@@ -67,7 +65,7 @@
 
                 <div class="form-group col-md-6">
                     <label>Employee</label>
-                    <select class="form-control" th:field="*{employee}">
+                    <select class="form-control js-example-basic-single" th:field="*{employee}">
                         <option th:each="employee : ${employees}"
                                 th:value="${employee.employeeId}"
                                 th:text="${employee.employeeName}"></option>
@@ -76,7 +74,7 @@
 
                 <div class="form-group col-md-6">
                     <label>Customer</label>
-                    <select class="form-control" th:field="*{customer}">
+                    <select class="form-control js-example-basic-single" th:field="*{customer}">
                         <option th:each="customer : ${customers}"
                                 th:value="${customer.customerId}"
                                 th:text="${customer.customerName}"></option>
@@ -85,7 +83,7 @@
 
                 <div class="form-group col-md-6">
                     <label>Service</label>
-                    <select class="form-control" th:field="*{service}">
+                    <select class="form-control js-example-basic-single" th:field="*{service}">
                         <option th:each="service : ${services}"
                                 th:value="${service.serviceId}"
                                 th:text="${service.serviceName}"></option>
@@ -106,7 +104,13 @@
     </article>
 </section>
 <footer th:replace="fragments :: footer">
-
 </footer>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.js-example-basic-single').select2();
+    });
+</script>
 </html>
