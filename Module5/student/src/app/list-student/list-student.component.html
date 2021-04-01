@@ -1,0 +1,58 @@
+<table class="table table-striped table-hover">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Mark</th>
+    <th>Result</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let student of students">
+    <td>{{student.id}}</td>
+    <td>{{student.name}}</td>
+    <td>{{student.age}}</td>
+    <td>{{student.mark}}</td>
+    <td *ngIf="student.mark >= 5">Pass</td>
+    <td *ngIf="student.mark < 5">Fail</td>
+    <td>
+      <button class="btn btn-warning" (click)="detail(student);openWindowCustomClass1(content1)">Detail</button>
+      <button class="btn btn-danger" (click)="detail(student);openWindowCustomClass(content)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Delete Student</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    ARE YOU SURE ?
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="delete(student);modal.close('Close click')">OK</button>
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+<ng-template #content1 let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Information Student</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <app-student-info [student]="student"></app-student-info>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+
+
+

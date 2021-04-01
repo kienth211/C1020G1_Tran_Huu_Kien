@@ -1,0 +1,16 @@
+// template
+<app-nav></app-nav>
+<h2>Today's article</h2>
+<hr>
+<div>
+  <div *ngFor="let art of articles">
+    <a href="{{art.url}}" target="_blank">{{art.title}}</a>
+    <app-likes></app-likes>
+  </div>
+<!--  <<textarea [(ngModel)]="article.title" cols="70"></textarea>-->
+<!--  <textarea [(ngModel)]="article.url" cols="70"></textarea>-->
+<!--  <input (click)="updateArticle()" type="button" value="Update">-->
+<!--  <button (click)="addArticle()">Add</button>-->
+</div>
+<hr>
+<app-footer></app-footer>
