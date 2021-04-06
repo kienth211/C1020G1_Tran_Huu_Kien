@@ -1,0 +1,37 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "code": "KH-0001",
+      "customerType": "Diamond",
+      "name": "Thịnh",
+      "birthday": "12/12/2000",
+      "idCard": "123456789",
+      "phone": "0356109144",
+      "email": "thinh@thinh.thinh",
+      "address": "Hội An"
+    },
+    {
+      "id": 2,
+      "code": "KH-0002",
+      "customerType": "Platinum",
+      "name": "Kiên",
+      "birthday": "11/11/1999",
+      "idCard": "123456789",
+      "phone": "0356109144",
+      "email": "kien@kien.kien",
+      "address": "Nghệ An"
+    },
+    {
+      "id": 3,
+      "code": "KH-0003",
+      "customerType": "Gold",
+      "name": "Cường",
+      "birthday": "10/10/1998",
+      "idCard": "123456789",
+      "phone": "0356109144",
+      "email": "cuong@cuong.cuong",
+      "address": "Đà Nẵng"
+    }
+  ]
+}

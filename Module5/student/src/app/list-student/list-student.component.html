@@ -24,6 +24,66 @@
   </tr>
   </tbody>
 </table>
+
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <p>
+    <label for="id">id </label>
+    <input type="text" id="id" name="id" formControlName="id">
+  </p>
+
+  <p>
+    <label for="name">name </label>
+    <input type="text" id="name" name="name" formControlName="name">
+  </p>
+
+  <div
+    *ngIf="!studentForm.controls.name?.valid && (studentForm.controls.name?.dirty
+    ||studentForm.controls.name?.touched)">
+    Name is not valid
+  </div>
+
+  <p>
+    <label for="age">age </label>
+    <input type="text" id="age" name="age" formControlName="age">
+  </p>
+
+  <p>
+    <label for="mark">mark </label>
+    <input type="text" id="mark" name="mark" formControlName="mark">
+  </p>
+
+  <p>
+    <label for="avatarImg">avatarImg </label>
+    <input type="text" id="avatarImg" name="avatarImg" formControlName="avatarImg">
+  </p>
+
+<!--  <p>-->
+<!--    <label for="gender">Geneder </label>-->
+<!--    <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male-->
+<!--    <input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female-->
+<!--  </p>-->
+
+<!--  <p>-->
+<!--    <label for="isMarried">Married </label>-->
+<!--    <input type="checkbox" id="isMarried" name="isMarried" formControlName="isMarried">-->
+<!--  </p>-->
+
+<!--  <p>-->
+<!--    <label for="country">country </label>-->
+<!--    <select id="country" name="country"  formControlName="country">-->
+<!--      <option [ngValue]="c.id" *ngFor="let c of countryList">-->
+
+<!--      </option>-->
+<!--    </select>-->
+<!--  </p>-->
+
+  <p>
+    <button type="submit" >Submit</button>
+  </p>
+<!--  -->
+</form>
+
 <ng-template #content let-modal>
   <div class="modal-header">
     <h4 class="modal-title">Delete Student</h4>

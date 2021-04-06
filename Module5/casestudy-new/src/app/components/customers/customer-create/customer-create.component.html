@@ -1,0 +1,60 @@
+<div class="row justify-content-between">
+  <button class="btn btn-outline-success me-2" type="button" [routerLink]="['/customer-list']">Back to List</button>
+</div>
+
+<form style="width: 100vw" [formGroup]="formCreate" (ngSubmit)="createCustomer()" novalidate>
+  <div class="mb-3">
+    <label for="id" class="form-label">ID</label>
+    <input type="text" class="form-control col-6" id="id" placeholder="name@example.com" formControlName="id">
+    
+  </div>
+
+  <div class="mb-3">
+    <label for="code" class="form-label">Code</label>
+    <input type="text" class="form-control col-6" id="code" placeholder="name@example.com" formControlName="code">
+  </div>
+
+  <div class="mb-3">
+    <label for="customerType" class="form-label">Customer Type</label>
+    <input type="text" class="form-control col-6" id="customerType" placeholder="name@example.com" formControlName="customerType">
+  </div>
+
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control col-6" id="name" placeholder="name@example.com" formControlName="name">
+  </div>
+
+  <div class="mb-3">
+    <label for="birthday" class="form-label">Birthday</label>
+    <input type="text" class="form-control col-6" id="birthday" placeholder="name@example.com" formControlName="birthday">
+  </div>
+
+  <div class="mb-3">
+    <label for="idCard" class="form-label">ID Card</label>
+    <input type="text" class="form-control col-6" id="idCard" placeholder="name@example.com" formControlName="idCard">
+  </div>
+
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone</label>
+    <input type="text" class="form-control col-6" id="phone" placeholder="name@example.com" formControlName="phone">
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="text" class="form-control col-6" id="email" placeholder="name@example.com" formControlName="email">
+  </div>
+
+  <div class="mb-3">
+    <label for="address" class="form-label">Address</label>
+    <input type="text" class="form-control col-6" id="address" placeholder="name@example.com" formControlName="address">
+  </div>
+
+<!--  <div class="row justify-content-between">-->
+<!--    <button class="btn btn-success me-2" type="submit" (click)="createCustomer()">Submit</button>-->
+<!--  </div>-->
+
+  <p>
+    <button type="submit" [disabled]="!formCreate.valid">Submit</button>
+  </p>
+
+</form>

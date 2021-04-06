@@ -1,0 +1,45 @@
+<div class="row justify-content-between">
+    <button class="btn btn-outline-success me-2" type="button" [routerLink]="['/customer-create']">Main button</button>
+    <div class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+             [(ngModel)]="name">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </div>
+</div>
+
+<div class="row">
+  <table class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+      <th>ID</th>
+      <th>Code</th>
+      <th>Customer Type</th>
+      <th>Name</th>
+      <th>Birthday</th>
+      <th>ID Card</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let customer of customers |filter:name |paginate: { itemsPerPage: 2, currentPage: p }">
+      <td>{{customer.id}}</td>
+      <td>{{customer.code}}</td>
+      <td>{{customer.customerType}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.birthday}}</td>
+      <td>{{customer.idCard}}</td>
+      <td>{{customer.phone}}</td>
+      <td>{{customer.email}}</td>
+      <td>{{customer.address}}</td>
+      <td>
+<!--        <button class="btn btn-warning" (click)="detail(student);openWindowCustomClass1(content1)">Detail</button>-->
+<!--        <button class="btn btn-danger" (click)="detail(student);openWindowCustomClass(content)">Delete</button>-->
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
