@@ -27,7 +27,7 @@
     <tr *ngFor="let customer of customers |filter:name |paginate: { itemsPerPage: 2, currentPage: p }">
       <td>{{customer.id}}</td>
       <td>{{customer.code}}</td>
-      <td>{{customer.customerType}}</td>
+      <td>{{customer.customerType.name}}</td>
       <td>{{customer.name}}</td>
       <td>{{customer.birthday}}</td>
       <td>{{customer.idCard}}</td>
@@ -36,7 +36,7 @@
       <td>{{customer.address}}</td>
       <td>
 <!--        <button class="btn btn-warning" (click)="detail(student);openWindowCustomClass1(content1)">Detail</button>-->
-<!--        <button class="btn btn-danger" (click)="detail(student);openWindowCustomClass(content)">Delete</button>-->
+        <button class="btn btn-danger" (click)=openDialog(customer.id)>Delete</button>
       </td>
     </tr>
     </tbody>

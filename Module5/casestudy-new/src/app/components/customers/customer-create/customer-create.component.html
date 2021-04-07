@@ -3,50 +3,129 @@
 </div>
 
 <form style="width: 100vw" [formGroup]="formCreate" (ngSubmit)="createCustomer()" novalidate>
-  <div class="mb-3">
-    <label for="id" class="form-label">ID</label>
-    <input type="text" class="form-control col-6" id="id" placeholder="name@example.com" formControlName="id">
-    
-  </div>
+<!--  <div class="mb-3">-->
+<!--    <label for="id" class="form-label">ID</label>-->
+<!--    <input type="text" class="form-control col-6" id="id" placeholder="name@example.com" formControlName="id">-->
+<!--    <div style="color: red"-->
+<!--         *ngIf="formCreate.controls.id.errors?.required && formCreate.controls.id.touched">-->
+<!--      Need value-->
+<!--    </div>-->
+<!--  </div>-->
 
   <div class="mb-3">
     <label for="code" class="form-label">Code</label>
     <input type="text" class="form-control col-6" id="code" placeholder="name@example.com" formControlName="code">
+    <div style="color: red"
+         *ngIf="formCreate.controls.code.errors?.required && formCreate.controls.code.touched">
+      Need value
+    </div>
+    <div style="color: red"
+         *ngIf="formCreate.controls.code.errors?.pattern && formCreate.controls.code.touched">
+      Wrong format
+    </div>
   </div>
 
   <div class="mb-3">
-    <label for="customerType" class="form-label">Customer Type</label>
-    <input type="text" class="form-control col-6" id="customerType" placeholder="name@example.com" formControlName="customerType">
+    <label class="form-label">Customer Type</label>
+    <select
+      formControlName="customerType"
+      class="form-control col-6"
+      name="customerType"
+    >
+      <option
+        *ngFor="let customerType of customerTypes"
+        [ngValue]="customerType"
+      >
+        {{ customerType.name }}
+      </option>
+      <p
+        class="alert alert-danger form-control"
+        style="
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                  "
+        role="alert"
+        *ngIf="
+                    formCreate.get('customerType').invalid &&
+                    formCreate.get('customerType').touched
+                  "
+      >
+        This field is required !
+      </p>
+    </select>
+    <div style="color: red"
+         *ngIf="formCreate.controls.customerType.errors?.required && formCreate.controls.customerType.touched">
+      Need value
+    </div>
   </div>
+
+
 
   <div class="mb-3">
     <label for="name" class="form-label">Name</label>
     <input type="text" class="form-control col-6" id="name" placeholder="name@example.com" formControlName="name">
+    <div style="color: red"
+         *ngIf="formCreate.controls.name.errors?.required && formCreate.controls.name.touched">
+      Need value
+    </div>
   </div>
 
   <div class="mb-3">
     <label for="birthday" class="form-label">Birthday</label>
     <input type="text" class="form-control col-6" id="birthday" placeholder="name@example.com" formControlName="birthday">
+    <div style="color: red"
+         *ngIf="formCreate.controls.birthday.errors?.required && formCreate.controls.birthday.touched">
+      Need value
+    </div>
   </div>
 
   <div class="mb-3">
     <label for="idCard" class="form-label">ID Card</label>
     <input type="text" class="form-control col-6" id="idCard" placeholder="name@example.com" formControlName="idCard">
+    <div style="color: red"
+         *ngIf="formCreate.controls.idCard.errors?.required && formCreate.controls.idCard.touched">
+      Need value
+    </div>
+    <div style="color: red"
+         *ngIf="formCreate.controls.idCard.errors?.pattern && formCreate.controls.idCard.touched">
+      Wrong format
+    </div>
   </div>
 
   <div class="mb-3">
     <label for="phone" class="form-label">Phone</label>
     <input type="text" class="form-control col-6" id="phone" placeholder="name@example.com" formControlName="phone">
+    <div style="color: red"
+         *ngIf="formCreate.controls.phone.errors?.required && formCreate.controls.phone.touched">
+      Need value
+    </div>
+    <div style="color: red"
+         *ngIf="formCreate.controls.phone.errors?.pattern && formCreate.controls.phone.touched">
+      Wrong format
+    </div>
   </div>
 
   <div class="mb-3">
     <label for="email" class="form-label">Email</label>
     <input type="text" class="form-control col-6" id="email" placeholder="name@example.com" formControlName="email">
+    <div style="color: red"
+         *ngIf="formCreate.controls.email.errors?.required && formCreate.controls.email.touched">
+      Need value
+    </div>
+    <div style="color: red"
+         *ngIf="formCreate.controls.email.errors?.email && formCreate.controls.email.touched">
+      Wrong format
+    </div>
   </div>
 
   <div class="mb-3">
     <label for="address" class="form-label">Address</label>
     <input type="text" class="form-control col-6" id="address" placeholder="name@example.com" formControlName="address">
+    <div style="color: red"
+         *ngIf="formCreate.controls.address.errors?.required && formCreate.controls.address.touched">
+      Need value
+    </div>
   </div>
 
 <!--  <div class="row justify-content-between">-->

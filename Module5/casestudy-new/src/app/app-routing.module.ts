@@ -9,6 +9,8 @@ import { FormsModule} from '@angular/forms';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { CustomerCreateComponent } from './components/customers/customer-create/customer-create.component';
 import { ReactiveFormsModule} from '@angular/forms';
+import { CustomerDeleteModalComponent } from './components/customers/customer-delete-modal/customer-delete-modal.component';
+import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 
 
 const routes: Routes = [
@@ -24,10 +26,15 @@ const routes: Routes = [
     Ng2SearchPipeModule,
     FormsModule,
     NgxPaginationModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   exports: [RouterModule],
-  declarations: [HomeComponent, PageNotFoundComponent, CustomerListComponent, CustomerCreateComponent]
+  declarations: [HomeComponent, PageNotFoundComponent, CustomerListComponent, CustomerCreateComponent, CustomerDeleteModalComponent],
+  providers: [{
+    provide: MatDialogRef,
+    useValue: {}
+  }]
 })
 export class AppRoutingModule {
 }
