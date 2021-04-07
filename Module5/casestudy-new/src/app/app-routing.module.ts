@@ -11,12 +11,14 @@ import { CustomerCreateComponent } from './components/customers/customer-create/
 import { ReactiveFormsModule} from '@angular/forms';
 import { CustomerDeleteModalComponent } from './components/customers/customer-delete-modal/customer-delete-modal.component';
 import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
+import { CustomerEditComponent } from './components/customers/customer-edit/customer-edit.component';
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'customer-list', component: CustomerListComponent},
   {path: 'customer-create', component: CustomerCreateComponent},
+  {path: 'customer-edit/:id', component: CustomerEditComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
@@ -30,7 +32,12 @@ const routes: Routes = [
     MatDialogModule
   ],
   exports: [RouterModule],
-  declarations: [HomeComponent, PageNotFoundComponent, CustomerListComponent, CustomerCreateComponent, CustomerDeleteModalComponent],
+  declarations: [HomeComponent,
+    PageNotFoundComponent,
+    CustomerListComponent,
+    CustomerCreateComponent,
+    CustomerDeleteModalComponent,
+    CustomerEditComponent],
   providers: [{
     provide: MatDialogRef,
     useValue: {}

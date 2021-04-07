@@ -30,7 +30,8 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"]
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -124,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "casestudy-new"
+    }
+  },
+  "defaultProject": "casestudy-new",
+  "cli": {
+    "analytics": "d75a2bb8-d9e2-436b-b28b-0399f40c4a71"
+  }
 }

@@ -1,10 +1,10 @@
 <div class="row justify-content-between">
-    <button class="btn btn-outline-success me-2" type="button" [routerLink]="['/customer-create']">Main button</button>
-    <div class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-             [(ngModel)]="name">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </div>
+  <button class="btn btn-outline-success me-2" type="button" [routerLink]="['/customer-create']">Main button</button>
+  <div class="d-flex">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+           [(ngModel)]="name">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </div>
 </div>
 
 <div class="row">
@@ -35,7 +35,7 @@
       <td>{{customer.email}}</td>
       <td>{{customer.address}}</td>
       <td>
-<!--        <button class="btn btn-warning" (click)="detail(student);openWindowCustomClass1(content1)">Detail</button>-->
+        <button class="btn btn-warning" [routerLink]= "['/customer-edit/' + customer.id]" >Edit</button>
         <button class="btn btn-danger" (click)=openDialog(customer.id)>Delete</button>
       </td>
     </tr>

@@ -27,4 +27,8 @@ export class CustomerService {
   deleteCustomer(customerId): Observable<any> {
     return this.http.delete(this.API + '/' + customerId);
   }
+
+  editCustomer(customer, customerId): Observable<any> {
+    return this.http.put(this.API + '/' + customerId, customer);
+  }
 }
